@@ -1,0 +1,18 @@
+name: g7-mobile
+group: ued
+version: 1.0.0
+description: 金融移动端组件库
+program_language: node
+scripts:
+  build: npm set registry http://npm.demo.ued.g7s.chinawayltd.com && yarn && npm run build  && rm -rf node_modules/
+workflow:
+  extends: feature-pr
+  /^demo/feature\/.*$/:
+    env: UED-DEMO
+    test: skip
+  /^test/feature\/.*$/:
+    env: UED-TEST
+    test: skip
+  master:
+    env: UED-DEMO
+    test: skip

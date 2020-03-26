@@ -1,0 +1,10 @@
+/build/
+/config/
+/lib/
+/dist/
+/*.js
+/test/unit/coverage/
+/src/router/index.js
+/src/router/mobile.js
+/src/utils/mobile.js
+/packages/index.js

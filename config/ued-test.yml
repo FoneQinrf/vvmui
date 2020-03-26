@@ -1,0 +1,2 @@
+FRONT_ENV: UED_TEST
+OIL_REQUEST_HOST: '//service-finance-gateway-app--front-end.test.g7pay.net'

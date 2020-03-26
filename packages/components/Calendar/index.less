@@ -1,0 +1,198 @@
+.g7-Calendar{
+    &-wrp{
+        width: 100%;
+        height: 560px;
+        background: @B6;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        position: relative;
+    }
+    &-model-top{
+        position: absolute;
+        width: 100%;
+    }
+    &-title{
+        position: relative;
+        width: 100%;
+        height: 48px;
+        .title{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: @B1;
+        }
+    }
+    &-close{
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate3d(0,-50%,0);
+    }
+    &-week{
+        width: 100%;
+        height: 32px;
+        display: flex;
+        .item{
+            flex: 0 0 100/7%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-Weekend{
+            color: @C1;
+        }
+    }
+    &-DateList{
+        width: 100%;
+        height: 390px;
+        overflow-y: auto;
+        &-title{
+            padding: 10px 15px;
+            text-align: left;
+            font-size: 14px;
+            box-shadow: 1px 2px 3px @B4;
+        }
+        &-wrp{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-top: 100px;
+        }
+        &-day{
+            &-render{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                color: @B2;
+                position: relative;
+            }
+        }
+        &-item{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            border-bottom: 1px dashed @B3;
+            &-title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                padding: 10px 0;
+            }
+            &-day{
+                flex: 0 0 100/7%;
+                height: 50px;
+                padding: 4px 0;
+                &.selectDate{
+                    background: @B6;
+                    .g7-Calendar-DateList-day-render{
+                        color: @B6;
+                        &::after{
+                            content: ' ';
+                            display: block;
+                            position: absolute;
+                            width: 80%;
+                            height: 100%;
+                            background: @C1;
+                            border-radius: 8px;
+                        }
+                        span{
+                            position: static;
+                            z-index: 1002;
+                        }
+                    }
+                }
+                &.startDate{
+                    .g7-Calendar-DateList-day-render{
+                        &::before{
+                            content: ' ';
+                            display: block;
+                            width: 50%;
+                            height: 100%;
+                            background: @B5;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+                    }
+                }
+                &.endDate{
+                    .g7-Calendar-DateList-day-render{
+                        &::before{
+                            content: ' ';
+                            display: block;
+                            width: 50%;
+                            height: 100%;
+                            background: @B5;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+                &.select-Date-Middle{
+                   .g7-Calendar-DateList-day-render{
+                        background: @B5;
+                   }
+                }
+                &.disabledDate{
+                    .g7-Calendar-DateList-day-render{
+                        color: @d2;
+                    }
+                }
+            }
+        }
+        &-bottom{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            height: 60px;
+            background: @B2;
+            box-sizing: border-box;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &-confirm{
+        color: @B6;
+        font-size: 16px;
+        padding: 2px 30px;
+        border-left: 1px solid @B5;
+    }
+    &-value{
+        display: block;
+        color: @B4;
+        .startValue,.endValue{
+            font-size: 12px;
+            text-align: left;
+            span{
+                color: @B6;
+            }
+        }
+        .endValue{
+            padding-top: 3px;
+        }
+    }
+    &-text{
+        &.placeholder{
+            color: @d1;
+        }
+        &.disabled{
+            color: @d2;
+        }
+    }
+}
+
+.g7-Calendar-DateList::-webkit-scrollbar {
+    width: 0px;    
+}

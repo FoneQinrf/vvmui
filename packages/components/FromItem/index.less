@@ -1,0 +1,56 @@
+.g7-From-Item{
+    padding: 18px 15px;
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    &.cellInline{
+        display: flex;
+    }
+    &.block{
+        .g7-From-Item-body{
+            padding-top: 8px;
+        }
+    }
+    &-body{
+        flex: 1 1 auto;
+        position: relative;
+        &.statusIcon{
+            box-sizing: border-box;
+            padding-right: 10px;
+        }
+    }
+    &-message{
+        font-size: 12px;
+        color: @A2;
+        position: absolute;
+        bottom: -16px;
+    }
+    &-label{
+        margin-right: 10px;
+        font-size: 16px;
+        color: @B2;
+        position: relative;
+        &-required{
+            color: @A2;
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translate3d(0,-50%,0);
+            display: flex;
+            align-items: center;
+        }
+    }
+    &-statusIcon{
+        position: absolute;
+        top: 50%;
+        transform: translate3d(0,-50%,0);
+        right: -6px;
+        color: @A2;
+        &.success{
+            color: @C1;
+        }
+        &.cellInline{
+            right: -18px;
+        }
+    }
+}

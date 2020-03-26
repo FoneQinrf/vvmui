@@ -1,0 +1,151 @@
+<!--
+ * @Descripttion: 
+ * @Author: Fone丶峰
+ * @LastModifiedBy: Fone丶峰
+ * @Date: 2019-08-05 09:35:58
+ * @LastEditors: Fone丶峰
+ * @LastEditTime: 2019-09-04 13:20:21
+ * @email: 15921712019@163.com
+ * @gitHub: https://github.com/FoneQinrf
+ -->
+ 
+<template>
+  <div class="G-home">
+    <div class="top-nav"></div>
+    <div class="G-body">
+      <div class="left-nav-wrp">
+        <div class="left-nav">
+          <div v-for="(item,$index) in navList" :key="$index">
+            <p class="title">{{item.name}}</p>
+            <div v-for="sub_item in item.children" :key="sub_item.name">
+              <div v-if="sub_item.children">
+                <p class="sub_title">{{sub_item.name}}</p>
+                <div v-for="options in sub_item.children" :key="options.name">
+                  <router-link class="nav" :to="options.path">{{options.name}}</router-link>
+                </div>
+              </div>
+              <router-link class="nav" v-else :to="sub_item.path">{{sub_item.name}}</router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="description">
+          <transition name="fade" mode="out-in">
+            <router-view></router-view>
+          </transition>
+          <div style="height:20px;"></div>
+        </div>
+        <div class="demo-wrp">
+          <mobileDemo></mobileDemo>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import mobileDemo from "@/components/mobile-demo.vue";
+import navList from "@/utils/navList";
+export default {
+  data() {
+    return {
+      navList: navList
+    };
+  },
+  components: {
+    mobileDemo
+  }
+};
+</script>
+
+<style lang="less" scoped>
+.G-home {
+  height: 100%;
+  .top-nav {
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 4px 6px #e0e0eb;
+    z-index: 10;
+    background: #fff;
+  }
+  .G-body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 60px;
+    display: flex;
+  }
+  .left-nav {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 58px;
+    left: 0;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding-bottom: 66px;
+    border-right: 1px solid #f2f2f4;
+  }
+  .left-nav-wrp {
+    flex: 0 0 200px;
+    overflow-y: auto;
+    .title {
+      font-size: 14px;
+      font-weight: 550;
+      color: #666;
+      padding: 10px 0 10px 20px;
+    }
+    .sub_title {
+      font-size: 12px;
+      color: #999;
+      padding: 10px 0 10px 24px;
+    }
+    .nav {
+      display: block;
+      font-size: 14px;
+      color: #666;
+      padding: 10px 0 10px 24px;
+      text-decoration: none;
+      &:hover {
+        background: #f2f2f4;
+      }
+      &.router-link-active {
+        color: #4d29e7;
+      }
+    }
+  }
+  .main {
+    flex: 1;
+    display: flex;
+  }
+  .demo-wrp {
+    flex: 0 0 320px;
+    padding: 20px 40px;
+    height: 568px;
+  }
+  .description {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 16px 20px;
+  }
+}
+</style>
+<style scoped>
+.description >>> h1,
+.description >>> h2,
+.description >>> h3,
+.description >>> h4,
+.description >>> h5 {
+  margin: 16px 0;
+  line-height: 1.5;
+}
+.description >>> p {
+  color: #3f536e;
+}
+.description {
+  color: #666;
+}
+</style>

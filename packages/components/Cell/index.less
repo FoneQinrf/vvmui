@@ -1,0 +1,37 @@
+.g7{
+    &-Cell{
+        background: @B6;
+        padding: 15px;
+        display: flex;
+        font-size: 16px;
+        position: relative;
+        &.cell-active{
+            &:active{
+                background: @B5;
+            }
+        }
+        &.cell-block{
+            display: block;
+            .g7-Cell-botton{
+                color: @B2;
+                padding: 5px 0;
+            }
+        }
+        &-label{
+            display: flex;
+            align-items: center;
+        }
+        &-value{
+            flex-grow: 1;
+            color: @B2;
+            box-sizing: border-box;
+            padding-left: 8px;
+        }
+        &-right{
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+}

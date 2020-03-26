@@ -1,0 +1,72 @@
+.g7-Button{
+    display: inline-block;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    color: @B6;
+    position: relative;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    &.g7-Button-type-{
+        &default{
+            background: @C1;
+        }
+        &errer{
+            background: @A2;
+        }
+        &success{
+            background: @A3;
+        }
+        &warning{
+            background: @A4;
+        }
+        &text{
+            color: @C1;
+            padding: 0;
+        }
+    }
+    
+    &.g7-Button-plain{
+        background: @B6;
+    }
+
+    &-round{
+        border-radius: 10em;
+        &.g7-border-color{
+            &-default,&-success,&-warning,&-errer{
+                &::after{
+                    border-radius: 10em;
+                }
+            }
+        }
+    }
+    &.g7-Button-disabled{
+        opacity: 0.6;
+    }
+    .g7-loading{
+        display: inline-block;
+    }
+    &.g7-Button-long{
+        width: 100%;
+    }
+}
+button + button{
+    margin-left: 5px;
+}
+[class*='.g7-border-color']{
+    &::after {
+        position: absolute;
+        box-sizing: border-box;
+        content: ' ';
+        pointer-events: none;
+        top: -50%;
+        right: -50%;
+        bottom: -50%;
+        left: -50%;
+        transform: scale(0.5);
+        border-width: 1px;
+        border-style: solid;
+    }
+}

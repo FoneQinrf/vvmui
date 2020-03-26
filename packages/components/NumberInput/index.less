@@ -1,0 +1,171 @@
+.g7-Number-Input{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    &-icon{
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+    }
+    &-unity{
+        padding-left: 4px;
+    }
+    &-placeholder{
+        color: @d1;
+        width: 100%;
+        position: relative;
+        span {
+            position: absolute;
+            top: 50%;
+            display: block;
+            height: 76%;
+            width: 1px;
+            background: @B2;
+            animation: blink 1s infinite steps(1, start);
+            transform: translate3d(0, -50%, 0);
+        }
+        &.left{
+            text-align: left;
+        }
+        &.right{
+            text-align: right;
+            span{
+                right: 0;
+            }
+        }
+        &.center{
+            text-align: center;
+            span{
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+            }
+        }
+    }
+    &-text{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+        .text-item{
+            color: @B2;
+            display: flex;
+            align-items: center;
+            line-height: 100%;
+            position: relative;
+            height: 100%;
+            &.disabled{
+                color: @d2;
+                font-size: 16px;
+                -webkit-text-fill-color: @d2;
+                -webkit-opacity: 1;
+                opacity: 1;
+            }
+        }
+        .cursor{
+            display: inline-block;
+            height: 86%;
+            width: 1px;
+            background: @B2;
+            animation: blink 1s infinite steps(1, start);
+        }
+        &.left{
+            justify-content: flex-start;
+        }
+        &.right{
+            justify-content: flex-end;
+        }
+        &.center{
+            justify-content: center;
+        }
+        &.value{
+            color: @B2;
+            span{
+                right: 0;
+            }
+        }
+    }
+    &-input{
+        border: none;
+        font-size: 16px;
+        height: 100%;
+        display: flex;
+        flex-grow: 1;
+    }
+    .g7-Layer-mask{
+        background: rgba(0,0,0,0);
+    }
+    &-keyboard{
+        &-title{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 28px;
+            border-top: 1px solid @B3;
+            background: #fff;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+    }
+    &-key{
+        width: 100%;
+        height: 210px;
+        background: @B2;
+        box-sizing: border-box;
+        padding-bottom: 10px;
+        display: flex;
+        &-number{
+            display: flex;
+            width: 300px;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+        &-item{
+            display: flex;
+            flex: 0 0 90px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 10px;
+            background: #fff;
+            border-radius: 6px;
+            font-size: 18px;
+            &:active {
+                background: @B4;
+            }
+        }
+        &-right{
+            flex-grow: 1;
+            background: @B2;
+            box-sizing: border-box;
+            padding: 10px 10px 0 10px;
+            label{
+                display: flex;
+                width: 100%;
+                background: #fff;
+                height: 90px;
+                border-radius: 6px;
+                align-items: center;
+                justify-content: center;
+            }
+            .right-confirm{
+                margin-top: 10px;
+                background: @C1;
+                color: #fff;
+                font-size: 18px;
+            }
+        }
+    }
+}
+@keyframes blink {
+    0%{
+      background-color: white;
+    }
+    50% {
+      background-color: black;
+    }
+    100% {
+      background-color: white;
+    }
+}

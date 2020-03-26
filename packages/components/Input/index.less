@@ -1,0 +1,34 @@
+.g7{
+    &-Input{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        &-context{
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            font-family:Tahoma;
+            &::placeholder {
+                color: @d1;
+                font-size: 16px;
+              }
+              &:disabled {
+                color: @d2;
+                background-color: #fff;
+                font-size: 16px;
+                -webkit-text-fill-color: @d2;
+                -webkit-opacity: 1;
+                opacity: 1;
+              }
+        }
+        &-input{
+            flex-grow: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        &-icon{
+            padding: 0 4px;
+        }
+    }
+}
