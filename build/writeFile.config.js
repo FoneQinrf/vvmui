@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-08-02 20:36:45
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-11-08 10:04:50
+ * @LastEditTime: 2020-03-27 17:46:17
  * @Description: 
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
@@ -18,6 +18,7 @@ module.exports = {
     Vue.use(Router)
     
     const router = new Router({
+      mode: 'history',
         routes: [
             {
                 path: '/',
@@ -50,6 +51,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
         path: '/',
