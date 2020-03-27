@@ -2,14 +2,21 @@ language: node_js
 node_js:
     - '8.9.1'
 
-cache: npm
+install:
+  - npm install
 
-script: npm run build
+script:
+  - npm run build
 
-deploy:
-provider: pages
-skip_cleanup: true
-github_token: $USER_TOKEN
-local_dir: dist
-on:
-  branch: master
+after_success:
+  - cd ./dist
+  - git init
+  - git config --global user.name "${USER_NAME}"
+  - git config --global user.email "${USER_EMAIL}"
+  - git add .
+  - git commit -m "Automatically update from travis-ci"
+  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+
+branches:
+  only:
+    - master
