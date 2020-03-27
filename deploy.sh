@@ -2,7 +2,7 @@
  # @Author: Fone丶峰
  # @Date: 2020-03-27 17:06:12
  # @LastEditors: Fone丶峰
- # @LastEditTime: 2020-03-27 17:07:10
+ # @LastEditTime: 2020-03-27 17:24:46
  # @Description: 
  # @Email: qinrifeng@163.com
  ###
@@ -26,6 +26,6 @@ git commit -m 'am-ui'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:FoneQinrf/am-ui.git master:gh-pages
+git push -f https://github.com/FoneQinrf/am-ui.git master:gh-pages
 
 cd -
