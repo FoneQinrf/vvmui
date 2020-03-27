@@ -20,7 +20,7 @@ after_script:
   - git config user.email "${USER_EMAIL}"
   - git add .
   - git commit -m "am-ui"
-  - git push --force --quiet "git@github.com:FoneQinrf/am-ui.git" master:${P_BRANCH}
+  - git push --force --quiet "https://github.com/FoneQinrf/am-ui.git" master:${P_BRANCH}
 # E: Build LifeCycle
 
 # 只对某个分支行为生效
