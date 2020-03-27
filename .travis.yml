@@ -4,6 +4,8 @@ node_js:
 
 cache: npm
 
+script: npm install
+
 script: npm run build
 
 deploy:

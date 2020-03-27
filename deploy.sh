@@ -2,11 +2,13 @@
  # @Author: Fone丶峰
  # @Date: 2020-03-27 15:33:28
  # @LastEditors: Fone丶峰
- # @LastEditTime: 2020-03-27 15:43:19
+ # @LastEditTime: 2020-03-27 16:06:35
  # @Description: 
  # @Email: qinrifeng@163.com
  ###
 set -e
+
+npm install
 
 npm run build
 
