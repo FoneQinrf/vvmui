@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-05 09:35:58
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 15:46:25
+ * @LastEditTime: 2020-03-27 15:55:34
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -68,8 +68,8 @@ module.exports = {
     mobile: path.resolve(__dirname, '../dist/mobile.html'),
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: 'am-ui',
+    assetsSubDirectory: 'am-ui',
+    assetsPublicPath: '/',
 
     /**
      * Source Maps
