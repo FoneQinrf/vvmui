@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-22 17:38:55
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-30 17:31:45
+ * @LastEditTime: 2020-03-27 11:42:51
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -24,14 +24,14 @@
         </template>
       </G-Cell>
     </G-Cell-Group>
-    <G-Cell-Group title="数据绑定">
+    <G-Cell-Group v-if="false" title="数据绑定">
       <G-Cell label="选择内容">
         <template>
           <Model />
         </template>
       </G-Cell>
     </G-Cell-Group>
-    <G-Cell-Group title="设置默认值">
+    <G-Cell-Group title="数据绑定">
       <G-Cell label="选择内容">
         <template>
           <setValue />
@@ -52,7 +52,7 @@
         </template>
       </G-Cell>
     </G-Cell-Group>
-    <G-Cell-Group v-if="false" title="测试异步value">
+    <G-Cell-Group title="异步value数据">
       <G-Cell label="选择内容">
         <template>
           <asyncValue />

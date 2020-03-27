@@ -4,14 +4,14 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-22 15:50:01
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-25 17:14:34
+ * @LastEditTime: 2020-03-27 15:02:45
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="g7-Upload">
+  <div class="Am-Upload">
     <template v-if="type === 'single'">
-      <Upload
+      <Am-Upload
         :icon="icon"
         :size="size"
         :accept="accept"
@@ -45,7 +45,7 @@
         ref="upload"
       >
         <slot></slot>
-      </Upload>
+      </Am-Upload>
     </template>
     <template v-else>
       <Multiple
@@ -90,13 +90,13 @@
 </template>
 
 <script>
-import Upload from "./components/upload";
+import AmUpload from "./components/upload";
 import mixins from "./components/mixins";
 import Multiple from "./components/multiple";
 import emitter from "../../utils/emitter";
 export default {
-  name: "G-Upload",
-  components: { Upload, Multiple },
+  name: "Upload",
+  components: { AmUpload, Multiple },
   mixins: [mixins, emitter],
   props: {
     value: {
@@ -116,7 +116,7 @@ export default {
   watch: {
     value(val) {
       this.currentValue = val;
-      this.dispatch("G-From-Item", "change", val);
+      this.dispatch("From-Item", "change", val);
     }
   },
   methods: {

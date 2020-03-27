@@ -9,9 +9,9 @@
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="g7-CellGroup">
-    <div class="g7-CellGroup-title">{{title}}</div>
-    <ul class="g7-Cell-wrp">
+  <div class="Am-CellGroup">
+    <div class="Am-CellGroup-title">{{title}}</div>
+    <ul class="Am-Cell-wrp">
       <slot></slot>
     </ul>
   </div>

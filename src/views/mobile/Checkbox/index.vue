@@ -3,88 +3,88 @@
     <section class="demo-button-row">
       <h3>基本用法</h3>
       <div class="cell">
-        <G-Checkbox>选项</G-Checkbox>
+        <Checkbox>选项</Checkbox>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>type类型</h3>
       <div class="cell">
-        <G-Checkbox-Group>
-          <G-Checkbox type="default" label="default"></G-Checkbox>
-          <G-Checkbox type="errer" label="errer"></G-Checkbox>
-          <G-Checkbox type="success" label="success"></G-Checkbox>
-          <G-Checkbox type="warning" label="warning"></G-Checkbox>
-        </G-Checkbox-Group>
+        <Checkbox-Group>
+          <Checkbox type="default" label="default"></Checkbox>
+          <Checkbox type="errer" label="errer"></Checkbox>
+          <Checkbox type="success" label="success"></Checkbox>
+          <Checkbox type="warning" label="warning"></Checkbox>
+        </Checkbox-Group>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>搭配CheckboxGroup使用</h3>
       <div class="cell">
-        <G-Checkbox-Group>
-          <G-Checkbox label="选项一" />
-          <G-Checkbox label="选项二" />
-          <G-Checkbox label="选项三" />
-        </G-Checkbox-Group>
+        <Checkbox-Group>
+          <Checkbox label="选项一" />
+          <Checkbox label="选项二" />
+          <Checkbox label="选项三" />
+        </Checkbox-Group>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>v-model绑定</h3>
       <div class="cell">
-        <G-Checkbox-Group v-model="model">
-          <G-Checkbox label="选项一" />
-          <G-Checkbox label="选项二" />
-          <G-Checkbox label="选项三" />
-        </G-Checkbox-Group>
+        <Checkbox-Group v-model="model">
+          <Checkbox label="选项一" />
+          <Checkbox label="选项二" />
+          <Checkbox label="选项三" />
+        </Checkbox-Group>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>禁用</h3>
       <div class="cell">
-        <G-Checkbox-Group :value="['选项二']">
-          <G-Checkbox disabled label="选项一" />
-          <G-Checkbox disabled label="选项二" />
-          <G-Checkbox label="选项三" />
-        </G-Checkbox-Group>
+        <Checkbox-Group :value="['选项二']">
+          <Checkbox disabled label="选项一" />
+          <Checkbox disabled label="选项二" />
+          <Checkbox label="选项三" />
+        </Checkbox-Group>
       </div>
     </section>
     <section v-if="false" class="demo-button-row">
       <h3>禁用</h3>
       <div class="cell">
-        <G-Checkbox-Group disabled :value="['选项二']">
-          <G-Checkbox label="选项一" />
-          <G-Checkbox label="选项二" />
-          <G-Checkbox label="选项三" />
-        </G-Checkbox-Group>
+        <Checkbox-Group disabled :value="['选项二']">
+          <Checkbox label="选项一" />
+          <Checkbox label="选项二" />
+          <Checkbox label="选项三" />
+        </Checkbox-Group>
       </div>
     </section>
     <section v-if="false" class="demo-button-row">
       <h3>禁用</h3>
       <div class="cell">
-        <G-Checkbox-Group type="success" :value="['选项二']">
-          <G-Checkbox label="选项一" />
-          <G-Checkbox label="选项二" />
-          <G-Checkbox label="选项三" />
-        </G-Checkbox-Group>
+        <Checkbox-Group type="success" :value="['选项二']">
+          <Checkbox label="选项一" />
+          <Checkbox label="选项二" />
+          <Checkbox label="选项三" />
+        </Checkbox-Group>
       </div>
     </section>
     <section v-if="false" class="demo-button-row">
       <h3>禁用</h3>
       <div class="cell">
-        <G-Checkbox-Group icon="iconradioactive" :value="['选项二']">
-          <G-Checkbox label="选项一" />
-          <G-Checkbox label="选项二" />
-          <G-Checkbox label="选项三" />
-        </G-Checkbox-Group>
+        <Checkbox-Group icon="iconradioactive" :value="['选项二']">
+          <Checkbox label="选项一" />
+          <Checkbox label="选项二" />
+          <Checkbox label="选项三" />
+        </Checkbox-Group>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>change事件</h3>
       <div class="cell">
-        <G-Checkbox-Group @on-change="change">
-          <G-Checkbox label="选项一" />
-          <G-Checkbox label="选项二" />
-          <G-Checkbox label="选项三" />
-        </G-Checkbox-Group>
+        <Checkbox-Group @on-change="change">
+          <Checkbox label="选项一" />
+          <Checkbox label="选项二" />
+          <Checkbox label="选项三" />
+        </Checkbox-Group>
       </div>
     </section>
   </demoTop>

@@ -4,12 +4,12 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-22 13:26:00
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-25 17:49:32
+ * @LastEditTime: 2020-03-26 15:42:03
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <form class="g7-Form">
+  <form class="Am-Form">
     <slot></slot>
   </form>
 </template>
@@ -18,7 +18,7 @@
 import { findComponentsDownward } from "../../utils";
 const model = {};
 export default {
-  name: "G-From",
+  name: "From",
   data() {
     return {
       components: ""
@@ -47,6 +47,10 @@ export default {
     errorIcon: {
       type: String,
       default: "iconcuowu"
+    },
+    labelWidth: {
+      type: Number,
+      default: 70
     }
   },
   watch: {
@@ -71,25 +75,35 @@ export default {
       }
     },
     init() {
-      const components = findComponentsDownward(this, "G-From-Item");
+      const components = findComponentsDownward(this, "From-Item");
       if (components) {
         this.components = components;
       }
     },
     validateField(prop, eventName) {
-      this.components.map(item => {
-        if (item.prop === prop) {
-          item.validator(eventName);
-        }
+      return new Promise(resolve => {
+        this.components.map(item => {
+          if (item.prop === prop) {
+            item.validator(eventName).then(res => {
+              resolve(res);
+            });
+          }
+        });
       });
     },
     async validate(cb) {
       const array = [];
-      this.components.forEach(element => {
-        array.push(element.validator());
-      });
-      const result = await Promise.all(array);
-      cb(!result.includes("error"));
+      let i = 0;
+      while (i < this.components.length) {
+        const res = await this.components[i].validator();
+        if (res !== "error") {
+          i += 1;
+        } else {
+          i = this.components.length;
+        }
+        array.push(res);
+      }
+      cb(!array.includes("error"));
     },
     resetFields() {
       const type = {
@@ -101,10 +115,11 @@ export default {
       for (const key in this.model) {
         this.model[key] = type[model[key]];
       }
+      this.clearValidate();
     },
     clearValidate() {
       this.components.map(item => {
-        item.message = "";
+        item.ruleState = "";
       });
     }
   }

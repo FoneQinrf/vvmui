@@ -2,32 +2,32 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-25 14:36:47
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-25 15:54:15
+ * @LastEditTime: 2020-03-27 13:21:36
  * @Description: 
  * @Email: qinrifeng@g7.com.cn
  -->
 <template>
   <div class="form">
     <h3>基本用法</h3>
-    <G-From :model="model">
-      <G-From-Item label="姓名" prop="uasrName">
-        <G-Input v-model="model.uasrName" />
-      </G-From-Item>
-      <G-From-Item label="年龄" prop="age">
-        <G-Input v-model="model.age" />
-      </G-From-Item>
-      <G-From-Item :cellInline="false" label="证件信息" prop="file">
-        <G-Upload
+    <From :model="model">
+      <From-Item label="姓名" prop="uasrName">
+        <Input v-model="model.uasrName" />
+      </From-Item>
+      <From-Item label="年龄" prop="age">
+        <Input v-model="model.age" />
+      </From-Item>
+      <From-Item :cellInline="false" label="证件信息" prop="file">
+        <Upload
           v-model="model.file"
           action="https://jsonplaceholder.typicode.com/posts/"
           type="multiple"
           :beforeUpload="multipleBeforeUpload"
           :maxNumber="2"
         />
-      </G-From-Item>
-    </G-From>
+      </From-Item>
+    </From>
     <div style="padding:15px">
-      <G-Button long>提 交</G-Button>
+      <Button long>提 交</Button>
     </div>
   </div>
 </template>
@@ -63,7 +63,7 @@ h3 {
 }
 </style>
 <style scoped>
-.form >>> .g7-Upload-default-icon {
+.form >>> .Am-Upload-default-icon {
   border: 1px solid #999;
 }
 </style>

@@ -4,18 +4,18 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-22 13:26:00
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-25 17:42:21
+ * @LastEditTime: 2020-03-26 16:08:59
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div :class="['g7-From-Item',{'cellInline':cellInline,'block':!cellInline}]">
-    <div class="g7-From-Item-label">
-      <span class="g7-From-Item-label-required" v-if="required">*</span>
+  <div :class="['Am-From-Item',{'cellInline':cellInline,'block':!cellInline}]">
+    <div class="Am-From-Item-label" :style="style">
+      <span class="Am-From-Item-label-required" v-if="required">*</span>
       <slot name="label">{{label}}</slot>
       <span
         v-if="!cellInline"
-        :class="['g7-From-Item-statusIcon',{'success': ruleState === 'success'},{'cellInline':!cellInline}]"
+        :class="['Am-From-Item-statusIcon',{'success': ruleState === 'success'},{'cellInline':!cellInline}]"
         v-show="statusIcon"
       >
         <transition name="fade" mode="out-in">
@@ -24,20 +24,16 @@
         </transition>
       </span>
     </div>
-    <div :class="['g7-From-Item-body',{'statusIcon':statusIcon}]">
+    <div :class="['Am-From-Item-body',{'statusIcon':statusIcon}]">
       <slot></slot>
       <transition name="slide-fade">
-        <label class="g7-From-Item-message g7-ellipsis" v-if="ruleState === 'error'">{{message}}</label>
+        <label class="Am-From-Item-message Am-ellipsis" v-if="ruleState === 'error'">{{message}}</label>
       </transition>
       <span
-        v-if="cellInline"
-        :class="['g7-From-Item-statusIcon',{'success': ruleState === 'success'},{'cellInline':!cellInline}]"
+        :class="['Am-From-Item-statusIcon',ruleState,{'loading':loadingShow},{'cellInline':!cellInline}]"
         v-show="statusIcon"
       >
-        <transition name="fade" mode="out-in">
-          <Icon v-if="ruleState === 'success'" key="success" :icon="successIcon" :size="12" />
-          <Icon v-if="ruleState === 'error'" key="error" :icon="errorIcon" :size="12" />
-        </transition>
+        <Icon :class="[loadingShow ? 'Am-loading' : '']" :icon="icon" :size="12" />
       </span>
     </div>
   </div>
@@ -45,11 +41,11 @@
 
 <script>
 import AsyncValidator from "async-validator";
-import { findComponentUpward } from "../../utils";
+import { findComponentUpward, vwWitdh } from "../../utils";
 import Icon from "../Icon";
 
 export default {
-  name: "G-From-Item",
+  name: "From-Item",
   components: { Icon },
   props: {
     label: {
@@ -67,24 +63,31 @@ export default {
     cellInline: {
       type: Boolean,
       default: true
+    },
+    labelWidth: {
+      type: Number
+    },
+    validateLoading: {
+      type: Boolean
     }
   },
   data() {
     return {
       parent: "",
-      validators: this.rule,
       eventName: "",
       itemVal: undefined,
       ruleState: "",
       message: "",
-      source: "",
-      required: false
+      required: false,
+      loadingShow: false
     };
   },
   watch: {
-    rule(val) {
-      this.validators = val;
-      this.parentRule();
+    rule() {
+      this.requiredFnc();
+    },
+    rules() {
+      this.requiredFnc();
     }
   },
   computed: {
@@ -105,6 +108,35 @@ export default {
         return this.parent.errorIcon;
       }
       return false;
+    },
+    rules() {
+      if (this.parent) {
+        return this.parent.rules;
+      }
+      return this.rule;
+    },
+    style() {
+      if (this.parent) {
+        return {
+          width: vwWitdh(
+            this.labelWidth ? this.labelWidth : this.parent.labelWidth
+          )
+        };
+      }
+      return {
+        width: vwWitdh(this.labelWidth) || "auto"
+      };
+    },
+    icon() {
+      if (this.loadingShow) {
+        return "iconloading1";
+      }
+      if (this.ruleState === "success") {
+        return this.successIcon;
+      }
+      if (this.ruleState === "error") {
+        return this.errorIcon;
+      }
     }
   },
   mounted() {
@@ -112,7 +144,7 @@ export default {
   },
   methods: {
     init() {
-      const parent = findComponentUpward(this, "G-From");
+      const parent = findComponentUpward(this, "From");
       if (parent) {
         this.parent = parent;
         this.itemVal = parent.model[this.prop] || "";
@@ -122,15 +154,16 @@ export default {
     validator(eventName = this.eventName) {
       return new Promise(resolve => {
         const rules = this.eventNameFnc(eventName);
-        if ((!rules && rules.length === 0) || this.required === false) {
+        if (!rules && rules.length === 0) {
+          this.loadingShow = false;
           this.ruleState = "success";
           resolve(this.ruleState);
-          return true;
+          return;
+        }
+        if (this.validateLoading) {
+          this.loadingShow = true;
         }
 
-        rules.forEach(element => {
-          delete element.trigger;
-        });
         const descriptor = {};
         descriptor[this.prop] = rules;
         const validator = new AsyncValidator(descriptor);
@@ -140,15 +173,18 @@ export default {
           .validate(model, { firstFields: true }, errors => {
             this.ruleState = !errors ? "success" : "error";
             this.message = errors ? errors[0].message : "";
+            this.loadingShow = false;
             resolve(this.ruleState);
           })
           .then(() => {
             this.ruleState = "success";
+            this.loadingShow = false;
             resolve(this.ruleState);
           })
           .catch(({ errors }) => {
             this.ruleState = !errors ? "success" : "error";
             this.message = errors ? errors[0].message : "";
+            this.loadingShow = false;
             resolve(this.ruleState);
           });
       });
@@ -159,14 +195,15 @@ export default {
     parentRule() {
       if (this.parent) {
         const rule = this.parent.rules[this.prop] || [];
-        return this.validators.concat(rule);
+        const array = [].concat(this.rule, rule);
+        return array;
       }
     },
     /**
      * 判断数据中 required === true
      */
     requiredFnc() {
-      const rules = this.parentRule() || this.validators;
+      const rules = this.parentRule();
       const array = rules.map(item => {
         return item.required;
       });
@@ -176,7 +213,7 @@ export default {
      * 过滤不需要校验的数据
      */
     eventNameFnc(eventName) {
-      const rules = this.parentRule() || this.validators;
+      const rules = this.parentRule();
       return rules.filter(item => {
         if (!item.trigger || eventName === "") {
           return true;

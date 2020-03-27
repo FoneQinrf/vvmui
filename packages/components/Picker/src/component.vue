@@ -9,17 +9,17 @@
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div ref="ref" class="g7-PickerColumn-wrp" :style="PickerHeight">
-    <ul class="g7-PickerColumn-group" :style="styleY">
+  <div ref="ref" class="Am-PickerColumn-wrp" :style="PickerHeight">
+    <ul class="Am-PickerColumn-group" :style="styleY">
       <li
         v-for="(item,$index) in options"
         :key="$index"
         :style="style"
-        :class="['g7-PickerColumn-label g7-ellipsis',{'g7-text-color-default':$index===curreIndex}]"
+        :class="['Am-PickerColumn-label Am-ellipsis',{'Am-text-color-default':$index===curreIndex}]"
       >{{item[label] || item}}</li>
     </ul>
-    <i class="g7-PickerColumn-top g7-hairline-bottom" :style="maskHeight"></i>
-    <i class="g7-PickerColumn-bottom g7-hairline-top" :style="maskHeight"></i>
+    <i class="Am-PickerColumn-top Am-hairline-bottom" :style="maskHeight"></i>
+    <i class="Am-PickerColumn-bottom Am-hairline-top" :style="maskHeight"></i>
   </div>
 </template>
 

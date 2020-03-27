@@ -4,28 +4,28 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-22 17:31:58
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-04 10:27:17
+ * @LastEditTime: 2020-03-27 15:03:31
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="g7-Picker">
+  <div class="Am-Picker">
     <div
       :class="[
-        'g7-Picker-context',
-        'g7-ellipsis',
+        'Am-Picker-context',
+        'Am-ellipsis',
         {'placeholder':context===placeholder,'disabled':disabled}
       ]"
       @click="click"
     >{{context}}</div>
     <Layer v-if="!disabled" direction="bottom" isMask v-model="LayerVal">
       <template>
-        <div class="g7-Picker-title">
+        <div class="Am-Picker-title">
           <span @click="onCancel" class="cancel-text">{{cancelText}}</span>
-          <span @click="onConfirm" class="confirm-text g7-text-color-default">{{confirmText}}</span>
+          <span @click="onConfirm" class="confirm-text Am-text-color-default">{{confirmText}}</span>
         </div>
-        <div class="g7-Picker-body">
-          <Picker
+        <div class="Am-Picker-body">
+          <Am-Picker
             v-for="(item,$index) in list"
             :options="item"
             :height="height"
@@ -36,7 +36,11 @@
             @on-change="change"
             :ref="$index"
           />
-          <div v-show="options.length===0" class="g7-Picker-loading" :style="PickerHeight">loading</div>
+          <transition name="fade">
+            <div v-if="options.length===0" class="Am-Picker-loading" :style="PickerHeight">
+              <Icon class="Am-loading" icon="iconloading1" :size="30" />
+            </div>
+          </transition>
         </div>
       </template>
     </Layer>
@@ -45,16 +49,19 @@
 
 <script>
 import Layer from "../Layer";
-import Picker from "./src/component.vue";
+import AmPicker from "./src/component.vue";
 import mixins from "./src/mixins";
-import { initIndex, initPlaceholder, initModel, typeOF } from "./utils";
+import { initIndex, initPlaceholder, initModel } from "./utils";
+import emitter from "../../utils/emitter";
+import Icon from "../Icon";
 
 export default {
-  name: "G-Picker",
-  mixins: [mixins],
+  name: "Picker",
+  mixins: [mixins, emitter],
   components: {
     Layer,
-    Picker
+    AmPicker,
+    Icon
   },
   data() {
     return {
@@ -82,7 +89,7 @@ export default {
       default: "children"
     },
     value: {
-      type: [Object, Array, String],
+      type: Array,
       default: function() {
         return [];
       }
@@ -90,12 +97,6 @@ export default {
     keyValue: {
       type: String,
       default: "value"
-    },
-    model: {
-      type: Array,
-      default: function() {
-        return [];
-      }
     },
     disabled: {
       type: Boolean
@@ -113,11 +114,7 @@ export default {
         }
       }
       this.index = array;
-      if (typeOF(this.value) === "Array") {
-        this.$emit("on-change", this.index);
-        return;
-      }
-      this.$emit("on-change", this.resetModel(), this.index);
+      this.$emit("on-change", this.index);
     },
     resetModel() {
       return initModel(this);
@@ -135,23 +132,9 @@ export default {
     },
     onConfirm() {
       const model = this.resetModel();
-      const fnc = {
-        Array: () => {
-          this.$emit("input", model);
-          this.$emit("on-confirm", model, this.list);
-        },
-        Object: () => {
-          this.model.forEach(element => {
-            this.value[element] = model[element];
-          });
-          this.$emit("on-confirm", model, this.index);
-        },
-        String: () => {
-          this.$emit("input", model);
-          this.$emit("on-confirm", model, this.list);
-        }
-      };
-      fnc[typeOF(this.value)]();
+      this.$emit("input", model);
+      this.$emit("on-confirm", model, this.list);
+      this.dispatch("From-Item", "change", model);
       this.LayerVal = false;
     },
     initIndex() {
@@ -191,10 +174,6 @@ export default {
     },
     options() {
       this.initIndex();
-    },
-    model() {
-      this.initIndex();
-      this.initPlaceholder();
     }
   }
 };

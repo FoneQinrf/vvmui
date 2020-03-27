@@ -4,12 +4,12 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-27 11:39:53
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-27 11:50:50
+ * @LastEditTime: 2020-03-27 10:45:42
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <G-Picker :options="options" />
+  <Picker :options="options" key-value="label" />
 </template>
 
 <script>

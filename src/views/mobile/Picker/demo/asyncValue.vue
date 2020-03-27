@@ -4,12 +4,12 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-26 15:03:21
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-27 14:24:42
+ * @LastEditTime: 2020-03-27 11:40:48
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <G-Picker :options="options" v-model="model" :model="['province','city','area']" />
+  <Picker :options="options" v-model="model" />
 </template>
 
 <script>
@@ -78,22 +78,12 @@ export default {
           ]
         }
       ],
-      model: {
-        city: "",
-        province: "",
-        area: ""
-      }
+      model: []
     };
   },
   mounted() {
-    const that = this;
-    const t = setTimeout(function() {
-      clearTimeout(t);
-      that.model = {
-        city: "nanjing",
-        province: "jiangsu",
-        area: "fuzimiao"
-      };
+    setTimeout(() => {
+      this.model = ["jiangsu", "nanjing", "fuzimiao"];
     }, 2000);
   }
 };

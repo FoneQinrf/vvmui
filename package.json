@@ -1,8 +1,8 @@
 {
-  "name": "MMUI",
+  "name": "am-ui",
   "version": "0.0.1",
   "description": "A Vue.js mobile ui",
-  "author": "Fone丶峰 <15921712019@g7.com.cn>",
+  "author": "Fone丶峰 <qinrifeng@g7.com.cn>",
   "private": false,
   "main": "lib/index.js",
   "repository": "",

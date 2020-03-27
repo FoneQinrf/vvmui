@@ -2,16 +2,16 @@
  * @Author: Fone丶峰
  * @Date: 2020-02-20 12:05:54
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-03 16:58:47
+ * @LastEditTime: 2020-03-27 14:53:23
  * @Description: 
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="g7-Calendar">
+  <div class="Am-Calendar">
     <div
       @click="openCalendar"
-      :class="['g7-Calendar-text g7-ellipsis',{placeholder:confirmValue.length === 0},{disabled:disabled}]"
+      :class="['Am-Calendar-text Am-ellipsis',{placeholder:confirmValue.length === 0},{disabled:disabled}]"
     >
       <template
         v-if="confirmValue.length > 0"
@@ -19,15 +19,15 @@
       <template v-else>{{ placeholder }}</template>
     </div>
     <Layer direction="bottom" isMask v-model="show" @on-mask="close">
-      <div class="g7-Calendar-wrp">
-        <div class="g7-Calendar-model-top">
-          <div class="g7-Calendar-title">
+      <div class="Am-Calendar-wrp">
+        <div class="Am-Calendar-model-top">
+          <div class="Am-Calendar-title">
             <div class="title">{{ titleText }}</div>
-            <span @click="close" class="g7-Calendar-close">
+            <span @click="close" class="Am-Calendar-close">
               <Icon icon="iconcuowu" />
             </span>
           </div>
-          <div class="g7-Calendar-week g7-hairline-bottom" ref="title">
+          <div class="Am-Calendar-week Am-hairline-bottom" ref="title">
             <span
               v-for="(item,$index) in weekList"
               :key="$index"
@@ -44,16 +44,16 @@
               :class="clasess(param)"
               @click="clickDate(index,param)"
             >
-              <div class="g7-Calendar-DateList-day-render">
+              <div class="Am-Calendar-DateList-day-render">
                 <slot name="dateItem" :node="param">
                   <span>{{param.day}}</span>
                 </slot>
               </div>
             </li>
           </template>
-          <div class="g7-Calendar-DateList-bottom">
+          <div class="Am-Calendar-DateList-bottom">
             <slot>
-              <ul class="g7-Calendar-value">
+              <ul class="Am-Calendar-value">
                 <li class="startValue">
                   {{startText}}：
                   <template
@@ -72,7 +72,7 @@
                 </li>
               </ul>
             </slot>
-            <div class="g7-Calendar-confirm" @click="confirm">
+            <div class="Am-Calendar-confirm" @click="confirm">
               <span>{{confirmText}}</span>
             </div>
           </div>
@@ -89,10 +89,11 @@ import { weekList, dateList, getweekday } from "./components/utils";
 import DateList from "./components/DateList";
 import Toast from "../~Toast";
 import mixins from "./components/mixins";
+import emitter from "../../utils/emitter";
 export default {
   name: "G-Calendar",
   components: { Layer, Icon, DateList },
-  mixins: [mixins],
+  mixins: [mixins, emitter],
   props: {
     placeholder: {
       type: String,
@@ -211,6 +212,7 @@ export default {
       this.confirmValue = value;
       this.$emit("input", value);
       this.$emit("on-confirm", value);
+      this.dispatch("From-Item", "change", value);
       this.show = false;
     },
     initValue(val) {

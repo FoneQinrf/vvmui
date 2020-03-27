@@ -4,10 +4,10 @@
  * @LastEditors: Fone丶峰
  * @LastEditTime: 2020-03-25 17:11:16
  * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @Email: qinrifeng@Am.com.cn
  -->
 <template>
-  <div class="g7-Upload-multiple">
+  <div class="Am-Upload-multiple">
     <Upload-Placeholder
       :style="style"
       v-for="(item,$index) in currentValue"

@@ -4,23 +4,24 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-06 09:23:49
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-05 13:43:58
+ * @LastEditTime: 2020-03-26 13:46:49
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="g7-Input">
-    <div class="g7-Input-icon" v-if="icon">
+  <div class="Am-Input">
+    <div class="Am-Input-icon" v-if="icon">
       <Icon :size="20" :icon="icon" />
     </div>
-    <div class="g7-Input-input">
+    <div class="Am-Input-input">
       <input
         :disabled="disabled"
         :placeholder="placeholder"
         v-model.trim="currentValue"
-        class="g7-Input-context"
+        class="Am-Input-context"
         :type="type"
         :maxlength="maxlength"
+        :autocomplete="autocomplete"
         @input="change"
         @blur="blur"
         @focus="focus"
@@ -39,7 +40,7 @@
 import Icon from "../Icon";
 import emitter from "../../utils/emitter";
 export default {
-  name: "G-Input",
+  name: "Input",
   mixins: [emitter],
   components: {
     Icon
@@ -74,6 +75,13 @@ export default {
         return ["text", "password"].includes(value);
       }
     },
+    autocomplete: {
+      type: String,
+      default: "off",
+      validator(value) {
+        return ["off", "on"].includes(value);
+      }
+    },
     scrollDom: {
       default() {
         return document.body;
@@ -99,11 +107,11 @@ export default {
       this.currentValue = val;
       this.$emit("input", val);
       this.$emit("on-change", val);
-      this.dispatch("G-From-Item", "change", val);
+      this.dispatch("From-Item", "change", val);
     },
     blur() {
       this.$emit("on-blur", this.currentValue);
-      this.dispatch("G-From-Item", "blur", this.currentValue);
+      this.dispatch("From-Item", "blur", this.currentValue);
       this.scrollDom.scrollTop = this.scrollDom.scrollTop;
     },
     focus() {

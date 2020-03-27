@@ -2,9 +2,9 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-03 15:48:53
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-03 16:09:29
+ * @LastEditTime: 2020-03-27 14:35:33
  * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @Email: qinrifeng@Am.com.cn
  */
 import { weeks } from "./utils";
 const Time = new Date();
@@ -36,7 +36,7 @@ export default {
                 const optionsDate = `${options.year}-${options.month}-${options.day}`;
                 if (this.options.length === 0) {
                     return [
-                        "g7-Calendar-DateList-item-day",
+                        "Am-Calendar-DateList-item-day",
                         {
                             disabledDate:
                                 this.oldDateDisabledFnc(timestamp2) ||
@@ -49,7 +49,7 @@ export default {
                         `${this.options[0].year}-${this.options[0].month}-${this.options[0].day}`
                     ).getTime();
                     return [
-                        "g7-Calendar-DateList-item-day",
+                        "Am-Calendar-DateList-item-day",
                         { selectDate: timestamp1 === timestamp2 },
                         {
                             disabledDate:
@@ -66,7 +66,7 @@ export default {
                         `${this.options[1].year}-${this.options[1].month}-${this.options[1].day}`
                     ).getTime();
                     return [
-                        "g7-Calendar-DateList-item-day",
+                        "Am-Calendar-DateList-item-day",
                         {
                             selectDate: timestamp1 === timestamp2 && timestamp2 === timestamp3
                         },

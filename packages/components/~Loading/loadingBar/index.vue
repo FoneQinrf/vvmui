@@ -4,14 +4,14 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-09-26 15:09:05
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-11-07 13:59:17
+ * @LastEditTime: 2020-03-26 10:01:25
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
   <transition>
-    <div class="g7-Loading-loadingBar" v-show="show">
-      <div :class="['g7-loadingBar',status]" :style="style"></div>
+    <div class="Am-Loading-loadingBar" v-show="show">
+      <div :class="['Am-loadingBar',status]" :style="style"></div>
     </div>
   </transition>
 </template>

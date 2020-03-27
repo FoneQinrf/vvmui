@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-09-02 10:22:38
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-09-30 15:24:33
+ * @LastEditTime: 2020-03-26 16:07:41
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -14,87 +14,87 @@
     <section class="demo-button-row">
       <h3>基本用法</h3>
       <div class="cell">
-        <G-Button>主要按钮</G-Button>
-        <G-Button type="success">成功按钮</G-Button>
+        <Button>主要按钮</Button>
+        <Button type="success">成功按钮</Button>
       </div>
       <div class="cell" style="padding:15px 0 0 0;">
-        <G-Button type="warning">警告按钮</G-Button>
-        <G-Button type="errer">错误按钮</G-Button>
+        <Button type="warning">警告按钮</Button>
+        <Button type="errer">错误按钮</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>字体</h3>
       <div class="cell">
-        <G-Button type="text">字体按钮</G-Button>
+        <Button type="text">字体按钮</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>空心按钮</h3>
       <div class="cell">
-        <G-Button plain>主要按钮</G-Button>
-        <G-Button plain type="success">成功按钮</G-Button>
+        <Button plain>主要按钮</Button>
+        <Button plain type="success">成功按钮</Button>
       </div>
       <div class="cell" style="padding:15px 0 0 0;">
-        <G-Button plain type="warning">警告按钮</G-Button>
-        <G-Button plain type="errer">错误按钮</G-Button>
+        <Button plain type="warning">警告按钮</Button>
+        <Button plain type="errer">错误按钮</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>圆角按钮</h3>
       <div class="cell">
-        <G-Button plain round>主要按钮</G-Button>
-        <G-Button plain round type="success">成功按钮</G-Button>
+        <Button plain round>主要按钮</Button>
+        <Button plain round type="success">成功按钮</Button>
       </div>
       <div class="cell" style="padding:15px 0 0 0;">
-        <G-Button plain round type="warning">警告按钮</G-Button>
-        <G-Button plain round type="errer">错误按钮</G-Button>
+        <Button plain round type="warning">警告按钮</Button>
+        <Button plain round type="errer">错误按钮</Button>
       </div>
       <div class="cell" style="padding:15px 0 0 0;">
-        <G-Button round>主要按钮</G-Button>
-        <G-Button round type="success">成功按钮</G-Button>
+        <Button round>主要按钮</Button>
+        <Button round type="success">成功按钮</Button>
       </div>
       <div class="cell" style="padding:15px 0 0 0;">
-        <G-Button round type="warning">警告按钮</G-Button>
-        <G-Button round type="errer">错误按钮</G-Button>
+        <Button round type="warning">警告按钮</Button>
+        <Button round type="errer">错误按钮</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>按钮大小</h3>
       <div>
-        <G-Button long>按钮</G-Button>
+        <Button long>按钮</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>页面导航</h3>
       <div class="cell">
-        <G-Button to="/mobile/Input">路由跳转</G-Button>
-        <G-Button url="index.html">URL跳转</G-Button>
+        <Button to="/mobile/Input">路由跳转</Button>
+        <Button url="index.html">URL跳转</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>配合icon使用</h3>
       <div class="cell">
-        <G-Button>
+        <Button>
           <G-Icon icon="iconbianji" style="padding-right:5px" />按 钮
-        </G-Button>
-        <G-Button>
+        </Button>
+        <Button>
           按 钮
           <G-Icon icon="iconcamera" />
-        </G-Button>
+        </Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>loading</h3>
       <div class="cell">
-        <G-Button loading></G-Button>
-        <G-Button loading type="success">主要按钮</G-Button>
+        <Button loading></Button>
+        <Button loading type="success">主要按钮</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>禁用</h3>
       <div class="cell">
-        <G-Button disabled>主要按钮</G-Button>
-        <G-Button disabled type="success">主要按钮</G-Button>
+        <Button disabled>主要按钮</Button>
+        <Button disabled type="success">主要按钮</Button>
       </div>
     </section>
   </demoTop>

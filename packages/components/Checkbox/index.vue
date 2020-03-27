@@ -5,20 +5,20 @@
  * @Last Modified time: 2020-01-06 16:48:50
  */
 <template>
-  <label class="g7-Checkbox">
-    <span :class="['g7-Checkbox-icon',`g7-text-color-${parentType}`,{['disabled']:parenDisabled}]">
+  <label class="Am-Checkbox">
+    <span :class="['Am-Checkbox-icon',`Am-text-color-${parentType}`,{['disabled']:parenDisabled}]">
       <transition name="fade">
         <Icon v-show="currentValue" :size="20" :icon="parentIcon" />
       </transition>
     </span>
-    <span :class="['g7-Checkbox-text',{['disabled']:parenDisabled}]">
+    <span :class="['Am-Checkbox-text',{['disabled']:parenDisabled}]">
       <slot>{{label}}</slot>
     </span>
     <input
       v-if="parent"
       type="checkbox"
       :value="label"
-      class="g7-Checkbox-input"
+      class="Am-Checkbox-input"
       @change="change"
       v-model="model"
       :disabled="parenDisabled"
@@ -26,7 +26,7 @@
     <input
       v-else
       type="checkbox"
-      class="g7-Checkbox-input"
+      class="Am-Checkbox-input"
       :checked="currentValue"
       @change="change"
       :disabled="parenDisabled"
@@ -38,10 +38,11 @@
 import Icon from "../Icon";
 import { findComponentUpward } from "../../utils";
 import { type } from "../../mixins/props";
+import emitter from "../../utils/emitter";
 export default {
-  name: "G-Checkbox",
+  name: "Checkbox",
   components: { Icon },
-  mixins: [type],
+  mixins: [type, emitter],
   data() {
     return {
       parent: "",
@@ -105,6 +106,7 @@ export default {
       this.currentValue = e.target.checked;
       this.$emit("input", this.currentValue);
       this.$emit("on-change", this.currentValue);
+      this.dispatch("From-Item", "change", this.currentValue);
     }
   },
   computed: {

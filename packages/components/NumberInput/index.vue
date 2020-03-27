@@ -3,18 +3,18 @@
  * @Author: Fone丶峰
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-11-06 14:10:08
- * @LastEditors  : Fone丶峰
- * @LastEditTime : 2019-12-18 13:29:18
+ * @LastEditors: Fone丶峰
+ * @LastEditTime: 2020-03-27 14:11:14
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="g7-Number-Input">
-    <div class="g7-Number-Input-icon" v-if="icon">
+  <div class="Am-Number-Input">
+    <div class="Am-Number-Input-icon" v-if="icon">
       <Icon :icon="icon" :size="16" />
     </div>
-    <div @click.stop="focus" class="g7-Number-Input-input g7-ellipsis">
-      <div v-if="currentValue" :class="['g7-Number-Input-text',align]">
+    <div @click.stop="focus" class="Am-Number-Input-input Am-ellipsis">
+      <div v-if="currentValue" :class="['Am-Number-Input-text',align]">
         <template v-for="(item,$index) in currentValue">
           <span
             @click.stop="cursorClick($index)"
@@ -41,12 +41,12 @@
           </template>
         </template>
       </div>
-      <div :class="['g7-Number-Input-placeholder',align,{'disabled':disabled}]" v-else>
+      <div :class="['Am-Number-Input-placeholder',align,{'disabled':disabled}]" v-else>
         {{placeholder}}
         <span v-show="show" class="cursor"></span>
       </div>
     </div>
-    <div v-if="unity" class="g7-Number-Input-unity">{{unity}}</div>
+    <div v-if="unity" class="Am-Number-Input-unity">{{unity}}</div>
   </div>
 </template>
 
@@ -55,9 +55,11 @@ import { on, off } from "../../utils/event";
 import bus from "../../utils/bus";
 import keyboard from "./component";
 import Icon from "../Icon";
+import emitter from "../../utils/emitter";
 
 export default {
-  name: "G-Number-Input",
+  name: "Number-Input",
+  mixins: [emitter],
   components: { Icon },
   props: {
     value: {
@@ -144,11 +146,14 @@ export default {
       });
     },
     close() {
-      this.show = false;
-      this.$emit("on-close");
+      if (this.show) {
+        this.show = false;
+        this.$emit("on-close");
+      }
     },
     confirm() {
       this.$emit("on-confirm", Number(this.currentValue));
+      this.dispatch("From-Item", "change", Number(this.currentValue));
       this.show = false;
     },
     keyup(key) {

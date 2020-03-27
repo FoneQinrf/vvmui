@@ -3,43 +3,43 @@
  * @Author: Fone丶峰
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-12-18 11:52:04
- * @LastEditors  : Fone丶峰
- * @LastEditTime : 2019-12-18 13:37:03
+ * @LastEditors: Fone丶峰
+ * @LastEditTime: 2020-03-27 13:55:20
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div @click.stop class="G-Number-keyboard">
+  <div @click.stop class="Am-Number-keyboard">
     <Layer :mask-show="false" direction="bottom" v-model="value">
-      <div class="g7-Number-Input-layer">
-        <div class="g7-Number-Input-keyboard">
-          <div class="g7-Number-Input-keyboard-title">
+      <div class="Am-Number-Input-layer">
+        <div class="Am-Number-Input-keyboard">
+          <div class="Am-Number-Input-keyboard-title">
             <div @click.stop="close">
               <Icon icon="iconxiangxia" />
             </div>
           </div>
-          <div class="g7-Number-Input-key">
-            <ul class="g7-Number-Input-key-number">
+          <div class="Am-Number-Input-key">
+            <ul class="Am-Number-Input-key-number">
               <li
-                class="g7-Number-Input-key-item"
+                class="Am-Number-Input-key-item"
                 v-for="item in 9"
                 @click.stop="keyup(item)"
                 :key="item"
               >{{item}}</li>
               <template v-if="isDecimal">
-                <li class="g7-Number-Input-key-item" @click.stop="keyup('.')">
+                <li class="Am-Number-Input-key-item" @click.stop="keyup('.')">
                   <Icon icon="icondian" />
                 </li>
               </template>
               <template v-else>
-                <li class="g7-Number-Input-key-item"></li>
+                <li class="Am-Number-Input-key-item"></li>
               </template>
-              <li class="g7-Number-Input-key-item" @click.stop="keyup('0')">0</li>
-              <li class="g7-Number-Input-key-item" @click.stop="remove">
+              <li class="Am-Number-Input-key-item" @click.stop="keyup('0')">0</li>
+              <li class="Am-Number-Input-key-item" @click.stop="remove">
                 <Icon icon="iconshanchu" />
               </li>
             </ul>
-            <div class="g7-Number-Input-key-right">
+            <div class="Am-Number-Input-key-right">
               <template v-if="negativeNumber">
                 <label class="right-cut" @click.stop="keyup('-')">
                   <Icon icon="iconiconfontmove" />

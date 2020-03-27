@@ -2,16 +2,16 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-23 15:00:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-24 10:50:39
+ * @LastEditTime: 2020-03-26 10:29:13
  * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @Email: qinrifeng@Am.com.cn
  -->
 <template>
   <transition name="fade">
     <div
       v-show="show"
       @click.stop="click"
-      class="g7-Backtop"
+      class="Am-Backtop"
       :style="{right:`${right}px`,bottom:`${bottom}px`}"
     >
       <slot></slot>
@@ -22,7 +22,7 @@
 <script>
 import { scrollToTop } from "../../utils";
 export default {
-  name: "G-Backtop",
+  name: "Backtop",
   props: {
     right: {            //元素距离右边的距离
       type: Number,

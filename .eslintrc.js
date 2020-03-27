@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-09 10:31:35
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-17 15:39:37
+ * @LastEditTime: 2020-03-26 10:59:13
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -48,7 +48,8 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'guard-for-in': 'off',
     'no-multi-spaces': 'off',
-    'valid-typeof': 'off'
+    'valid-typeof': 'off',
+    'no-await-in-loop': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint',

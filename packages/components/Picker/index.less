@@ -1,4 +1,4 @@
-.g7{
+.Am{
     &-Picker{
         &-body{
             background: @B6;
@@ -20,6 +20,7 @@
             }
         }
         &-context{
+            font-size: 16px;
             &.placeholder{
                 color: @d1;
                 -webkit-text-fill-color: @d1;
@@ -35,6 +36,9 @@
         }
         &-loading{
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     &-PickerColumn{
@@ -49,7 +53,7 @@
             align-items: center;
             justify-content: center;
             font-size: 16px;
-            &.g7-text-color-default{
+            &.Am-text-color-default{
                 font-weight: 550;
             }
         }

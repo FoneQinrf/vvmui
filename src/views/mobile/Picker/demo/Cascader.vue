@@ -9,7 +9,7 @@
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <G-Picker :options="options" />
+  <Picker :options="options" />
 </template>
 
 <script>

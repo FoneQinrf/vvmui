@@ -4,10 +4,10 @@
  * @LastEditors: Fone丶峰
  * @LastEditTime: 2020-03-25 17:13:20
  * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @Email: qinrifeng@Am.com.cn
  -->
 <template>
-  <div class="g7-Upload-single">
+  <div class="Am-Upload-single">
     <Upload-Placeholder
       :url="value"
       :iconSize="iconSize"
@@ -19,7 +19,7 @@
       <slot></slot>
     </Upload-Placeholder>
     <input
-      class="g7-Upload-input"
+      class="Am-Upload-input"
       @change="change"
       :disabled="computedDisabled"
       :name="name"
@@ -29,8 +29,8 @@
     <!-- 图片压缩需要用到的canvas -->
     <canvas hidden="hidden" v-if="compress" ref="canvas"></canvas>
     <!-- 进度条 -->
-    <div v-if="progress > 0" class="g7-Upload-progress">
-      <div :style="{width:`${progress}%`}" class="g7-Upload-progress-bar"></div>
+    <div v-if="progress > 0" class="Am-Upload-progress">
+      <div :style="{width:`${progress}%`}" class="Am-Upload-progress-bar"></div>
     </div>
   </div>
 </template>

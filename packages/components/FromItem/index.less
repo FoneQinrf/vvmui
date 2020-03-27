@@ -1,4 +1,4 @@
-.g7-From-Item{
+.Am-From-Item{
     padding: 18px 15px;
     background: #fff;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
         display: flex;
     }
     &.block{
-        .g7-From-Item-body{
+        .Am-From-Item-body{
             padding-top: 8px;
         }
     }
@@ -30,6 +30,8 @@
         font-size: 16px;
         color: @B2;
         position: relative;
+        display: flex;
+        align-items: center;
         &-required{
             color: @A2;
             position: absolute;
@@ -45,12 +47,23 @@
         top: 50%;
         transform: translate3d(0,-50%,0);
         right: -6px;
-        color: @A2;
+        color: @B3;
+        display: inline-block;
+        height: auto;
         &.success{
             color: @C1;
         }
+        &.error{
+            color: @A2;
+        }
         &.cellInline{
             right: -18px;
+        }
+        &.loading{
+            color: @B3;
+        }
+        .iconfont{
+            transition: all .3s;
         }
     }
 }

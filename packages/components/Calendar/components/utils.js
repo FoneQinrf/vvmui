@@ -2,17 +2,17 @@
  * @Author: Fone丶峰
  * @Date: 2020-02-24 09:54:33
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-02 16:35:12
+ * @LastEditTime: 2020-03-27 14:34:00
  * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @Email: qinrifeng@Am.com.cn
  */
-export const weekList = [{ name: '日', class: 'g7-Calendar-week-Weekend' },
+export const weekList = [{ name: '日', class: 'Am-Calendar-week-Weekend' },
 { name: '一', class: '' },
 { name: '二', class: '' },
 { name: '三', class: '' },
 { name: '四', class: '' },
 { name: '五', class: '' },
-{ name: '六', class: 'g7-Calendar-week-Weekend' },
+{ name: '六', class: 'Am-Calendar-week-Weekend' },
 ];
 
 export const weeks = ['日', '一', '二', '三', '四', '五', '六'];

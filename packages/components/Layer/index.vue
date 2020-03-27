@@ -9,12 +9,12 @@
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="g7-Layer">
+  <div class="Am-Layer">
     <transition v-if="maskShow" name="fade">
-      <div ref="ref" @click="click" v-show="value" class="g7-Layer-mask"></div>
+      <div ref="ref" @click="click" v-show="value" class="Am-Layer-mask"></div>
     </transition>
     <transition :name="direction">
-      <div v-show="value" :class="['g7-Layer-body',direction]">
+      <div v-show="value" :class="['Am-Layer-body',direction]">
         <slot></slot>
       </div>
     </transition>

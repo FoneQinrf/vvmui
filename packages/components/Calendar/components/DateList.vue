@@ -2,18 +2,18 @@
  * @Author: Fone丶峰
  * @Date: 2020-02-24 14:36:14
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-03 16:59:17
+ * @LastEditTime: 2020-03-27 14:48:54
  * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @Email: qinrifeng@Am.com.cn
  -->
 <template>
-  <div class="g7-Calendar-DateList-wrp">
-    <div class="g7-Calendar-DateList" ref="scroll">
+  <div class="Am-Calendar-DateList-wrp">
+    <div class="Am-Calendar-DateList" ref="scroll">
       <div v-for="(item,$index) in date" :key="$index+'A'" :ref="$index">
-        <div class="g7-Calendar-DateList-item-title">
+        <div class="Am-Calendar-DateList-item-title">
           <b>{{item.name}}</b>
         </div>
-        <ul class="g7-Calendar-DateList-item">
+        <ul class="Am-Calendar-DateList-item">
           <slot name="dateItem" :item="item.list"></slot>
         </ul>
       </div>
@@ -52,8 +52,15 @@ export default {
       const index = this.locationIndex();
       if (index) {
         this.$nextTick(() => {
-          const height = this.$refs["0"][0].offsetHeight;
-          this.$refs.scroll.scrollTop = height * (index + 1) - 82;
+          const array = [];
+          this.date.forEach((element, i) => {
+            array.push(this.$refs[i][0].offsetHeight);
+          });
+          let height = 0;
+          for (let i = 0; i < index; i += 1) {
+            height += array[i];
+          }
+          this.$refs.scroll.scrollTop = height;
         });
       }
     },

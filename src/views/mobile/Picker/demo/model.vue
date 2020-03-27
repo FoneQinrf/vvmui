@@ -9,7 +9,7 @@
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <G-Picker :options="options" v-model="model" :model="['province','city','area']" />
+  <Picker :options="options" v-model="model" :model="['province','city','area']" />
 </template>
 
 <script>

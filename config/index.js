@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-05 09:35:58
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-22 13:36:06
+ * @LastEditTime: 2020-03-27 09:46:04
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -15,7 +15,7 @@
 const path = require('path')
 
 module.exports = {
-  name: 'G-UI',  //组件库名称
+  name: 'Am-ui',  //组件库名称
   component: {
     templateApi: '_',   //模板注册和createApi调用共存的组件命名前缀
     createApi: '~'    //createApi调用组件命名前缀

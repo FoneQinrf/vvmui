@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-22 15:53:09
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-24 10:06:35
+ * @LastEditTime: 2020-03-26 14:16:39
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -76,4 +76,15 @@ export const scrollToTop = (scrollNum, target) => {
         top: scrollNum,
         behavior: "smooth"
     });
+}
+
+/**
+ * 计算宽度的vw值
+ * @param {*} witdh 
+ */
+export const vwWitdh = (px) => {
+    if (window) {
+        const witdh = document.body.clientWidth;
+        return `${(px * 100) / witdh}vw` || 'auto'
+    }
 }

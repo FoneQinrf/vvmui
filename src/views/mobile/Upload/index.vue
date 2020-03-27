@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-22 15:59:48
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-23 14:41:56
+ * @LastEditTime: 2020-03-27 15:01:13
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -13,7 +13,7 @@
     <div class="demo-item-flex">
       <section class="demo-button-row">
         <h3>基本用法</h3>
-        <G-Upload
+        <Upload
           v-model="src"
           action="https://jsonplaceholder.typicode.com/posts/"
           :onSuccess="onSuccess"
@@ -22,7 +22,7 @@
       </section>
       <section class="demo-button-row">
         <h3>接管文件上传</h3>
-        <G-Upload
+        <Upload
           v-model="value"
           action="https://jsonplaceholder.typicode.com/posts/"
           :beforeUpload="beforeUpload"
@@ -31,18 +31,18 @@
     </div>
     <section class="demo-button-row">
       <h3>自定义上传文件占位图</h3>
-      <G-Upload
+      <Upload
         v-model="file"
         action="https://jsonplaceholder.typicode.com/posts/"
         :quality="0.7"
         :beforeUpload="fileBeforeUpload"
       >
         <i class="iconfont iconupload"></i>
-      </G-Upload>
+      </Upload>
     </section>
     <section class="demo-button-row">
       <h3>多文件上传</h3>
-      <G-Upload
+      <Upload
         v-model="array"
         action="https://jsonplaceholder.typicode.com/posts/"
         type="multiple"
@@ -51,7 +51,7 @@
     </section>
     <section class="demo-button-row">
       <h3>控制多文件，最多上传3张</h3>
-      <G-Upload
+      <Upload
         v-model="list"
         action="https://jsonplaceholder.typicode.com/posts/"
         type="multiple"

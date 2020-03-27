@@ -4,16 +4,16 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-06 14:35:20
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-11-07 14:00:25
+ * @LastEditTime: 2020-03-26 10:35:11
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
   <button :disabled="tagDisabled" @click="click" :class="clasess">
-    <span class="g7-loading" v-show="currentLoading">
+    <span class="Am-loading" v-show="currentLoading">
       <Icon icon="iconloading" />
     </span>
-    <span :class="[this.plain ? `g7-text-color-${this.type}` : '']">
+    <span :class="[this.plain ? `Am-text-color-${this.type}` : '']">
       <template v-if="currentLoading">{{loadingText}}</template>
       <template v-else>
         <slot></slot>
@@ -25,7 +25,7 @@
 import links from "../../mixins/links";
 import Icon from "../Icon";
 export default {
-  name: "G-Button",
+  name: "Button",
   components: { Icon },
   mixins: [links],
   props: {
@@ -64,13 +64,13 @@ export default {
   computed: {
     clasess() {
       return [
-        "g7-Button",
-        `g7-Button-type-${this.type}`,
-        this.plain ? `g7-Button-plain g7-border-color-${this.type}` : "",
+        "Am-Button",
+        `Am-Button-type-${this.type}`,
+        this.plain ? `Am-Button-plain Am-border-color-${this.type}` : "",
         {
-          "g7-Button-round": this.round,
-          "g7-Button-disabled": this.tagDisabled,
-          "g7-Button-long": this.long
+          "Am-Button-round": this.round,
+          "Am-Button-disabled": this.tagDisabled,
+          "Am-Button-long": this.long
         }
       ];
     },

@@ -4,26 +4,24 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-30 13:32:05
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-11-04 15:38:15
+ * @LastEditTime: 2020-03-27 14:00:57
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <label class="g7-Radio">
-    <span
-      :class="['g7-Radio-icon',`g7-text-color-${parentType}`,parentDisabled ? 'disabled' : '']"
-    >
+  <label class="Am-Radio">
+    <span :class="['Am-Radio-icon',`Am-text-color-${parentType}`,parentDisabled ? 'disabled' : '']">
       <transition name="fade">
         <Icon v-show="active" :size="20" :icon="parentIcon" />
       </transition>
     </span>
-    <span :class="['g7-Radio-text',parentDisabled ? 'disabled' : '']">
+    <span :class="['Am-Radio-text',parentDisabled ? 'disabled' : '']">
       <slot>{{label}}</slot>
     </span>
     <input
       v-if="parent"
       :disabled="parentDisabled"
-      class="g7-Radio-input"
+      class="Am-Radio-input"
       :value="label"
       type="radio"
       :name="name"
@@ -33,7 +31,7 @@
       v-else
       :name="name"
       :disabled="parentDisabled"
-      class="g7-Radio-input"
+      class="Am-Radio-input"
       type="radio"
       @change="change"
     />
@@ -43,8 +41,10 @@
 <script>
 import Icon from "../Icon";
 import { findComponentUpward } from "../../utils";
+import emitter from "../../utils/emitter";
 export default {
-  name: "G-Radio",
+  name: "Radio",
+  mixins: [emitter],
   components: { Icon },
   props: {
     value: {
@@ -91,6 +91,7 @@ export default {
       this.currentValue = e.target.checked;
       this.$emit("input", this.currentValue);
       this.$emit("on-change", this.currentValue);
+      this.dispatch("From-Item", "change", this.currentValue);
     },
     parentFnc(options) {
       if (this.parent) {
@@ -124,7 +125,7 @@ export default {
     }
   },
   mounted() {
-    const parent = findComponentUpward(this, "G-Radio-Group");
+    const parent = findComponentUpward(this, "Radio-Group");
     if (parent) {
       this.parent = parent;
     }

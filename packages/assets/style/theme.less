@@ -1,5 +1,5 @@
 /*class头*/
-@classname:.g7;
+@classname:.Am;
 
 /*主题色*/
 @C1:#7e60ff;
@@ -33,53 +33,53 @@
 @z-loading:1100;  /*loading*/
 
 /*背景色定义*/
-.g7-back-color-default{
+.Am-back-color-default{
     background: @C1;
 }
-.g7-back-color-errer{
+.Am-back-color-errer{
     background: @A2;
 }
-.g7-back-color-success{
+.Am-back-color-success{
     background: @A3;
 }
-.g7-back-color-warning{
+.Am-back-color-warning{
     background: @A4;
 }
 
 /*字体颜色定义*/
-.g7-text-color-default{
+.Am-text-color-default{
     color: @C1;
 }
-.g7-text-color-errer{
+.Am-text-color-errer{
   color: @A2;
 }
-.g7-text-color-success{
+.Am-text-color-success{
   color: @A3;
 }
-.g7-text-color-warning{
+.Am-text-color-warning{
   color: @A4;
 }
 
 /*主题相关边框颜色定义*/
-.g7-border-color--default{
+.Am-border-color--default{
     border-color: @C1;
     &::after{
       border-color: @C1;
     }
 }
-.g7-border-color--errer{
+.Am-border-color--errer{
     border-color: @A2;
     &::after{
       border-color: @A2;
     }
 }
-.g7-border-color--success{
+.Am-border-color--success{
     border-color: @A3;
     &::after{
       border-color: @A3;
     }
 }
-.g7-border-color--warning{
+.Am-border-color--warning{
     border-color: @A4;
     &::after{
       border-color: @A4;
@@ -87,14 +87,14 @@
 }
 
 /*文字超出省略*/
-.g7-ellipsis{
+.Am-ellipsis{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 /*1px 边框*/
-  [class*='g7-hairline'] {
+  [class*='mm-hairline'] {
     &::after {
         position: absolute;
         box-sizing: border-box;
@@ -108,7 +108,7 @@
         transform: scale(0.5);
     }
   }
-  .g7-hairline {
+  .Am-hairline {
     &-top,
     &-left,
     &-right,

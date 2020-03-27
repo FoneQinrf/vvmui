@@ -1,11 +1,14 @@
-/* CheckboxGroup
- * @Author: Fone丶峰 
- * @Date: 2020-01-02 15:41:03 
- * @Last Modified by: Fone丶峰
- * @Last Modified time: 2020-01-06 16:35:01
- */
+<!--
+ * @Author: Fone丶峰
+ * @Date: 2020-01-02 15:40:27
+ * @LastEditors: Fone丶峰
+ * @LastEditTime: 2020-03-26 16:47:05
+ * @Description: 
+ * @Email: qinrifeng@163.com
+ -->
+
 <template>
-  <div :class="['g7-CheckboxGroup',{['inline']:inline}]">
+  <div :class="['Am-CheckboxGroup',{['inline']:inline}]">
     <slot></slot>
   </div>
 </template>
@@ -13,9 +16,10 @@
 <script>
 import { type } from "../../mixins/props";
 import { findComponentsDownward } from "../../utils/index";
+import emitter from "../../utils/emitter";
 export default {
-  name: "G-Checkbox-Group",
-  mixins: [type],
+  name: "Checkbox-Group",
+  mixins: [type, emitter],
   data() {
     return {
       childrens: [],
@@ -61,6 +65,7 @@ export default {
       this.currentValue = value;
       this.$emit("input", value);
       this.$emit("on-change", value);
+      this.dispatch("From-Item", "change", value);
       this.updateModel();
     }
   },

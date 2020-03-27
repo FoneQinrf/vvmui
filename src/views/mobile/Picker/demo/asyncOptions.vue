@@ -4,12 +4,12 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-27 13:51:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-27 14:18:27
+ * @LastEditTime: 2020-03-27 11:47:57
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
-  <G-Picker @on-show="show" :options="options" />
+  <Picker @on-show="show" :options="options" />
 </template>
 
 <script>
