@@ -1,17 +1,27 @@
 language: node_js
 node_js:
-  - "node"
+    - '8.9.1'
 
 cache: npm
 
-script: npm install
+# S: Build Lifecycle
+install:
+  - npm install
 
-script: npm run build
+script:
+  - npm run build
 
-deploy:
-provider: pages
-skip_cleanup: true
-github_token: 4614f9e0d411dc76229b8722e1a2ab0d6f20427d
-local_dir: dist
-on:
-  branch: master
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "${USER_NAME}"
+  - git config user.email "${USER_EMAIL}"
+  - git add .
+  - git commit -m "am-ui"
+  - git push --force --quiet "https://${USER_TOKEN}@${GH_REF}" master:${P_BRANCH}
+# E: Build LifeCycle
+
+# 只对某个分支行为生效
+branches:
+  only:
+    - master
