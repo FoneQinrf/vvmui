@@ -4,23 +4,26 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-05 11:32:26
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-11-08 17:24:12
+ * @LastEditTime: 2020-03-28 08:37:01
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
   <div class="mobile-demo">
-    <iframe class="iframe" frameborder="0" :src="path+'/mobile.html'"></iframe>
+    <iframe
+      class="iframe"
+      frameborder="0"
+      :src="path + '/mobile.html'"
+    ></iframe>
   </div>
 </template>
 <script>
 const array = ["main", "main-introduce", "main-quickstart", "main-updata"];
-
 export default {
   data() {
     return {
       name: "",
-      path: window.location.origin
+      path: process.env.NODE_ENV === "development" ? window.location.origin : 'https://foneqinrf.github.io/am-ui/'
     };
   },
   watch: {
@@ -39,7 +42,7 @@ export default {
       window.localStorage.setItem("name", this.name);
       window.frames[0].postMessage(
         { name: this.name },
-        `${window.location.origin}/mobile.html`
+        `${this.path}/mobile.html`
       );
     }
   },
