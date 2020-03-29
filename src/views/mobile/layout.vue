@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-02 17:54:46
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-11-08 17:24:30
+ * @LastEditTime: 2020-03-29 21:05:01
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -14,18 +14,12 @@
   </transition>
 </template>
 <script>
+//console.log(window.routerFnc());
 export default {
   mounted() {
-    window.addEventListener(
-      "message",
-      e => {
-        const name = e.data.name
-          ? e.data.name
-          : window.localStorage.getItem("name");
-        this.$router.replace(`/mobile/${name}`);
-      },
-      false
-    );
+    window.routerFnc = name => {
+      this.$router.replace(`/mobile/${name}`);
+    };
   }
 };
 </script>

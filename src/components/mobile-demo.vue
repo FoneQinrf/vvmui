@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-05 11:32:26
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-28 08:37:01
+ * @LastEditTime: 2020-03-29 21:05:13
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -14,6 +14,7 @@
       class="iframe"
       frameborder="0"
       :src="path + '/mobile.html'"
+      ref="iframe"
     ></iframe>
   </div>
 </template>
@@ -23,7 +24,10 @@ export default {
   data() {
     return {
       name: "",
-      path: process.env.NODE_ENV === "development" ? window.location.origin : 'https://foneqinrf.github.io/am-ui/'
+      path:
+        process.env.NODE_ENV === "development"
+          ? window.location.origin
+          : "https://foneqinrf.github.io/am-ui/"
     };
   },
   watch: {
@@ -39,17 +43,15 @@ export default {
       } else {
         this.name = name.replace(/main-/g, "");
       }
-      window.localStorage.setItem("name", this.name);
-      window.frames[0].postMessage(
-        { name: this.name },
-        `${this.path}/mobile.html`
-      );
+      this.$refs.iframe.contentWindow.routerFnc(this.name);
     }
   },
   mounted() {
     this.$nextTick(() => {
-      const { name } = this.$route;
-      this.init(name);
+      setTimeout(() => {
+        const { name } = this.$route;
+        this.init(name);
+      }, 1000);
     });
   }
 };
