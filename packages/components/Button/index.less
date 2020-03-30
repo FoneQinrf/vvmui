@@ -12,15 +12,31 @@
     &.Am-Button-type-{
         &default{
             background: @C1;
+            &:active{
+                background: @C1;
+                opacity: 0.8;
+            }
         }
         &errer{
             background: @A2;
+            &:active{
+                background: @A2;
+                opacity: 0.8;
+            }
         }
         &success{
             background: @A3;
+            &:active{
+                background: @A3;
+                opacity: 0.8;
+            }
         }
         &warning{
             background: @A4;
+            &:active{
+                background: @A4;
+                opacity: 0.8;
+            }
         }
         &text{
             color: @C1;
@@ -30,6 +46,24 @@
     
     &.Am-Button-plain{
         background: @B6;
+        &:active{
+            background: @B5;
+            opacity: 0.5;
+        }
+        &.Am-border-color-{
+            &default{
+                border: 1px solid  @C1;
+            }
+            &errer{
+                border: 1px solid  @A2;
+            }
+            &success{
+                border: 1px solid  @A3;
+            }
+            &warning{
+                border: 1px solid  @A4;
+            }
+        }
     }
 
     &-round{
@@ -44,6 +78,9 @@
     }
     &.Am-Button-disabled{
         opacity: 0.6;
+        &:active{
+            opacity: 0.6;
+        }
     }
     .Am-loading{
         display: inline-block;

@@ -4,15 +4,13 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-06 14:35:20
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 10:35:11
+ * @LastEditTime: 2020-03-30 11:12:27
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
   <button :disabled="tagDisabled" @click="click" :class="clasess">
-    <span class="Am-loading" v-show="currentLoading">
-      <Icon icon="iconloading" />
-    </span>
+    <Icon v-show="currentLoading" class="Am-loading" icon="iconloading1" />
     <span :class="[this.plain ? `Am-text-color-${this.type}` : '']">
       <template v-if="currentLoading">{{loadingText}}</template>
       <template v-else>

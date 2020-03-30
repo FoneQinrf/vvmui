@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-21 17:32:52
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-10-22 14:25:45
+ * @LastEditTime: 2020-03-30 14:16:02
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -19,8 +19,8 @@
         }
       ]"
   >
-    <Icon v-if="icon" :icon="icon" />
     <div class="Am-Cell-label Am-ellipsis">
+      <Icon style="margin-right: 3px;" v-if="icon" :icon="icon" />
       <slot name="label">{{label}}</slot>
     </div>
     <template v-if="model === 'block'">
@@ -40,7 +40,7 @@
 import Icon from "../Icon";
 import links from "../../mixins/links";
 export default {
-  name: "G-Cell",
+  name: "Cell",
   components: { Icon },
   mixins: [links],
   props: {

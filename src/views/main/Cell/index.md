@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-21 18:04:47
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-22 16:24:59
+ * @LastEditTime: 2020-03-30 15:42:10
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -16,9 +16,10 @@
 ```js
 
 import Vue from 'vue'
-import { Upload } from 'vant'
+import { Cell, CellGroup } from 'am-ui'
 
-Vue.component(Upload.name, Upload)
+Vue.component(Cell)
+Vue.component(CellGroup)
 
 ```
 :::
@@ -29,23 +30,93 @@ Vue.component(Upload.name, Upload)
 ::: demo
 ```html
 
-<G-Cell-Group title="基本用法">
-    <G-Cell label="单元格" context="内容" />
-    <G-Cell label="单元格" context="内容" />
-</G-Cell-Group>
+<Cell-Group title="基本用法">
+    <Cell label="单元格" context="内容" />
+    <Cell label="单元格" context="内容" />
+</Cell-Group>
+
+```
+:::
+
+#### 显示icon
+传入`icon`可显示左边icon
+##### 代码示例
+::: demo
+```html
+
+<Cell-Group title="展示icon">
+    <Cell icon="iconaccount" label="内容一" context="内容" />
+    <Cell icon="iconrejected" label="内容二" context="内容" />
+</Cell-Group>
+
+```
+:::
+
+#### block模式
+默认的都是行内块方式，通过`model`定义block属性可使用非行内块的模式。
+::: demo
+```html
+
+<Cell-Group title="block模式">
+    <Cell model="block" label="内容一" context="内容" />
+    <Cell model="block" label="内容二" context="内容" />
+</Cell-Group>
 
 ```
 :::
 
 #### 导航用法
-传递`to`或者`url`字段可激活导航用法。
+可以通过`url`属性进行 URL 跳转，或通过`to`属性进行路由跳转，跳转默认都是使用push的方式跳转，设置`replace`属性会使用replace的方式跳转。
 ::: demo
 ```html
 
-<G-Cell-Group title="导航用法">
-    <G-Cell label="路由跳转" to="/mobile/Input" />
-    <G-Cell label="页面跳转" url="index.html" />
-</G-Cell-Group>
+<Cell-Group title="导航用法">
+    <Cell label="路由跳转" to="/mobile/Input" />
+    <Cell label="页面跳转" url="index.html" />
+</Cell-Group>
 
 ```
 :::
+
+#### 插槽自定义内容
+::: demo
+```html
+
+<Cell-Group title="插槽自定义内容">
+    <Cell model="block">
+    <template slot="label">自定义label</template>
+    <template>自定义内容</template>
+    </Cell>
+</Cell-Group>
+
+```
+:::
+
+### API
+##### Cell props
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+|------|------------|------------|------------|------------|
+| label  | 左边label内容      | String        | 无 | 无 |
+| context  | 主体内容       | String       | 无 | 无 |
+| icon  | 左边icon，传入会显示      | String       | 无 | 无 |
+| arrow  | 右边箭头是否显示      | Boolean   | 无 | false |
+| model  | `Cell`组件的布局方式       | String       | `default` `block` | default |
+| url  | 点击后跳转的地址    | String       | 无 | 无 |
+| to  | 点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)   | String       | 无 | 无 |
+| replace  | 是否使用replace来跳转    | Boolean       | 无 | false |
+
+##### Cell-Group props
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+|------|------------|------------|------------|------------|
+| title  | 标题文字      | String        | 无 | 无 |
+
+##### Cell solt
+| 名称 | 说明 |
+|------|------------|
+| 无  | 自定义的主体内容 |
+| label | 左边label的自定义内容 |
+
+##### Cell Events
+| 事件名 | 说明 | 回调参数 |
+|------|------------|------------|
+| on-click  | 点击`Cell`时触发 |  无  |

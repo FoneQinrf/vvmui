@@ -88,6 +88,7 @@ Ported by Fabrício Tavares de Oliveira
 .table{
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid #F2F2F4;
 }
 
 .table td,.table th{
@@ -101,5 +102,5 @@ Ported by Fabrício Tavares de Oliveira
 }
 
 .table thead th{
-  text-align: center;
+  text-align: left;
 }

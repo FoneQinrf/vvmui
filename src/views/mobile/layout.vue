@@ -1,10 +1,11 @@
+
 <!--
  * @Descripttion: 
  * @Author: Fone丶峰
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-02 17:54:46
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-29 21:05:01
+ * @LastEditTime: 2020-03-30 09:50:43
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -20,6 +21,11 @@ export default {
     window.routerFnc = name => {
       this.$router.replace(`/mobile/${name}`);
     };
+    /* eslint-disable */
+    if (parent) {
+      parent.window.initState();
+    }
+    /* eslint-disable */
   }
 };
 </script>

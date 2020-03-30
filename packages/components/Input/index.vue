@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-06 09:23:49
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 13:46:49
+ * @LastEditTime: 2020-03-30 17:09:05
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -26,7 +26,10 @@
         @blur="blur"
         @focus="focus"
       />
-      <span @click="click">
+      <div :style="style" class="Am-Input-button">
+        <slot></slot>
+      </div>
+      <span v-if="rightIcon || unity" @click="click">
         <template v-if="rightIcon">
           <Icon :icon="rightIcon" />
         </template>
@@ -39,6 +42,7 @@
 <script>
 import Icon from "../Icon";
 import emitter from "../../utils/emitter";
+import { vwWitdh } from "../../utils";
 export default {
   name: "Input",
   mixins: [emitter],
@@ -116,6 +120,16 @@ export default {
     },
     focus() {
       this.$emit("on-focus", this.currentValue);
+    }
+  },
+  computed: {
+    style() {
+      if (this.$slots.default) {
+        return {
+          flex: `1 1 ${vwWitdh(160)}`
+        };
+      }
+      return {};
     }
   }
 };
