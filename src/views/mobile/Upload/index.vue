@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-22 15:59:48
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 15:01:13
+ * @LastEditTime: 2020-03-30 10:14:17
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -37,7 +37,7 @@
         :quality="0.7"
         :beforeUpload="fileBeforeUpload"
       >
-        <i class="iconfont iconupload"></i>
+        <i class="Am-iconfont iconupload"></i>
       </Upload>
     </section>
     <section class="demo-button-row">

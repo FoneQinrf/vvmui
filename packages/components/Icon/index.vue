@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-16 14:28:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-09-19 14:53:36
+ * @LastEditTime: 2020-03-30 10:01:12
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: "G-Icon",
+  name: "Icon",
   props: {
     icon: {
       type: String
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     clasess() {
-      return `iconfont ${this.icon}`;
+      return `Am-iconfont ${this.icon}`;
     },
     style() {
       const witdh = document.body.clientWidth;

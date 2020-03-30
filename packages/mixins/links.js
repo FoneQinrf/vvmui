@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-09-19 13:30:48
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-09-19 14:27:45
+ * @LastEditTime: 2020-03-30 10:52:46
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -24,8 +24,7 @@ export default {
         handleLink() {
             const router = this.$router;
             if (!router) {
-                console.error("error:There is no router");
-                return
+                throw new Error("error:There is no router");
             }
             const { replace, to, url } = this;
             const model = replace ? 'replace' : 'push';
@@ -35,10 +34,14 @@ export default {
             }
             if (url) {
                 if (replace) {
-                    window.location.replace(url)
+                    if (window) {
+                        window.location.replace(url)
+                    }
                     return
                 }
-                window.location.href = url
+                if (window) {
+                    window.location.href = url
+                }
             }
         }
     }

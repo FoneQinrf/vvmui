@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-05 09:35:58
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-09-04 13:20:21
+ * @LastEditTime: 2020-03-30 11:27:04
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -88,6 +88,9 @@ export default {
     box-sizing: border-box;
     padding-bottom: 66px;
     border-right: 1px solid #f2f2f4;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .left-nav-wrp {
     flex: 0 0 200px;
@@ -129,7 +132,7 @@ export default {
   .description {
     flex: 1;
     box-sizing: border-box;
-    padding: 16px 20px;
+    padding: 16px 28px;
   }
 }
 </style>

@@ -4,18 +4,13 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-05 11:32:26
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-29 21:05:13
+ * @LastEditTime: 2020-03-30 10:13:55
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
 <template>
   <div class="mobile-demo">
-    <iframe
-      class="iframe"
-      frameborder="0"
-      :src="path + '/mobile.html'"
-      ref="iframe"
-    ></iframe>
+    <iframe class="iframe" frameborder="0" :src="path + '/mobile.html'" ref="iframe"></iframe>
   </div>
 </template>
 <script>
@@ -24,6 +19,7 @@ export default {
   data() {
     return {
       name: "",
+      state: false,
       path:
         process.env.NODE_ENV === "development"
           ? window.location.origin
@@ -34,6 +30,12 @@ export default {
     $route(val) {
       const { name } = val;
       this.init(name);
+    },
+    state(val) {
+      if (val) {
+        const { name } = this.$route;
+        this.init(name);
+      }
     }
   },
   methods: {
@@ -47,12 +49,9 @@ export default {
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      setTimeout(() => {
-        const { name } = this.$route;
-        this.init(name);
-      }, 1000);
-    });
+    window.initState = () => {
+      this.state = true;
+    };
   }
 };
 </script>

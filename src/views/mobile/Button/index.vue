@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-09-02 10:22:38
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 16:07:41
+ * @LastEditTime: 2020-03-30 10:20:19
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -75,11 +75,11 @@
       <h3>配合icon使用</h3>
       <div class="cell">
         <Button>
-          <G-Icon icon="iconbianji" style="padding-right:5px" />按 钮
+          <Icon icon="iconbianji" style="padding-right:5px" />按 钮
         </Button>
         <Button>
           按 钮
-          <G-Icon icon="iconcamera" />
+          <Icon icon="iconcamera" />
         </Button>
       </div>
     </section>
