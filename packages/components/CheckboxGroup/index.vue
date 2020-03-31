@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-02 15:40:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 16:47:05
+ * @LastEditTime: 2020-03-31 15:05:00
  * @Description: 
  * @Email: qinrifeng@163.com
  -->
@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     updateModel() {
-      this.childrens = findComponentsDownward(this, "G-Checkbox");
+      this.childrens = findComponentsDownward(this, "Checkbox");
       if (this.childrens) {
         this.childrens.forEach(element => {
           element.model = this.currentValue;

@@ -57,8 +57,8 @@
         </Checkbox-Group>
       </div>
     </section>
-    <section v-if="false" class="demo-button-row">
-      <h3>禁用</h3>
+    <section class="demo-button-row">
+      <h3>CheckboxGroup的type属性</h3>
       <div class="cell">
         <Checkbox-Group type="success" :value="['选项二']">
           <Checkbox label="选项一" />
@@ -74,6 +74,16 @@
           <Checkbox label="选项一" />
           <Checkbox label="选项二" />
           <Checkbox label="选项三" />
+        </Checkbox-Group>
+      </div>
+    </section>
+    <section v-if="false" class="demo-button-row">
+      <h3>测试数字label</h3>
+      <div class="cell">
+        <Checkbox-Group icon="iconradioactive" :value="[0]">
+          <Checkbox :label="0" />
+          <Checkbox :label="1" />
+          <Checkbox :label="2" />
         </Checkbox-Group>
       </div>
     </section>
@@ -94,7 +104,8 @@
 export default {
   data() {
     return {
-      model: ["选项二"]
+      model: ["选项二"],
+      value: 0
     };
   },
   methods: {

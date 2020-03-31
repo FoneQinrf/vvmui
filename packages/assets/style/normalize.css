@@ -22,14 +22,3 @@ button, input, select, textarea {
 a{
     text-decoration:none;
 }
-.Am-iconfont{
-    font-family: "Am-iconfont" !important;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    vertical-align: baseline;
-    display: inline-block;
-}

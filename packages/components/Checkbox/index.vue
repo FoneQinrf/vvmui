@@ -52,7 +52,7 @@ export default {
   },
   props: {
     label: {
-      type: String
+      type: [String, Number, Boolean]
     },
     icon: {
       type: String,
@@ -94,6 +94,9 @@ export default {
       }
       return this.parent[options] ? this.parent[options] : this[options];
     },
+    active() {
+      return typeof this.currentValue !== "undefined";
+    },
     change(e) {
       if (this.parenDisabled) {
         return;
@@ -133,7 +136,7 @@ export default {
     }
   },
   mounted() {
-    const parent = findComponentUpward(this, "G-Checkbox-Group");
+    const parent = findComponentUpward(this, "Checkbox-Group");
     if (parent) {
       this.parent = parent;
       parent.updateModel();

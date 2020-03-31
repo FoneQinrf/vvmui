@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-30 13:34:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 16:33:42
+ * @LastEditTime: 2020-03-31 15:46:46
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -14,6 +14,32 @@
       <h3>基本用法</h3>
       <div class="cell">
         <Radio>单选框</Radio>
+      </div>
+    </section>
+    <section class="demo-button-row">
+      <h3>type类型</h3>
+      <div class="cell">
+        <Radio-Group inline>
+          <Radio type="errer" label="errer" />
+          <Radio type="success" label="success" />
+          <Radio type="warning" label="warning" />
+        </Radio-Group>
+      </div>
+    </section>
+    <section v-if="false" class="demo-button-row">
+      <h3>测试数字</h3>
+      <div class="cell">
+        <Radio-Group v-model="value1" inline>
+          <Radio :label="0" />
+          <Radio :label="1" />
+          <Radio :label="2" />
+        </Radio-Group>
+      </div>
+    </section>
+    <section v-if="false" class="demo-button-row">
+      <h3>测试数字</h3>
+      <div class="cell">
+        <Radio v-model="value1" :label="0">单选框</Radio>
       </div>
     </section>
     <section class="demo-button-row">
@@ -41,10 +67,10 @@
       <div class="cell">
         <Radio-Group inline>
           <Radio label="单选框1">
-            <G-Icon icon="iconaccount" />单选框1
+            <Icon icon="iconaccount" />单选框1
           </Radio>
           <Radio label="单选框2">
-            <G-Icon icon="iconcamera" />单选框2
+            <Icon icon="iconcamera" />单选框2
           </Radio>
         </Radio-Group>
       </div>
@@ -74,7 +100,8 @@ export default {
   data() {
     return {
       value: true,
-      label: "单选框1"
+      label: "单选框1",
+      value1: 0
     };
   }
 };
