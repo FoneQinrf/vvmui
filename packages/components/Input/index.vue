@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-06 09:23:49
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 17:09:05
+ * @LastEditTime: 2020-03-31 11:07:10
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -21,7 +21,6 @@
         class="Am-Input-context"
         :type="type"
         :maxlength="maxlength"
-        :autocomplete="autocomplete"
         @input="change"
         @blur="blur"
         @focus="focus"
@@ -79,17 +78,8 @@ export default {
         return ["text", "password"].includes(value);
       }
     },
-    autocomplete: {
-      type: String,
-      default: "off",
-      validator(value) {
-        return ["off", "on"].includes(value);
-      }
-    },
-    scrollDom: {
-      default() {
-        return document.body;
-      }
+    scrollTarget: {
+      type: String
     }
   },
   data() {
@@ -116,7 +106,10 @@ export default {
     blur() {
       this.$emit("on-blur", this.currentValue);
       this.dispatch("From-Item", "blur", this.currentValue);
-      this.scrollDom.scrollTop = this.scrollDom.scrollTop;
+      const scrollDom = this.scrollTarget
+        ? document.querySelector(this.scrollTarget)
+        : document.body;
+      scrollDom.scrollTop = scrollDom.scrollTop;
     },
     focus() {
       this.$emit("on-focus", this.currentValue);

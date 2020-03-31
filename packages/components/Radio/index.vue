@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-30 13:32:05
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 14:00:57
+ * @LastEditTime: 2020-03-31 15:46:23
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -24,12 +24,12 @@
       class="Am-Radio-input"
       :value="label"
       type="radio"
-      :name="name"
+      name="radio"
       @change="change"
     />
     <input
       v-else
-      :name="name"
+      name="radio"
       :disabled="parentDisabled"
       class="Am-Radio-input"
       type="radio"
@@ -62,10 +62,7 @@ export default {
       default: false
     },
     label: {
-      type: [String, Number]
-    },
-    name: {
-      default: "radio"
+      type: [String, Number, Boolean]
     },
     icon: {
       type: String,
@@ -109,7 +106,7 @@ export default {
     active() {
       return this.parent
         ? this.parent.currentValue === this.label
-        : this.currentValue;
+        : this.currentValue || this.currentValue === 0;
     },
     parentDisabled() {
       const { parentFnc } = this;

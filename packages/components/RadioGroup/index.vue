@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-30 13:32:15
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 16:40:54
+ * @LastEditTime: 2020-03-31 14:14:39
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -24,7 +24,7 @@ export default {
       type: Boolean
     },
     value: {
-      type: [String, Number]
+      type: [String, Number, Boolean]
     },
     disabled: {
       type: Boolean,
