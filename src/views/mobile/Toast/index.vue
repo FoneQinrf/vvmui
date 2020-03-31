@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-09-02 10:22:38
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-03 10:12:45
+ * @LastEditTime: 2020-03-31 16:55:12
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -14,23 +14,23 @@
     <section class="demo-button-row">
       <h3>Toast用法</h3>
       <div class="cell">
-        <G-Button @click="click">Toast info</G-Button>
-        <G-Button @click="success" type="success">Toast success</G-Button>
+        <Button @click="click">Toast info</Button>
+        <Button @click="success" type="success">Toast success</Button>
       </div>
       <div class="cell" style="padding:15px 0 0 0;">
-        <G-Button @click="warning" type="warning">Toast warning</G-Button>
-        <G-Button @click="errer" type="errer">Toast errer</G-Button>
+        <Button @click="warning" type="warning">Toast warning</Button>
+        <Button @click="errer" type="errer">Toast errer</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>自定义用法</h3>
       <div class="cell">
-        <G-Button @click="iconfont">自定义icon</G-Button>
-        <!--<G-Button @click="close">关闭自动关闭</G-Button>-->
-        <G-Button @click="duration">自定义关闭时长</G-Button>
+        <Button @click="iconfont">自定义icon</Button>
+        <!--<Button @click="close">关闭自动关闭</Button>-->
+        <Button @click="duration">自定义关闭时长</Button>
       </div>
       <div class="cell" style="padding:15px 0 0 0;">
-        <G-Button @click="mask">开启蒙层</G-Button>
+        <Button @click="mask">开启蒙层</Button>
       </div>
     </section>
   </demoTop>
