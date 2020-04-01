@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-09-19 15:36:38
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-09-26 16:25:59
+ * @LastEditTime: 2020-04-01 10:24:48
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -13,15 +13,15 @@
     <section class="demo-button-row">
       <h3>Loading用法</h3>
       <div class="cell">
-        <G-Button @click="show">开启Loading</G-Button>
-        <G-Button @click="context">展示内容</G-Button>
+        <Button @click="show">开启Loading</Button>
+        <Button @click="context">展示内容</Button>
       </div>
     </section>
     <section class="demo-button-row">
       <h3>LoadingBar用法</h3>
       <div class="cell">
-        <G-Button @click="start">点击开始</G-Button>
-        <G-Button @click="errer">errer</G-Button>
+        <Button @click="start">点击开始</Button>
+        <Button @click="errer">errer</Button>
       </div>
     </section>
   </demoTop>
