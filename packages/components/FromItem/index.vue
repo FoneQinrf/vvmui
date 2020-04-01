@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-10-22 13:26:00
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 16:08:59
+ * @LastEditTime: 2020-04-01 13:45:07
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  -->
@@ -15,7 +15,7 @@
       <slot name="label">{{label}}</slot>
       <span
         v-if="!cellInline"
-        :class="['Am-From-Item-statusIcon',{'success': ruleState === 'success'},{'cellInline':!cellInline}]"
+        :class="['Am-From-Item-statusIcon',ruleState,{'cellInline':!cellInline}]"
         v-show="statusIcon"
       >
         <transition name="fade" mode="out-in">
@@ -30,6 +30,7 @@
         <label class="Am-From-Item-message Am-ellipsis" v-if="ruleState === 'error'">{{message}}</label>
       </transition>
       <span
+        v-if="cellInline"
         :class="['Am-From-Item-statusIcon',ruleState,{'loading':loadingShow},{'cellInline':!cellInline}]"
         v-show="statusIcon"
       >
@@ -118,7 +119,7 @@ export default {
     style() {
       if (this.parent) {
         return {
-          width: vwWitdh(
+          width: !this.cellInline ? '100%' : vwWitdh(
             this.labelWidth ? this.labelWidth : this.parent.labelWidth
           )
         };

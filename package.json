@@ -14,7 +14,7 @@
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src packages",
     "build": "node build/build.gulp.js && npm run build:package && npm run build:style && node build/build.js",
     "serve": "concurrently \"npm run gulp:dev\" \"npm run dev\" \"npm run dev:package\"",
@@ -26,6 +26,9 @@
   },
   "dependencies": {
     "async-validator": "^3.2.4",
+    "chai": "^4.2.0",
+    "sinon": "^9.0.1",
+    "sinon-chai": "^3.5.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -97,6 +100,7 @@
     "vue-markdown-loader": "^2.4.1",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
+    "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
@@ -134,10 +138,12 @@
   "lint-staged": {
     "*.js": [
       "npm run lint",
+      "npm run test",
       "git add"
     ],
     "*.vue": [
       "npm run lint",
+      "npm run test",
       "git add"
     ]
   }
