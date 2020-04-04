@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-23 15:09:29
+ * @LastEditTime: 2020-04-02 10:05:28
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -62,12 +62,16 @@ module.exports = [
                         path: '/main/NumberInput'
                     },
                     {
-                        name: 'Radio - 单选',
-                        path: '/main/Radio'
+                        name: 'Switch - 开关',
+                        path: '/main/Switch'
                     },
                     {
                         name: 'Checkbox - 多选',
                         path: '/main/Checkbox'
+                    },
+                    {
+                        name: 'Radio - 单选',
+                        path: '/main/Radio'
                     },
                     {
                         name: 'Picker - 选择器',

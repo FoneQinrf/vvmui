@@ -1,0 +1,49 @@
+.Am-Switch{
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background: @B4;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+    &-disabled{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, .4);
+        border-radius: 30px;
+    }
+    &.color-active{
+        &.default{
+            background: @A1;
+        }
+        &.success{
+            background: @A3;
+        }
+        &.warning{
+            background: @A4;
+        }
+        &.errer{
+            background: @A2;
+        }
+    }
+    &-radius{
+        display: inline-block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: #fff;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s;
+        &.active{
+            left: 100%;
+            margin-left: -28px;
+        }
+        &.close{
+            left: 2px;
+        }
+    }
+}
