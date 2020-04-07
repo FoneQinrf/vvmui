@@ -1,11 +1,13 @@
 /*
  * @Author: Fone丶峰
- * @Date: 2020-02-24 09:54:33
+ * @Date: 2020-03-27 20:09:04
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 14:34:00
+ * @LastEditTime: 2020-04-07 13:40:55
  * @Description: 
- * @Email: qinrifeng@Am.com.cn
+ * @email: 15921712019@163.com
+ * @gitHub: https://github.com/FoneQinrf
  */
+
 export const weekList = [{ name: '日', class: 'Am-Calendar-week-Weekend' },
 { name: '一', class: '' },
 { name: '二', class: '' },

@@ -1,11 +1,13 @@
 /*
  * @Author: Fone丶峰
- * @Date: 2020-03-03 15:48:53
+ * @Date: 2020-03-27 20:09:04
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 14:35:33
+ * @LastEditTime: 2020-04-07 13:40:49
  * @Description: 
- * @Email: qinrifeng@Am.com.cn
+ * @email: 15921712019@163.com
+ * @gitHub: https://github.com/FoneQinrf
  */
+
 import { weeks } from "./utils";
 const Time = new Date();
 const timestamp = new Date(

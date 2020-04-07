@@ -1,11 +1,13 @@
 /*
  * @Author: Fone丶峰
- * @Date: 2020-03-05 14:18:50
+ * @Date: 2020-03-27 20:09:04
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-16 13:10:58
+ * @LastEditTime: 2020-04-07 13:41:51
  * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @email: 15921712019@163.com
+ * @gitHub: https://github.com/FoneQinrf
  */
+
 export default {
     props: {
         size: {     //图片超过指定大小不让上传
