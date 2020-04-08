@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-21 18:04:29
+ * @Date: 2019-10-22 14:53:18
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 14:17:51
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:07:44
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <demoTop gray text="Cell">
     <Cell-Group title="基本用法">

@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 11:32:26
+ * @Date: 2020-03-30 09:21:57
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 10:13:55
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:06:23
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div class="mobile-demo">
     <iframe class="iframe" frameborder="0" :src="path + '/mobile.html'" ref="iframe"></iframe>

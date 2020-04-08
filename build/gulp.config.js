@@ -1,13 +1,12 @@
 /*
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-02 18:12:33
+ * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-09-26 15:22:10
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 09:48:39
+ * @Description: 
+ * @Email: qinrifeng@163.com
  */
+
 const { watch, task, parallel } = require('gulp')
 const { entries, mobileDemo, packagesWatch, packagesWatchStyle } = require('./utils.js')
 

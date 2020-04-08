@@ -2,10 +2,12 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 17:39:16
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-03 10:45:24
- * @Description: 
+ * @LastEditTime: 2020-04-08 10:04:07
+ * @Description: msg
  * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div :class="['Am-Switch',active ? 'color-active' : '',type]" @click="click">
     <span :class="['Am-Switch-radius',active ? 'active' : 'close']"></span>

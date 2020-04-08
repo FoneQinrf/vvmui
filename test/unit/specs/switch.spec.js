@@ -2,16 +2,20 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-02 18:03:15
+ * @LastEditTime: 2020-04-08 10:19:32
  * @Description: 
  * @Email: qinrifeng@163.com
  */
-//import chai, { expect } from 'chai'
+
 import { mount } from 'vue-test-utils'
 import Switch from '@/../packages/components/Switch/index.vue'
 import Vue from "vue";
 
 describe('Switch.vue', () => {
+    it('Switch存在', () => {
+        const wrapper = mount(Switch)
+        expect(wrapper.exists()).toBe(true)
+    })
     it('type传入success', () => {
         const wrapper = mount(Switch, {
             propsData: {

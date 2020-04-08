@@ -2,10 +2,12 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-25 16:10:01
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 13:21:43
- * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @LastEditTime: 2020-04-08 10:08:19
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div class="form">
     <h3>表单校验</h3>

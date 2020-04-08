@@ -1,3 +1,4 @@
+import ActionSheet from "./components/ActionSheet";
 import Backtop from "./components/Backtop";
 import Button from "./components/Button";
 import Calendar from "./components/Calendar";
@@ -20,7 +21,7 @@ import Loading from "./components/~Loading";
 import Toast from "./components/~Toast";
  
 
-const components = [Backtop,Button,Calendar,Cell,CellGroup,Checkbox,CheckboxGroup,From,FromItem,Icon,Input,Layer,NumberInput,Picker,Radio,RadioGroup,Switch,Upload]
+const components = [ActionSheet,Backtop,Button,Calendar,Cell,CellGroup,Checkbox,CheckboxGroup,From,FromItem,Icon,Input,Layer,NumberInput,Picker,Radio,RadioGroup,Switch,Upload]
 
 const install = function (Vue) {
       if (install.installed) return;

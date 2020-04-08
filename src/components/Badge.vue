@@ -2,10 +2,12 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 13:29:54
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 13:33:19
- * @Description: 
+ * @LastEditTime: 2020-04-08 10:06:38
+ * @Description: msg
  * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <span class="badge">{{text}}</span>
 </template>

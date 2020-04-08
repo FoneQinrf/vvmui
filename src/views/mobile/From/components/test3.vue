@@ -2,10 +2,12 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-26 11:20:44
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 15:47:36
- * @Description: 
+ * @LastEditTime: 2020-04-08 10:08:26
+ * @Description: msg
  * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div class="form">
     <h3>自定义校验</h3>

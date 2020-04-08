@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-16 14:28:02
+ * @Date: 2019-10-22 11:32:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 10:01:12
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:00:38
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <i :class="clasess" :style="style"></i>
 </template>

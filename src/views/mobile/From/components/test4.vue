@@ -2,18 +2,12 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-26 15:59:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 15:03:49
- * @Description: 
+ * @LastEditTime: 2020-04-08 10:08:33
+ * @Description: msg
  * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
-<!--
- * @Author: Fone丶峰
- * @Date: 2020-03-26 11:20:44
- * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 16:48:49
- * @Description: 
- * @Email: qinrifeng@163.com
- -->
+
 <template>
   <div class="form">
     <h3>可用于表单校验的组件</h3>

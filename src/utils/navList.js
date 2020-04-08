@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-02 10:05:28
+ * @LastEditTime: 2020-04-08 11:29:53
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -72,6 +72,10 @@ module.exports = [
                     {
                         name: 'Radio - 单选',
                         path: '/main/Radio'
+                    },
+                    {
+                        name: 'ActionSheet - 上拉菜单',
+                        path: '/main/ActionSheet'
                     },
                     {
                         name: 'Picker - 选择器',
