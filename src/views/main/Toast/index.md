@@ -12,7 +12,7 @@
 ---
 
 #### 使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue';
@@ -21,11 +21,11 @@ import { Toast } from 'am-ui';
 Vue.use(Toast);
 
 ```
-:::
+
 
 #### Toast用法
 
-::: demo
+
 ``` javascript
 
 Toast.info("提示消息");
@@ -34,11 +34,11 @@ Toast.warning("警告");
 Toast.errer("错误");
 
 ```
-:::
+
 
 #### 自定义用法
 
-::: demo
+
 ``` javascript
 
 Toast.success({
@@ -58,7 +58,7 @@ Toast.success({
 });
 
 ```
-:::
+
 
 ### API
 | 方法 | 说明 | 参数 | 返回值 |

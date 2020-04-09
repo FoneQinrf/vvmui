@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-02 10:04:13
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:12:59
+ * @LastEditTime: 2020-04-09 15:43:24
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,7 +12,7 @@
 ---
 
 #### 按需引入使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue'
@@ -21,11 +21,11 @@ import { Switch } from 'am-ui'
 Vue.component(Switch)
 
 ```
-:::
+
 
 #### 基础用法
 `Switch`支持`default`、`success`、`warning`、`errer`四种类型，默认`default`
-::: demo
+
 ```html
 
 <Am-Switch />
@@ -34,10 +34,10 @@ Vue.component(Switch)
 <Am-Switch type="errer" />
 
 ```
-:::
+
 
 #### 绑定值
-::: demo
+
 ```html
 <template>
     <Am-Switch v-model="value" />
@@ -54,12 +54,12 @@ export default {
 </script>
 
 ```
-:::
+
 
 #### 自定义返回值
 
 通过`active-value`和`inactive-value`两个字段可以自定义选中和为选中的返回值
-::: demo
+
 ```html
 
 <template>
@@ -77,11 +77,11 @@ export default {
 </script>
 
 ```
-:::
+
 
 #### 禁用
 
-::: demo
+
 ```html
 
 <template>
@@ -102,7 +102,7 @@ export default {
 </script>
 
 ```
-:::
+
 
 ### API
 ##### Switch props
@@ -114,7 +114,7 @@ export default {
 | inactive-value | `Switch` 关闭时的值       | String/Number/Boolean   | 无 | 无 |
 | disabled  | 是否禁用`Switch`      | Boolean       | 无 | 无 |
 
-#### Switch Events
+##### Switch Events
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | on-change  | 状态发生变化时的回调函数 |  新状态的值  |

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:49:05
+ * @LastEditTime: 2020-04-09 11:51:00
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -12,7 +12,6 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-
 const MarkdownItContainer = require('markdown-it-container')
 const striptags = require('./strip-dom')
 
@@ -131,8 +130,12 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        loader: 'vue-markdown-loader',
-        options: vueMarkdown
+        use: [
+          { loader: 'vue-loader' },
+          {
+            loader: require.resolve('./markdownLoader')
+          }
+        ]
       }/**,
       {
         test: /\.css$/,

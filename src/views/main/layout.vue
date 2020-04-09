@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:13:19
+ * @LastEditTime: 2020-04-09 15:06:02
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -121,8 +121,9 @@ export default {
     }
   }
   .main {
-    flex: 1;
+    flex: 1 1 auto;
     display: flex;
+    width: 100%;
   }
   .demo-wrp {
     flex: 0 0 320px;
@@ -130,9 +131,9 @@ export default {
     height: 568px;
   }
   .description {
-    flex: 1;
-    box-sizing: border-box;
+    flex: 1 1 auto;
     padding: 16px 28px;
+    box-sizing: border-box;
   }
 }
 </style>

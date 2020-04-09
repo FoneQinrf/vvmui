@@ -12,7 +12,7 @@
 ---
 
 #### 使用方式
-::: demo
+
 ```js
 
 import Vue from 'vue'
@@ -22,12 +22,12 @@ Vue.component(Cell)
 Vue.component(CellGroup)
 
 ```
-:::
+
 
 #### 基本用法
 ```Cell```可单独使用，也可配合```Cell-Group```使用，```Cell-Group```为```Cell```提供单元格分割线。
 ##### 代码示例
-::: demo
+
 ```html
 
 <Cell-Group title="基本用法">
@@ -36,12 +36,12 @@ Vue.component(CellGroup)
 </Cell-Group>
 
 ```
-:::
+
 
 #### 显示icon
 传入`icon`可显示左边icon
 ##### 代码示例
-::: demo
+
 ```html
 
 <Cell-Group title="展示icon">
@@ -50,11 +50,11 @@ Vue.component(CellGroup)
 </Cell-Group>
 
 ```
-:::
+
 
 #### block模式
 默认的都是行内块方式，通过`model`定义block属性可使用非行内块的模式。
-::: demo
+
 ```html
 
 <Cell-Group title="block模式">
@@ -63,11 +63,11 @@ Vue.component(CellGroup)
 </Cell-Group>
 
 ```
-:::
+
 
 #### 导航用法
 可以通过`url`属性进行 URL 跳转，或通过`to`属性进行路由跳转，跳转默认都是使用push的方式跳转，设置`replace`属性会使用replace的方式跳转。
-::: demo
+
 ```html
 
 <Cell-Group title="导航用法">
@@ -76,10 +76,10 @@ Vue.component(CellGroup)
 </Cell-Group>
 
 ```
-:::
+
 
 #### 插槽自定义内容
-::: demo
+
 ```html
 
 <Cell-Group title="插槽自定义内容">
@@ -90,7 +90,7 @@ Vue.component(CellGroup)
 </Cell-Group>
 
 ```
-:::
+
 
 ### API
 ##### Cell props

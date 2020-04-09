@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:12:20
+ * @LastEditTime: 2020-04-09 15:42:41
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,7 +12,7 @@
 ---
 
 #### 使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue'
@@ -21,33 +21,33 @@ import { Input } from 'am-ui'
 Vue.component(Input)
 
 ```
-:::
+
 
 #### 基础用法
 
-::: demo
+
 ```html
 
 <Input />
 
 ```
-:::
+
 
 #### 使用icon
 
 通过使用`icon`属性显示左边icon
-::: demo
+
 ```html
 
 <Input icon="iconaccount" />
 
 ```
-:::
+
 
 #### 设置右边展示icon
 
 通过使用`right-icon`属性显示右边icon
-::: demo
+
 ```html
 
 <template>
@@ -65,34 +65,34 @@ export default {
 </script>
 
 ```
-:::
+
 
 #### 展示单位
 
 通过使用`unity`属性可设置单位
-::: demo
+
 ```html
 
 <Input unity="元" />
 
 ```
-:::
+
 
 #### 禁用
 
 通过使用`disabled`属性可禁用输入框
-::: demo
+
 ```html
 
 <Input disabled unity="元" />
 
 ```
-:::
+
 
 #### 配合按钮使用
 
 通过插槽配合按钮使用
-::: demo
+
 ```html
 
 <Input>
@@ -102,7 +102,7 @@ export default {
 </Input>
 
 ```
-:::
+
 
 ### API
 ##### Input props
@@ -118,12 +118,12 @@ export default {
 | type  | input原生type属性    | String       | `text` `password` | text |
 | scroll-target  | 使用scroll的dom节点名称，`ios系统键盘关闭不重绘页面scroll的可使用`    | String  | 无 | 无 |
 
-#### Input solt
+##### Input solt
 | 名称 | 说明 |
 |------|------------|
 | 无  | 输入框右边的内容 |
 
-#### Input Events
+##### Input Events
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | on-click  | 点击右边icon触发 |  无  |

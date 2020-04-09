@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 18:13:54
+ * @LastEditTime: 2020-04-09 15:14:43
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -33,7 +33,7 @@
     <Cell-Group title="禁用部分选项">
       <Cell label="请选择">
         <Action-Sheet
-          :data="[{label:'选项一',value:1},{label:'选项二',value:2,disabled:true},{label:'选项三',value:2}]"
+          :data="list"
         />
       </Cell>
     </Cell-Group>
@@ -46,7 +46,7 @@
       <Cell label="请选择">
         <Action-Sheet
           @on-confirm="confirm"
-          :data="[{label:'选项一',value:1},{label:'选项二',value:2,disabled:true},{label:'选项三',value:2}]"
+          :data="list"
         />
       </Cell>
     </Cell-Group>
@@ -57,7 +57,12 @@ export default {
   data() {
     return {
       value: "",
-      data: []
+      data: [],
+      list: [
+        { label: "选项一", value: 1 },
+        { label: "选项二", value: 2, disabled: true },
+        { label: "选项三", value: 2 }
+      ]
     };
   },
   methods: {

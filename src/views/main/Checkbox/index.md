@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-02 15:44:14
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:12:07
+ * @LastEditTime: 2020-04-09 15:42:33
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,7 +12,7 @@
 ---
 
 #### 使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue'
@@ -22,20 +22,20 @@ Vue.component(Checkbox)
 Vue.component(CheckboxGroup)
 
 ```
-:::
+
 
 #### 基础用法
-::: demo
+
 ```html
 
 <Checkbox>选项</Checkbox>
 
 ```
-:::
+
 
 #### type类型
 `type`类型提供`default`、`errer`、`success`、`warning`四种可选，默认`default`
-::: demo
+
 ```html
 
 <Checkbox-Group>
@@ -46,11 +46,11 @@ Vue.component(CheckboxGroup)
 </Checkbox-Group>
 
 ```
-:::
+
 
 #### 配合CheckboxGroup使用
 
-::: demo
+
 ```html
 
 <Checkbox-Group>
@@ -60,11 +60,11 @@ Vue.component(CheckboxGroup)
 </Checkbox-Group>
 
 ```
-:::
+
 
 #### v-model绑定
 
-::: demo
+
 ```html
 
 <template>
@@ -86,12 +86,12 @@ export default {
 </script>
 
 ```
-:::
+
 
 #### 禁用
 
 可通过`disabled`属性禁用`Checkbox`组件
-::: demo
+
 ```html
 
 <Checkbox-Group :value="['选项二']">
@@ -101,12 +101,12 @@ export default {
 </Checkbox-Group>
 
 ```
-:::
+
 
 #### CheckboxGroup的type属性
 
 也可通过`CheckboxGroup`组件的`type`控制所有`Checkbox`组件的`type`，`disabled`属性和`icon`属性也可这样操作
-::: demo
+
 ```html
 
 <Checkbox-Group type="success" :value="['选项二']">
@@ -116,11 +116,11 @@ export default {
 </Checkbox-Group>
 
 ```
-:::
+
 
 #### change事件
 
-::: demo
+
 ```html
 
 <template>
@@ -142,7 +142,7 @@ export default {
 </script>
 
 ```
-:::
+
 
 ### API
 ##### Checkbox props
@@ -164,17 +164,17 @@ export default {
 | disabled  | 设置该属性可控制Checkbox的disabled属性       | Boolean       | 无 | 无 |
 | icon  | 设置该属性可控制Checkbox的icon属性    | String       | 无 | 无 |
 
-#### Checkbox solt
+##### Checkbox solt
 | 名称 | 说明 |
 |------|------------|
 | 无  | 自定义主体内容 |
 
-#### Checkbox Events
+##### Checkbox Events
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | on-change | Checkbox变化时触发，嵌套CheckboxGroup组件使用时无效 |  选中的label值  |
 
-#### CheckboxGroup Events
+##### CheckboxGroup Events
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | on-change | 绑定值变化时触发 |  选中的label值数组  |

@@ -12,7 +12,7 @@
 ---
 
 #### 使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue';
@@ -21,11 +21,11 @@ import { Loading } from 'am-ui';
 Vue.use(Loading);
 
 ```
-:::
+
 
 #### Loading用法
 
-::: demo
+
 ``` javascript
 
 Loading.spin.show();
@@ -39,11 +39,11 @@ setTimeout(() => {
 }, 3000);
 
 ```
-:::
+
 
 #### LoadingBar用法
 
-::: demo
+
 ``` javascript
 
 Loading.loadingBar.start();
@@ -57,7 +57,7 @@ setTimeout(() => {
 }, 10000);
 
 ```
-:::
+
 
 ### API
 | 方法 | 说明 | 参数 | 返回值 |

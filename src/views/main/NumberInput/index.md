@@ -12,7 +12,7 @@
 ---
 
 #### 使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue'
@@ -21,39 +21,39 @@ import { NumberInput } from 'am-ui'
 Vue.component(NumberInput)
 
 ```
-:::
+
 
 #### 基础用法
 输入框内容默认靠左展示，可通过`align`属性设置内容靠右显示，`center`居中显示，因为整个输入框都是通过模拟实现，随意通过样式修改可能会出现问题
-::: demo
+
 ```html
 
 <Number-Input align="right" />
 
 ```
-:::
+
 
 #### 显示单位
 
 通过使用`unity`属性显示单位
-::: demo
+
 ```html
 
 <Number-Input unity="元" />
 
 ```
-:::
+
 
 #### 禁用
 
 通过使用`disabled`可禁用
-::: demo
+
 ```html
 
 <Number-Input disabled />
 
 ```
-:::
+
 
 ### API
 ##### NumberInput props
