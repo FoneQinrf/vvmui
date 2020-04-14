@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 11:04:50
+ * @LastEditTime: 2020-04-14 18:14:28
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -23,7 +23,7 @@ describe('ActionSheet.vue', () => {
                 value: null
             }
         })
-        expect(wrapper.vm.placeholderText.flag).toBe(false)
+        expect(wrapper.vm.placeholderText).toBe("")
     })
 
     it('value传入空字符串处理正常', () => {
@@ -32,7 +32,7 @@ describe('ActionSheet.vue', () => {
                 value: ""
             }
         })
-        expect(wrapper.vm.placeholderText.flag).toBe(false)
+        expect(wrapper.vm.placeholderText).toBe("")
     })
 
     it('value传入0处理正常', () => {
@@ -41,7 +41,7 @@ describe('ActionSheet.vue', () => {
                 value: 0
             }
         })
-        expect(wrapper.vm.placeholderText.flag).toBe(true)
+        expect(wrapper.vm.placeholderText).toBe("")
     })
 
     it('传入value、data数据正常', () => {
@@ -52,8 +52,7 @@ describe('ActionSheet.vue', () => {
             }
         })
         expect(wrapper.vm.currentValue).toBe(0)
-        expect(wrapper.vm.placeholderText.flag).toBe(true)
-        expect(wrapper.vm.placeholderText.placeholder).toBe('男')
+        expect(wrapper.vm.placeholderText).toBe('男')
     })
 
     it('禁用正常', async () => {

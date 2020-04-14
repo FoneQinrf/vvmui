@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:02:41
+ * @LastEditTime: 2020-04-14 18:09:53
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -59,7 +59,7 @@ export const initIndex = (options) => {
  * @param {*} params 
  */
 function placeholderArray(params) {
-    const { index, list, placeholder, label, value } = params;
+    const { index, list, label, value } = params;
     let context = '';
     if (value.length > 0) {
         if (index.length && list.length) {
@@ -69,7 +69,6 @@ function placeholderArray(params) {
             return context
         }
     }
-    return placeholder
 }
 
 /**

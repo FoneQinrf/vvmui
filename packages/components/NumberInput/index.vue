@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 13:21:17
+ * @LastEditTime: 2020-04-14 17:56:33
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,15 +13,8 @@
     <div class="Am-Number-Input-icon" v-if="icon">
       <Icon :icon="icon" :size="16" />
     </div>
-    <div @click="focus" class="Am-Number-Input-input Am-ellipsis">
-      <div
-        v-if="currentValue"
-        :class="['Am-Number-Input-text',align,{'disabled':disabled}]"
-      >{{currentValue}}</div>
-      <div
-        :class="['Am-Number-Input-placeholder',align,{'disabled':disabled}]"
-        v-else
-      >{{placeholder}}</div>
+    <div @click="focus" :class="['Am-Number-Input-input', align]">
+      <Input readonly :disabled="disabled" :placeholder="placeholder" v-model="currentValue" />
     </div>
     <div v-if="unity" class="Am-Number-Input-unity">{{unity}}</div>
     <keyboard
@@ -42,11 +35,12 @@ import bus from "../../utils/bus";
 import keyboard from "./component/keyboard";
 import Icon from "../Icon";
 import emitter from "../../utils/emitter";
+import Input from "../Input";
 
 export default {
   name: "Number-Input",
   mixins: [emitter],
-  components: { Icon, keyboard },
+  components: { Icon, keyboard, Input },
   props: {
     value: {
       type: [Number, String],
@@ -135,8 +129,8 @@ export default {
           0,
           this.currentValue.length - 1
         );
-        this.$emit("input", Number(this.currentValue));
-        this.$emit("on-remove", Number(this.currentValue));
+        this.$emit("input", this.currentValue ? Number(this.currentValue) : '');
+        this.$emit("on-remove", this.currentValue ? Number(this.currentValue) : '');
         return;
       }
       this.$emit("on-remove", "");

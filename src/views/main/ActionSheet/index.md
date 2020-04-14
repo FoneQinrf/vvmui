@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 13:23:50
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:41:32
+ * @LastEditTime: 2020-04-14 18:01:07
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -85,7 +85,7 @@ export default {
 #### 异步数据
 ##### 代码示例
 
-```javascript
+```html
 
 <template>
     <Action-Sheet @on-show="show" :data="data" />
@@ -110,13 +110,14 @@ export default {
   }
 };
 </script>
+
 ```
 
 
 #### 事件
 ##### 代码示例
 
-``` Javascript
+```html
 
 <template>
     <Action-Sheet @on-confirm="confirm" :data="list"/>
@@ -140,6 +141,7 @@ export default {
   }
 };
 </script>
+
 ```
 
 
