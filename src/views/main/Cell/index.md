@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:11:58
+ * @LastEditTime: 2020-04-14 11:04:56
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -54,7 +54,7 @@ Vue.component(CellGroup)
 
 #### block模式
 默认的都是行内块方式，通过`model`定义block属性可使用非行内块的模式。
-
+##### 代码示例
 ```html
 
 <Cell-Group title="block模式">
@@ -67,7 +67,7 @@ Vue.component(CellGroup)
 
 #### 导航用法
 可以通过`url`属性进行 URL 跳转，或通过`to`属性进行路由跳转，跳转默认都是使用push的方式跳转，设置`replace`属性会使用replace的方式跳转。
-
+##### 代码示例
 ```html
 
 <Cell-Group title="导航用法">
@@ -79,7 +79,7 @@ Vue.component(CellGroup)
 
 
 #### 插槽自定义内容
-
+##### 代码示例
 ```html
 
 <Cell-Group title="插槽自定义内容">
@@ -104,6 +104,7 @@ Vue.component(CellGroup)
 | url  | 点击后跳转的地址    | String       | 无 | 无 |
 | to  | 点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)   | String       | 无 | 无 |
 | replace  | 是否使用replace来跳转    | Boolean       | 无 | false |
+| reture-value | 点击时`on-click`事件需要返回的数据   | 无       | 无 | 无 |
 
 ##### Cell-Group props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |

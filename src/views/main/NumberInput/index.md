@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:12:38
+ * @LastEditTime: 2020-04-14 13:22:20
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -24,7 +24,7 @@ Vue.component(NumberInput)
 
 
 #### 基础用法
-输入框内容默认靠左展示，可通过`align`属性设置内容靠右显示，`center`居中显示，因为整个输入框都是通过模拟实现，随意通过样式修改可能会出现问题
+输入框内容默认靠左展示，可通过`align`属性设置内容靠右显示，`center`居中显示
 
 ```html
 
@@ -39,7 +39,7 @@ Vue.component(NumberInput)
 
 ```html
 
-<Number-Input unity="元" />
+<Number-Input align="right" unity="元" />
 
 ```
 
@@ -68,7 +68,7 @@ Vue.component(NumberInput)
 | maxlength  | 最大输入长度    | Number       | 无 | 20 |
 | confirm-text  | 数字键盘确认按钮的文字    | String       | 无 | 确认 |d
 | is-decimal  |  是否需要小数点 | Boolean  | 无 | true |
-| negative-number  |  是否需要 - 按键 | Boolean  | 无 | true |
+| negative-number  |  是否需要负值 `-` 按键 | Boolean  | 无 | true |
 
 #### NumberInput Events
 | 事件名 | 说明 | 回调参数 |

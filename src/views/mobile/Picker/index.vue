@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:09:16
+ * @LastEditTime: 2020-04-13 16:39:02
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -70,14 +70,14 @@
 </template>
 
 <script>
-import Cascader from "./demo/Cascader";
-import setValue from "./demo/setValue";
-import Basics from "./demo/Basics";
-import Model from "./demo/model";
-import disabled from "./demo/disabled";
-import asyncOptions from "./demo/asyncOptions";
-import asyncValue from "./demo/asyncValue";
-import asyncModel from "./demo/asyncModel";
+import Cascader from "./demo/Cascader.vue";
+import setValue from "./demo/setValue.vue";
+import Basics from "./demo/Basics.vue";
+import Model from "./demo/model.vue";
+import disabled from "./demo/disabled.vue";
+import asyncOptions from "./demo/asyncOptions.vue";
+import asyncValue from "./demo/asyncValue.vue";
+import asyncModel from "./demo/asyncModel.vue";
 export default {
   components: {
     Cascader,

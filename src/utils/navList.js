@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 11:29:53
+ * @LastEditTime: 2020-04-14 13:24:06
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -47,6 +47,10 @@ module.exports = [
                     {
                         name: 'Cell - 单元格',
                         path: '/main/Cell'
+                    },
+                    {
+                        name: 'Card - 卡片',
+                        path: '/main/Card'
                     }
                 ]
             },

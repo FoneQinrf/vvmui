@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:01:44
+ * @LastEditTime: 2020-04-14 13:56:48
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -74,7 +74,7 @@ export default {
       this.$emit("on-remove");
     },
     close() {
-      this.$emit("on-close", false);
+      this.$emit("input", false);
     }
   },
   props: {

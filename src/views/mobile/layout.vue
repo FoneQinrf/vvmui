@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 09:21:57
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:10:59
+ * @LastEditTime: 2020-04-14 10:34:01
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -29,8 +29,15 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="less">
 body {
   user-select: none;
+}
+#app {
+  overflow-y: auto;
+  min-height: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

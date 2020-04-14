@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:09:08
+ * @LastEditTime: 2020-04-14 13:19:50
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -17,7 +17,7 @@
     </Cell-Group>
     <Cell-Group title="带单位">
       <Cell label="金额">
-        <Number-Input unity="元" />
+        <Number-Input align="right" unity="元" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="使用icon">

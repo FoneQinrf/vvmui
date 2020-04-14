@@ -2,14 +2,14 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 17:39:16
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:04:07
+ * @LastEditTime: 2020-04-14 15:02:58
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <div :class="['Am-Switch',active ? 'color-active' : '',type]" @click="click">
+  <div :class="['Am-Switch',active ? 'color-active' : '', type]" @click="click">
     <span :class="['Am-Switch-radius',active ? 'active' : 'close']"></span>
     <div v-if="disabled" class="Am-Switch-disabled"></div>
   </div>
@@ -20,7 +20,7 @@ import { type } from "../../mixins/props";
 import emitter from "../../utils/emitter";
 export default {
   name: "Am-Switch",
-  mixins: [type,emitter],
+  mixins: [type, emitter],
   props: {
     value: {
       type: [Number, Boolean, String]

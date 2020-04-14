@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 14:53:18
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:58:38
+ * @LastEditTime: 2020-04-14 10:53:14
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -62,7 +62,8 @@ export default {
       validator: function(value) {
         return ["default", "block"].includes(value);
       }
-    }
+    },
+    retureValue: {}
   },
   computed: {
     clasess() {
@@ -76,8 +77,8 @@ export default {
   },
   methods: {
     click() {
-      this.$emit("on-click");
       this.handleLink();
+      this.$emit("on-click", this.retureValue);
     }
   }
 };
