@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:42:41
+ * @LastEditTime: 2020-04-14 20:30:18
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -87,23 +87,6 @@ export default {
 <Input disabled unity="元" />
 
 ```
-
-
-#### 配合按钮使用
-
-通过插槽配合按钮使用
-
-```html
-
-<Input>
-  <template>
-    <Button type="text">发送验证码</Button>
-  </template>
-</Input>
-
-```
-
-
 ### API
 ##### Input props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
@@ -117,11 +100,6 @@ export default {
 | maxlength  | 最大输入长度    | Number       | 无 | 无 |
 | type  | input原生type属性    | String       | `text` `password` | text |
 | scroll-target  | 使用scroll的dom节点名称，`ios系统键盘关闭不重绘页面scroll的可使用`    | String  | 无 | 无 |
-
-##### Input solt
-| 名称 | 说明 |
-|------|------------|
-| 无  | 输入框右边的内容 |
 
 ##### Input Events
 | 事件名 | 说明 | 回调参数 |

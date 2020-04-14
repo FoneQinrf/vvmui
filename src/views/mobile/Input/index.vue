@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:08:45
+ * @LastEditTime: 2020-04-14 20:29:51
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -21,7 +21,7 @@
       </Cell>
     </Cell-Group>
     <Cell-Group title="设置右边展示icon">
-      <Cell label="手机号码">
+      <Cell label="内容">
         <Input @on-click="click" right-icon="iconinfo" />
       </Cell>
     </Cell-Group>
@@ -31,19 +31,8 @@
       </Cell>
     </Cell-Group>
     <Cell-Group title="禁用">
-      <Cell label="金额">
+      <Cell label="收入">
         <Input disabled unity="元" />
-      </Cell>
-    </Cell-Group>
-    <Cell-Group title="插入按钮">
-      <Cell label="短信验证码">
-        <template>
-          <Input>
-            <template>
-              <Button type="text">发送验证码</Button>
-            </template>
-          </Input>
-        </template>
       </Cell>
     </Cell-Group>
   </demoTop>
