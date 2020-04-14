@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:14:43
+ * @LastEditTime: 2020-04-14 17:51:28
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -32,9 +32,7 @@
     </Cell-Group>
     <Cell-Group title="禁用部分选项">
       <Cell label="请选择">
-        <Action-Sheet
-          :data="list"
-        />
+        <Action-Sheet :data="list" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="异步数据">
@@ -44,10 +42,7 @@
     </Cell-Group>
     <Cell-Group title="事件">
       <Cell label="请选择">
-        <Action-Sheet
-          @on-confirm="confirm"
-          :data="list"
-        />
+        <Action-Sheet @on-confirm="confirm" :data="list" />
       </Cell>
     </Cell-Group>
   </demoTop>
@@ -80,3 +75,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.Am-CellGroup >>> .Am-Input-context {
+  text-align: right;
+}
+</style>

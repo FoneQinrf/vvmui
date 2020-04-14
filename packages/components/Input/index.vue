@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:00:55
+ * @LastEditTime: 2020-04-14 17:39:08
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -14,17 +14,33 @@
       <Icon :size="20" :icon="icon" />
     </div>
     <div class="Am-Input-input">
-      <input
-        :disabled="disabled"
-        :placeholder="placeholder"
-        v-model.trim="currentValue"
-        class="Am-Input-context"
-        :type="type"
-        :maxlength="maxlength"
-        @input="change"
-        @blur="blur"
-        @focus="focus"
-      />
+      <template v-if="readonly">
+        <input
+          :disabled="disabled"
+          :placeholder="placeholder"
+          v-model.trim="currentValue"
+          class="Am-Input-context readonly"
+          readonly="readonly"
+          :type="type"
+          :maxlength="maxlength"
+          @input="change"
+          @blur="blur"
+          @focus="focus"
+        />
+      </template>
+      <template v-else>
+        <input
+          :disabled="disabled"
+          :placeholder="placeholder"
+          v-model.trim="currentValue"
+          class="Am-Input-context"
+          :type="type"
+          :maxlength="maxlength"
+          @input="change"
+          @blur="blur"
+          @focus="focus"
+        />
+      </template>
       <div :style="style" class="Am-Input-button">
         <slot></slot>
       </div>
@@ -80,7 +96,8 @@ export default {
     },
     scrollTarget: {
       type: String
-    }
+    },
+    readonly: Boolean
   },
   data() {
     return {

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-14 13:24:55
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 15:23:37
+ * @LastEditTime: 2020-04-14 18:16:38
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -16,11 +16,6 @@ describe('NumberInput.vue', () => {
         const wrapper = mount(NumberInput)
         expect(wrapper.exists()).toBe(true)
     })
-    it('默认placeholder状态，视图正常', async () => {
-        const wrapper = mount(NumberInput)
-        await Vue.nextTick()
-        expect(wrapper.find('.Am-Number-Input-placeholder').exists()).toBe(true)
-    })
     it('传入value，视图正常', async () => {
         const wrapper = mount(NumberInput, {
             propsData: {
@@ -28,7 +23,6 @@ describe('NumberInput.vue', () => {
             }
         })
         await Vue.nextTick()
-        expect(wrapper.find('.Am-Number-Input-text').exists()).toBe(true)
         expect(wrapper.vm.currentValue).toBe('123456')
     })
     it('禁用状态正常', async () => {

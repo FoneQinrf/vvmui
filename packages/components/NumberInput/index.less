@@ -10,64 +10,27 @@
     &-unity{
         padding-left: 4px;
     }
-    &-placeholder{
-        color: @d1;
-        width: 100%;
-        position: relative;
-        &.left{
-            text-align: left;
-        }
-        &.right{
-            text-align: right;
-            span{
-                right: 0;
-            }
-        }
-        &.center{
-            text-align: center;
-            span{
-                left: 50%;
-                transform: translate3d(-50%, -50%, 0);
-            }
-        }
-        &.disabled{
-            color: @d2;
-            font-size: 16px;
-            -webkit-text-fill-color: @d2;
-            -webkit-opacity: 1;
-            opacity: 1;
-        }
-    }
-    &-text{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        font-size: 16px;
-        align-items: center;
-        color: @B2;
-        &.left{
-            justify-content: flex-start;
-        }
-        &.right{
-            justify-content: flex-end;
-        }
-        &.center{
-            justify-content: center;
-        }
-        &.disabled{
-            color: @d2;
-            font-size: 16px;
-            -webkit-text-fill-color: @d2;
-            -webkit-opacity: 1;
-            opacity: 1;
-        }
-    }
     &-input{
         border: none;
         font-size: 16px;
         height: 100%;
         display: flex;
         flex-grow: 1;
+        &.left{
+            .Am-Input-context{
+                text-align: left;
+            }
+        }
+        &.right{
+            .Am-Input-context{
+                text-align: right;
+            }
+        }
+        &.center{
+            .Am-Input-context{
+                text-align: center
+            }
+        }
     }
     .Am-Layer-mask{
         background: rgba(0,0,0,0);

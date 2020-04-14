@@ -2,17 +2,21 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 11:17:40
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:23:10
+ * @LastEditTime: 2020-04-14 17:49:33
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 <template>
   <div class="Am-Action-Sheet">
-    <div
-      @click="click"
-      :class="['Am-Action-Sheet-placeholder',{placeholder:!placeholderText.flag},{disabled:disabled}]"
-    >{{placeholderText.placeholder}}</div>
+    <div @click="click" class="Am-Action-Sheet-placeholder">
+      <Input
+        readonly
+        :disabled="disabled"
+        :placeholder="placeholder"
+        v-model="placeholderText"
+      />
+    </div>
     <Layer @on-mask="mask" :isMask="true" direction="bottom" v-model="show">
       <div class="Am-Action-Sheet-Model">
         <div v-if="data.length === 0" class="Am-Action-Sheet-loading">
@@ -36,11 +40,12 @@
 import emitter from "../../utils/emitter";
 import Layer from "../Layer";
 import Icon from "../Icon";
+import Input from "../Input";
 
 export default {
   name: "Action-Sheet",
   mixins: [emitter],
-  components: { Layer, Icon },
+  components: { Layer, Icon, Input },
   props: {
     placeholder: {
       type: String,
@@ -123,9 +128,9 @@ export default {
             str = item[this.label];
           }
         });
-        return { placeholder: str, flag: true };
+        return str;
       }
-      return { placeholder: this.placeholder, flag: false };
+      return "";
     }
   }
 };

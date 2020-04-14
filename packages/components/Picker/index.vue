@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:02:31
+ * @LastEditTime: 2020-04-14 17:29:51
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,12 +12,12 @@
   <div class="Am-Picker">
     <div
       :class="[
-        'Am-Picker-context',
-        'Am-ellipsis',
-        {'placeholder':context===placeholder,'disabled':disabled}
+        'Am-Picker-context'
       ]"
       @click="click"
-    >{{context}}</div>
+    >
+      <Input readonly :disabled="disabled" :placeholder="placeholder" v-model="context" />
+    </div>
     <Layer v-if="!disabled" direction="bottom" isMask v-model="LayerVal">
       <template>
         <div class="Am-Picker-title">
@@ -54,6 +54,7 @@ import mixins from "./src/mixins";
 import { initIndex, initPlaceholder, initModel } from "./utils";
 import emitter from "../../utils/emitter";
 import Icon from "../Icon";
+import Input from "../Input";
 
 export default {
   name: "Picker",
@@ -61,7 +62,8 @@ export default {
   components: {
     Layer,
     AmPicker,
-    Icon
+    Icon,
+    Input
   },
   data() {
     return {
