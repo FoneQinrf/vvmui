@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-13 15:57:55
+ * @LastEditTime: 2020-04-14 15:18:40
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -31,6 +31,17 @@ function entries() {
     });
     return map;
 }
+
+const createLintingRule = () => ({
+    test: /\.(js|vue)$/,
+    loader: 'eslint-loader',
+    enforce: 'pre',
+    include: [resolve('src'), resolve('test'), resolve('packages')],
+    options: {
+      formatter: require('eslint-friendly-formatter'),
+      emitWarning: !config.dev.showEslintErrorsInOverlay
+    }
+  })
 
 entries()
 
@@ -91,6 +102,7 @@ module.exports = {
     },
     module: {
         rules: [
+            ...(config.dev.useEslint ? [createLintingRule()] : []),
             {
                 test: /\.(css|less)$/,
                 exclude: /node_modules/,
