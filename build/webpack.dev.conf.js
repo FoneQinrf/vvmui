@@ -1,13 +1,12 @@
 /*
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-09 10:31:35
+ * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-22 13:50:53
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 09:49:14
+ * @Description: 
+ * @Email: qinrifeng@163.com
  */
+
 'use strict'
 const utils = require('./utils')
 const webpack = require('webpack')

@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-23 15:09:29
+ * @LastEditTime: 2020-04-14 13:24:06
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -47,6 +47,10 @@ module.exports = [
                     {
                         name: 'Cell - 单元格',
                         path: '/main/Cell'
+                    },
+                    {
+                        name: 'Card - 卡片',
+                        path: '/main/Card'
                     }
                 ]
             },
@@ -62,12 +66,20 @@ module.exports = [
                         path: '/main/NumberInput'
                     },
                     {
-                        name: 'Radio - 单选',
-                        path: '/main/Radio'
+                        name: 'Switch - 开关',
+                        path: '/main/Switch'
                     },
                     {
                         name: 'Checkbox - 多选',
                         path: '/main/Checkbox'
+                    },
+                    {
+                        name: 'Radio - 单选',
+                        path: '/main/Radio'
+                    },
+                    {
+                        name: 'ActionSheet - 上拉菜单',
+                        path: '/main/ActionSheet'
                     },
                     {
                         name: 'Picker - 选择器',

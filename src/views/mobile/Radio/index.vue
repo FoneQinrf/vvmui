@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-10-30 13:34:03
+ * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-31 15:46:46
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:10:23
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <demoTop gray text="Radio">
     <section class="demo-button-row">

@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-27 13:51:51
+ * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 11:47:57
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:09:33
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <Picker @on-show="show" :options="options" />
 </template>

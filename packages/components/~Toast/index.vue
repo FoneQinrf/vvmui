@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-09-02 10:45:52
+ * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 10:01:45
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 09:57:08
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div class="Am-Toast">
     <template v-if="mask">

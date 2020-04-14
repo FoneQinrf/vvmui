@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: From-Item
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-10-22 13:26:00
+ * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-01 13:45:07
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:00:23
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div :class="['Am-From-Item',{'cellInline':cellInline,'block':!cellInline}]">
     <div class="Am-From-Item-label" :style="style">

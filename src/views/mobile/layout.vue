@@ -1,14 +1,14 @@
-
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-02 17:54:46
+ * @Date: 2020-03-30 09:21:57
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 09:50:43
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-14 10:34:01
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
+
 <template>
   <transition name="fade" mode="out-in">
     <router-view></router-view>
@@ -29,8 +29,15 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="less">
 body {
   user-select: none;
+}
+#app {
+  overflow-y: auto;
+  min-height: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

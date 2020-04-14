@@ -2,10 +2,12 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-05 11:32:04
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-17 14:05:46
- * @Description: 
- * @Email: qinrifeng@g7.com.cn
+ * @LastEditTime: 2020-04-08 10:04:54
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  */
+
 /**
  * 获取文件的后缀
  * @param {*} file

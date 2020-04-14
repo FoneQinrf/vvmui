@@ -1,13 +1,13 @@
 /*
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-09 10:31:35
+ * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 10:59:13
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-14 15:10:52
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  */
+
 module.exports = {
   root: true,
   env: {
@@ -16,8 +16,10 @@ module.exports = {
   extends: ['plugin:vue/essential', 'airbnb-base'],
   rules: {
     'linebreak-style': [0, 'error', 'windows'],
+    'import/extensions': 'off',
     'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/no-parsing-error': [2, { "x-invalid-end-tag": false }],
     'indent': 0,
     'semi': 'off',
     'eol-last': 'off',

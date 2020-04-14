@@ -1,18 +1,18 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 09:35:58
+ * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-31 11:49:03
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-14 13:22:20
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 ## NumberInput 数字键盘
 ---
 
 #### 使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue'
@@ -21,39 +21,39 @@ import { NumberInput } from 'am-ui'
 Vue.component(NumberInput)
 
 ```
-:::
+
 
 #### 基础用法
-输入框内容默认靠左展示，可通过`align`属性设置内容靠右显示，`center`居中显示，因为整个输入框都是通过模拟实现，随意通过样式修改可能会出现问题
-::: demo
+输入框内容默认靠左展示，可通过`align`属性设置内容靠右显示，`center`居中显示
+
 ```html
 
 <Number-Input align="right" />
 
 ```
-:::
+
 
 #### 显示单位
 
 通过使用`unity`属性显示单位
-::: demo
+
 ```html
 
-<Number-Input unity="元" />
+<Number-Input align="right" unity="元" />
 
 ```
-:::
+
 
 #### 禁用
 
 通过使用`disabled`可禁用
-::: demo
+
 ```html
 
 <Number-Input disabled />
 
 ```
-:::
+
 
 ### API
 ##### NumberInput props
@@ -68,7 +68,7 @@ Vue.component(NumberInput)
 | maxlength  | 最大输入长度    | Number       | 无 | 20 |
 | confirm-text  | 数字键盘确认按钮的文字    | String       | 无 | 确认 |d
 | is-decimal  |  是否需要小数点 | Boolean  | 无 | true |
-| negative-number  |  是否需要 - 按键 | Boolean  | 无 | true |
+| negative-number  |  是否需要负值 `-` 按键 | Boolean  | 无 | true |
 
 #### NumberInput Events
 | 事件名 | 说明 | 回调参数 |

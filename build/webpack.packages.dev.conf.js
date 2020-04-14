@@ -1,13 +1,12 @@
 /*
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 15:31:24
+ * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-09-23 11:58:49
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-14 15:18:40
+ * @Description: 
+ * @Email: qinrifeng@163.com
  */
+
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -32,6 +31,17 @@ function entries() {
     });
     return map;
 }
+
+const createLintingRule = () => ({
+    test: /\.(js|vue)$/,
+    loader: 'eslint-loader',
+    enforce: 'pre',
+    include: [resolve('src'), resolve('test'), resolve('packages')],
+    options: {
+      formatter: require('eslint-friendly-formatter'),
+      emitWarning: !config.dev.showEslintErrorsInOverlay
+    }
+  })
 
 entries()
 
@@ -92,6 +102,7 @@ module.exports = {
     },
     module: {
         rules: [
+            ...(config.dev.useEslint ? [createLintingRule()] : []),
             {
                 test: /\.(css|less)$/,
                 exclude: /node_modules/,

@@ -1,11 +1,14 @@
 <!--
  * @Author: Fone丶峰
- * @Date: 2020-03-23 15:00:29
+ * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-26 10:29:13
- * @Description: 
- * @Email: qinrifeng@Am.com.cn
+ * @LastEditTime: 2020-04-08 09:57:27
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
+
 <template>
   <transition name="fade">
     <div

@@ -1,13 +1,12 @@
 /*
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 09:35:58
+ * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-11-07 14:25:39
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 09:48:55
+ * @Description: 
+ * @Email: qinrifeng@163.com
  */
+
 'use strict'
 const path = require('path')
 const fs = require('fs')

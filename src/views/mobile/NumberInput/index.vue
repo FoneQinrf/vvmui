@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 09:35:58
+ * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-31 11:10:33
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-14 13:19:50
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <demoTop gray text="NumberInput">
     <Cell-Group title="使用方式">
@@ -17,7 +17,7 @@
     </Cell-Group>
     <Cell-Group title="带单位">
       <Cell label="金额">
-        <Number-Input unity="元" />
+        <Number-Input align="right" unity="元" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="使用icon">

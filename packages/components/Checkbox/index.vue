@@ -1,9 +1,13 @@
-/* Checkbox
- * @Author: Fone丶峰 
- * @Date: 2020-01-02 15:42:34 
- * @Last Modified by: Fone丶峰
- * @Last Modified time: 2020-01-06 16:48:50
- */
+<!--
+ * @Author: Fone丶峰
+ * @Date: 2020-01-02 15:39:54
+ * @LastEditors: Fone丶峰
+ * @LastEditTime: 2020-04-08 09:59:34
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
+ -->
+
 <template>
   <label class="Am-Checkbox">
     <span :class="['Am-Checkbox-icon',`Am-text-color-${parentType}`,{['disabled']:parenDisabled}]">

@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-21 17:47:53
+ * @Date: 2019-10-22 11:32:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 14:35:37
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 09:59:20
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div class="Am-CellGroup">
     <div v-if="title" class="Am-CellGroup-title">{{title}}</div>

@@ -1,18 +1,18 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 09:35:58
+ * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-01 10:29:30
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:12:31
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 ## Loading 加载
 ---
 
 #### 使用方式
-::: demo
+
 ``` javascript
 
 import Vue from 'vue';
@@ -21,11 +21,11 @@ import { Loading } from 'am-ui';
 Vue.use(Loading);
 
 ```
-:::
+
 
 #### Loading用法
 
-::: demo
+
 ``` javascript
 
 Loading.spin.show();
@@ -39,11 +39,11 @@ setTimeout(() => {
 }, 3000);
 
 ```
-:::
+
 
 #### LoadingBar用法
 
-::: demo
+
 ``` javascript
 
 Loading.loadingBar.start();
@@ -57,7 +57,7 @@ setTimeout(() => {
 }, 10000);
 
 ```
-:::
+
 
 ### API
 | 方法 | 说明 | 参数 | 返回值 |

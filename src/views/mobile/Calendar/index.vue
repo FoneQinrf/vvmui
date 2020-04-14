@@ -1,42 +1,42 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 09:35:58
+ * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-03 17:13:37
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:07:36
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <demoTop gray text="Calendar">
-    <G-Cell-Group title="使用方式">
-      <G-Cell label="请选择日期">
+    <Cell-Group title="使用方式">
+      <Cell label="请选择日期">
         <G-Calendar />
-      </G-Cell>
-    </G-Cell-Group>
-    <G-Cell-Group title="不禁用过去的日期">
-      <G-Cell label="请选择日期">
+      </Cell>
+    </Cell-Group>
+    <Cell-Group title="不禁用过去的日期">
+      <Cell label="请选择日期">
         <G-Calendar :oldDateDisabled="false" />
-      </G-Cell>
-    </G-Cell-Group>
-    <G-Cell-Group title="v-model绑定时间">
-      <G-Cell label="请选择日期">
+      </Cell>
+    </Cell-Group>
+    <Cell-Group title="v-model绑定时间">
+      <Cell label="请选择日期">
         <G-Calendar v-model="value" />
-      </G-Cell>
-    </G-Cell-Group>
-    <G-Cell-Group title="自定义禁用日期，禁用日期为当前日期">
-      <G-Cell label="请选择日期">
+      </Cell>
+    </Cell-Group>
+    <Cell-Group title="自定义禁用日期，禁用日期为当前日期">
+      <Cell label="请选择日期">
         <G-Calendar :oldDateDisabled="false" :disabledList="disabledList" />
-      </G-Cell>
-    </G-Cell-Group>
-    <G-Cell-Group v-if="false" title="调试">
-      <G-Cell label="请选择日期">
+      </Cell>
+    </Cell-Group>
+    <Cell-Group v-if="false" title="调试">
+      <Cell label="请选择日期">
         <G-Calendar :disabledList="['2020-3-6','2020-3-8']" />
-      </G-Cell>
-    </G-Cell-Group>
-    <G-Cell-Group title="自定义日期内容，在每个月的这一天日期上加个红点">
-      <G-Cell label="请选择日期">
+      </Cell>
+    </Cell-Group>
+    <Cell-Group title="自定义日期内容，在每个月的这一天日期上加个红点">
+      <Cell label="请选择日期">
         <G-Calendar v-if="true">
           <template slot="dateItem" slot-scope="{node}">
             <template v-if="node.day === date">
@@ -45,13 +45,13 @@
             </template>
           </template>
         </G-Calendar>
-      </G-Cell>
-    </G-Cell-Group>
-    <G-Cell-Group title="禁用">
-      <G-Cell label="请选择日期">
+      </Cell>
+    </Cell-Group>
+    <Cell-Group title="禁用">
+      <Cell label="请选择日期">
         <G-Calendar disabled />
-      </G-Cell>
-    </G-Cell-Group>
+      </Cell>
+    </Cell-Group>
   </demoTop>
 </template>
 

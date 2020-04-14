@@ -1,13 +1,13 @@
 /*
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-10-22 15:53:09
+ * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-31 10:18:27
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:05:40
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  */
+
 
 /**
  * 根据组件名称查找所有下级对应的组件(特定的层级关系，没法跨级查询)

@@ -1,19 +1,19 @@
 /*
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-05 09:35:58
+ * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2019-08-23 09:41:41
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-13 16:38:03
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  */
+
 
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/mobile'
-import UI from "@/../packages/index"
-import demoTop from "@/components/demo-top";
+import UI from "../lib/index"
+import demoTop from "./components/demo-top/index.vue";
 import './assets/style/normalize.css'
 Vue.component("demoTop", demoTop);
 require("#/lib/style.css");

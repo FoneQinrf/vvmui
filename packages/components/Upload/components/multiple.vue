@@ -1,11 +1,13 @@
 <!--
  * @Author: Fone丶峰
- * @Date: 2020-03-17 14:28:41
+ * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-25 17:11:16
- * @Description: 
- * @Email: qinrifeng@Am.com.cn
+ * @LastEditTime: 2020-04-08 10:04:35
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div class="Am-Upload-multiple">
     <Upload-Placeholder

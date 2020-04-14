@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-10-30 13:32:15
+ * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-31 14:14:39
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-08 10:03:51
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <div :class="['Am-Radio-Group',inline ? 'inline' : '']">
     <slot></slot>

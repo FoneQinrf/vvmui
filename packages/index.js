@@ -1,6 +1,8 @@
+import ActionSheet from "./components/ActionSheet";
 import Backtop from "./components/Backtop";
 import Button from "./components/Button";
 import Calendar from "./components/Calendar";
+import Card from "./components/Card";
 import Cell from "./components/Cell";
 import CellGroup from "./components/CellGroup";
 import Checkbox from "./components/Checkbox";
@@ -14,12 +16,13 @@ import NumberInput from "./components/NumberInput";
 import Picker from "./components/Picker";
 import Radio from "./components/Radio";
 import RadioGroup from "./components/RadioGroup";
+import Switch from "./components/Switch";
 import Upload from "./components/Upload";
 import Loading from "./components/~Loading";
 import Toast from "./components/~Toast";
  
 
-const components = [Backtop,Button,Calendar,Cell,CellGroup,Checkbox,CheckboxGroup,From,FromItem,Icon,Input,Layer,NumberInput,Picker,Radio,RadioGroup,Upload]
+const components = [ActionSheet,Backtop,Button,Calendar,Card,Cell,CellGroup,Checkbox,CheckboxGroup,From,FromItem,Icon,Input,Layer,NumberInput,Picker,Radio,RadioGroup,Switch,Upload]
 
 const install = function (Vue) {
       if (install.installed) return;

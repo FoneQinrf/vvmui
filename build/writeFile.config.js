@@ -1,12 +1,12 @@
 /*
  * @Author: Fone丶峰
- * @Date: 2019-08-02 20:36:45
+ * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-27 18:19:55
+ * @LastEditTime: 2020-04-08 09:50:00
  * @Description: 
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @Email: qinrifeng@163.com
  */
+
 const { component } = require('../config')
 
 module.exports = {

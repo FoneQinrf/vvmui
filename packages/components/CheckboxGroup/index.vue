@@ -2,10 +2,12 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-02 15:40:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-31 15:05:00
- * @Description: 
+ * @LastEditTime: 2020-04-08 09:59:50
+ * @Description: msg
  * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 
 <template>
   <div :class="['Am-CheckboxGroup',{['inline']:inline}]">

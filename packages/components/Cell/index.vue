@@ -1,13 +1,13 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-21 17:32:52
+ * @Date: 2019-10-22 14:53:18
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-03-30 14:16:02
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-14 10:53:14
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+
 <template>
   <li
     @click="click"
@@ -62,7 +62,8 @@ export default {
       validator: function(value) {
         return ["default", "block"].includes(value);
       }
-    }
+    },
+    retureValue: {}
   },
   computed: {
     clasess() {
@@ -76,8 +77,8 @@ export default {
   },
   methods: {
     click() {
-      this.$emit("on-click");
       this.handleLink();
+      this.$emit("on-click", this.retureValue);
     }
   }
 };
