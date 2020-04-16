@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 17:29:51
+ * @LastEditTime: 2020-04-16 16:34:26
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,12 +10,9 @@
 
 <template>
   <div class="Am-Picker">
-    <div
-      :class="[
+    <div :class="[
         'Am-Picker-context'
-      ]"
-      @click="click"
-    >
+      ]" @click="click">
       <Input readonly :disabled="disabled" :placeholder="placeholder" v-model="context" />
     </div>
     <Layer v-if="!disabled" direction="bottom" isMask v-model="LayerVal">
@@ -48,7 +45,7 @@
 </template>
 
 <script>
-import Layer from "../Layer";
+import Layer from "../Modal";
 import AmPicker from "./src/component.vue";
 import mixins from "./src/mixins";
 import { initIndex, initPlaceholder, initModel } from "./utils";
@@ -68,9 +65,9 @@ export default {
   data() {
     return {
       LayerVal: false,
-      count: 0,
       index: [],
-      context: ""
+      context: "",
+      model: this.value
     };
   },
   props: {
@@ -134,9 +131,11 @@ export default {
     },
     onConfirm() {
       const model = this.resetModel();
+      this.model = model;
       this.$emit("input", model);
       this.$emit("on-confirm", model, this.list);
       this.dispatch("From-Item", "change", model);
+      this.initPlaceholder();
       this.LayerVal = false;
     },
     initIndex() {
@@ -169,8 +168,10 @@ export default {
   watch: {
     value: {
       handler() {
+        this.model = this.value;
         this.initIndex();
         this.initPlaceholder();
+        console.log();
       },
       deep: true
     },

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-07 14:18:36
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-13 16:08:52
+ * @LastEditTime: 2020-04-15 14:59:48
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -78,7 +78,8 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue', '.less', '.json'],
         alias: {
-            '#': resolve('')
+            '#': resolve(''),
+            '@': resolve('packages')
         }
     },
     externals: {

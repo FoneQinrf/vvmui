@@ -2,21 +2,21 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:19:32
+ * @LastEditTime: 2020-04-16 10:55:53
  * @Description: 
  * @Email: qinrifeng@163.com
  */
 
 import { mount } from 'vue-test-utils'
-import Switch from '@/../packages/components/Switch/index.vue'
+import Switch from '@/components/Switch'
 import Vue from "vue";
 
 describe('Switch.vue', () => {
-    it('Switch存在', () => {
+    it('Switch不存在', () => {
         const wrapper = mount(Switch)
         expect(wrapper.exists()).toBe(true)
     })
-    it('type传入success', () => {
+    it('type传入success，处理异常', () => {
         const wrapper = mount(Switch, {
             propsData: {
                 type: 'success'
@@ -25,13 +25,13 @@ describe('Switch.vue', () => {
         expect(wrapper.props().type).toBe('success')
         expect(wrapper.classes()).toContain('success')
     })
-    it('触发事件正常', async () => {
+    it('触发事件异常', async () => {
         const wrapper = mount(Switch);
         wrapper.vm.$emit('on-change');
         await wrapper.vm.$nextTick();
         expect(wrapper.emitted('on-change')).toBeTruthy();
     })
-    it('传入disabled，禁用正常，点击事件未触发', async () => {
+    it('传入disabled，禁用异常', async () => {
         const wrapper = mount(Switch, {
             propsData: {
                 disabled: true,
@@ -45,7 +45,7 @@ describe('Switch.vue', () => {
         target.trigger('click')
         expect(wrapper.vm.currentValue).toBe(true)
     })
-    it('传入activeValue=1,inactiveValue=0点击返回的值正常', async () => {
+    it('传入activeValue=1,inactiveValue=0点击返回的值异常', async () => {
         const wrapper = mount(Switch, {
             propsData: {
                 activeValue: 1,

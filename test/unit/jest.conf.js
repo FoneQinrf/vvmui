@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-08-09 10:31:35
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-01 13:10:17
+ * @LastEditTime: 2020-04-16 16:15:50
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -16,7 +16,8 @@ module.exports = {
     'vue'
   ],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/packages/$1',
+    '^#/(.*)$': '<rootDir>/src/$1'
   },
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
