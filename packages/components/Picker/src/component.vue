@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 17:31:02
+ * @LastEditTime: 2020-04-16 17:14:48
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -16,7 +16,9 @@
         :key="$index"
         :style="style"
         :class="['Am-PickerColumn-label',{'Am-text-color-default':$index===curreIndex}]"
-      ><span class="Am-ellipsis">{{item[label] || item}}</span></li>
+      >
+        <span class="Am-ellipsis">{{item[label] || item}}</span>
+      </li>
     </ul>
     <i class="Am-PickerColumn-top Am-hairline-bottom" :style="maskHeight"></i>
     <i class="Am-PickerColumn-bottom Am-hairline-top" :style="maskHeight"></i>
@@ -45,7 +47,7 @@ function isMobile() {
 }
 
 export default {
-  name: "Picker",
+  name: "Am-Picker",
   mixins: [mixins],
   data() {
     return {

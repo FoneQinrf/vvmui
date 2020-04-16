@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 11:17:40
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 17:49:33
+ * @LastEditTime: 2020-04-15 14:05:37
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -38,7 +38,7 @@
 
 <script>
 import emitter from "../../utils/emitter";
-import Layer from "../Layer";
+import Layer from "../Modal";
 import Icon from "../Icon";
 import Input from "../Input";
 

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 18:09:53
+ * @LastEditTime: 2020-04-16 14:38:20
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -59,9 +59,9 @@ export const initIndex = (options) => {
  * @param {*} params 
  */
 function placeholderArray(params) {
-    const { index, list, label, value } = params;
+    const { index, list, label, model } = params;
     let context = '';
-    if (value.length > 0) {
+    if (model.length > 0) {
         if (index.length && list.length) {
             index.forEach((element, i) => {
                 context += `${list[i][element][label]} `;

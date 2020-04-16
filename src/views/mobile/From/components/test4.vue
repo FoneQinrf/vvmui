@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-26 15:59:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:08:33
+ * @LastEditTime: 2020-04-16 17:12:02
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -32,7 +32,7 @@
         </Checkbox-Group>
       </From-Item>
       <From-Item label="级联选择" prop="address">
-        <Picker v-model="model.address" label="name" key-value="id" :options="options" />
+        <Picker v-model="model.address" label="name" key-value="name" :options="options" />
       </From-Item>
     </From>
     <div class="bto" style="padding:15px">
@@ -68,6 +68,11 @@ export default {
     resetFields() {
       this.$refs.from.resetFields();
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.model.address = ["广东省", "广州市", "东山区"];
+    }, 2000);
   }
 };
 </script>

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 15:18:40
+ * @LastEditTime: 2020-04-15 15:01:18
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -38,10 +38,10 @@ const createLintingRule = () => ({
     enforce: 'pre',
     include: [resolve('src'), resolve('test'), resolve('packages')],
     options: {
-      formatter: require('eslint-friendly-formatter'),
-      emitWarning: !config.dev.showEslintErrorsInOverlay
+        formatter: require('eslint-friendly-formatter'),
+        emitWarning: !config.dev.showEslintErrorsInOverlay
     }
-  })
+})
 
 entries()
 
@@ -89,7 +89,8 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue', '.less', '.json'],
         alias: {
-            '#': resolve('')
+            '#': resolve(''),
+            '@': resolve('packages')
         }
     },
     externals: {

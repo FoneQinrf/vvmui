@@ -7,11 +7,12 @@ import Cell from "./components/Cell";
 import CellGroup from "./components/CellGroup";
 import Checkbox from "./components/Checkbox";
 import CheckboxGroup from "./components/CheckboxGroup";
+import DatetimePicker from "./components/DatetimePicker";
 import From from "./components/From";
 import FromItem from "./components/FromItem";
 import Icon from "./components/Icon";
 import Input from "./components/Input";
-import Layer from "./components/Layer";
+import Modal from "./components/Modal";
 import NumberInput from "./components/NumberInput";
 import Picker from "./components/Picker";
 import Radio from "./components/Radio";
@@ -22,7 +23,7 @@ import Loading from "./components/~Loading";
 import Toast from "./components/~Toast";
  
 
-const components = [ActionSheet,Backtop,Button,Calendar,Card,Cell,CellGroup,Checkbox,CheckboxGroup,From,FromItem,Icon,Input,Layer,NumberInput,Picker,Radio,RadioGroup,Switch,Upload]
+const components = [ActionSheet,Backtop,Button,Calendar,Card,Cell,CellGroup,Checkbox,CheckboxGroup,DatetimePicker,From,FromItem,Icon,Input,Modal,NumberInput,Picker,Radio,RadioGroup,Switch,Upload]
 
 const install = function (Vue) {
       if (install.installed) return;
