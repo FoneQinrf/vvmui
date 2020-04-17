@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 16:34:26
+ * @LastEditTime: 2020-04-17 14:23:50
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -113,7 +113,8 @@ export default {
         }
       }
       this.index = array;
-      this.$emit("on-change", this.index);
+      const model = this.resetModel();
+      this.$emit("on-change", model, this.index);
     },
     resetModel() {
       return initModel(this);
@@ -133,7 +134,7 @@ export default {
       const model = this.resetModel();
       this.model = model;
       this.$emit("input", model);
-      this.$emit("on-confirm", model, this.list);
+      this.$emit("on-confirm", model);
       this.dispatch("From-Item", "change", model);
       this.initPlaceholder();
       this.LayerVal = false;
@@ -171,7 +172,6 @@ export default {
         this.model = this.value;
         this.initIndex();
         this.initPlaceholder();
-        console.log();
       },
       deep: true
     },

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-15 13:40:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 17:46:40
+ * @LastEditTime: 2020-04-17 14:37:57
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -123,7 +123,11 @@ export default {
       const index = i - 1;
       this.$set(this.index, index, item);
       const label = this.options[index][item];
-      this.$set(this.timeItem, index, label);
+      if (this.type === "time") {
+        this.$set(this.timeItem, index + 3, label);
+      } else {
+        this.$set(this.timeItem, index, label);
+      }
       if (this.type !== "time" && [0, 1].includes(index)) {
         this.initDay();
         this.$set(this.timeItem, 2, this.options[2][0]);

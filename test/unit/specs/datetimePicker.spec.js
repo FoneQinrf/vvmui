@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 17:50:22
+ * @LastEditTime: 2020-04-17 14:45:25
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -12,12 +12,12 @@ import DatetimePicker from '@/components/DatetimePicker'
 import Vue from "vue";
 
 describe('DatetimePicker.vue', () => {
-    it('DatetimePicke不存在', () => {
+    it('DatetimePicke存在', () => {
         const wrapper = mount(DatetimePicker)
         expect(wrapper.exists()).toBe(true)
     })
 
-    it('动态切换type，数据异常', async () => {
+    it('动态切换type，数据正常', async () => {
         const wrapper = mount(DatetimePicker)
         wrapper.setProps({ type: 'date' })
         expect(wrapper.vm.type).toBe('date')
@@ -41,7 +41,7 @@ describe('DatetimePicker.vue', () => {
         expect(datetime.length).toBe(6)
     })
 
-    it('传入value，下标异常，数据异常', async () => {
+    it('传入value，下标正常，数据正常', async () => {
         const wrapper = mount(DatetimePicker, {
             propsData: {
                 value: '1969/12/12 23:23:23'
@@ -57,7 +57,7 @@ describe('DatetimePicker.vue', () => {
         expect(picker.at(2).vm.index).toBe(11)
     })
 
-    it('异步type，异步v-model，数据异常', async (done) => {
+    it('异步type，异步v-model，数据正常', async (done) => {
         const wrapper = mount(DatetimePicker, {
             propsData: {
                 value: '1969/12/12 23:23:23'
@@ -79,5 +79,39 @@ describe('DatetimePicker.vue', () => {
             expect(picker.at(5).vm.index).toBe(22)
             done()
         }, 2000)
+    })
+
+    it('模拟用户滑动选择，数据正常', async () => {
+        const wrapper = mount(DatetimePicker, {
+            propsData: {
+                minYear: 2010,
+                maxYear: 2020
+            }
+        })
+        await wrapper.vm.$nextTick()
+        const find = wrapper.findAll({ name: 'Am-Picker' })
+        find.at(0).vm.$emit('on-change', [1, 3])
+        find.at(1).vm.$emit('on-change', [2, 2])
+        find.at(2).vm.$emit('on-change', [3, 23])
+        expect(wrapper.vm.fncTime()).toBe('2013/03/24')
+
+        wrapper.setProps({ type: 'time' })
+        await wrapper.vm.$nextTick()
+        const time = wrapper.findAll({ name: 'Am-Picker' })
+        time.at(0).vm.$emit('on-change', [1, 21])
+        time.at(1).vm.$emit('on-change', [2, 22])
+        time.at(2).vm.$emit('on-change', [3, 0])
+        expect(wrapper.vm.fncTime()).toBe('21:22:00')
+
+        wrapper.setProps({ type: 'datetime' })
+        await wrapper.vm.$nextTick()
+        const datetime = wrapper.findAll({ name: 'Am-Picker' })
+        datetime.at(0).vm.$emit('on-change', [1, 4])
+        datetime.at(1).vm.$emit('on-change', [2, 3])
+        datetime.at(2).vm.$emit('on-change', [3, 24])
+        datetime.at(3).vm.$emit('on-change', [4, 22])
+        datetime.at(4).vm.$emit('on-change', [5, 23])
+        datetime.at(5).vm.$emit('on-change', [6, 11])
+        expect(wrapper.vm.fncTime()).toBe('2014/04/25 22:23:11')
     })
 })

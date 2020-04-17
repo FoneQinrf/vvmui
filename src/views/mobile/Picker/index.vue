@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 17:38:56
+ * @LastEditTime: 2020-04-17 13:31:20
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -52,14 +52,14 @@
         </template>
       </Cell>
     </Cell-Group>
-    <Cell-Group title="异步value数据">
+    <Cell-Group v-if="false" title="异步value数据">
       <Cell label="选择内容">
         <template>
           <asyncValue />
         </template>
       </Cell>
     </Cell-Group>
-    <Cell-Group v-if="false" title="测试异步model">
+    <Cell-Group title="自定义读取数据字段和返回数据字段">
       <Cell label="选择内容">
         <template>
           <asyncModel />
