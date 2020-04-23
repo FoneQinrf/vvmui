@@ -7,13 +7,13 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FoneQinrf/am-ui"
+    "url": "git@github.com:FoneQinrf/am-ui.git"
   },
   "bugs": {
     "url": "https://github.com/FoneQinrf/am-ui/issues",
     "email": "qinrifeng@163.com"
   },
-  "homepage": "",
+  "homepage": "https://foneqinrf.github.io/am-ui/",
   "scripts": {
     "gulp:dev": "gulp --gulpfile build/gulp.config.js",
     "dev": "webpack-dev-server --inline --progress --host 0.0.0.0 --config build/webpack.dev.conf.js",
