@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 13:23:50
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 18:01:07
+ * @LastEditTime: 2020-04-23 11:35:53
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -29,7 +29,7 @@ Vue.component(ActionSheet)
 
 ```html
 
-<Action-Sheet :data="[{label:'选项一',value:1},{label:'选项二',value:2}]" />
+<ActionSheet :data="[{label:'选项一',value:1},{label:'选项二',value:2}]" />
 
 ```
 
@@ -39,7 +39,7 @@ Vue.component(ActionSheet)
 
 ```html
 
-<Action-Sheet v-model="value" :data="[{label:'男',value:1},{label:'女',value:2}]" />
+<ActionSheet v-model="value" :data="[{label:'男',value:1},{label:'女',value:2}]" />
 
 ```
 
@@ -50,7 +50,7 @@ Vue.component(ActionSheet)
 
 ```html
 
-<Action-Sheet disabled :value="1" :data="[{label:'男',value:1},{label:'女',value:2}]" />
+<ActionSheet disabled :value="1" :data="[{label:'男',value:1},{label:'女',value:2}]" />
 
 ```
 
@@ -62,7 +62,7 @@ Vue.component(ActionSheet)
 ```html
 
 <template>
-    <Action-Sheet :data="list"/>
+    <ActionSheet :data="list"/>
 </template>
 
 <script>
@@ -88,7 +88,7 @@ export default {
 ```html
 
 <template>
-    <Action-Sheet @on-show="show" :data="data" />
+    <ActionSheet @on-show="show" :data="data" />
 </template>
 
 <script>
@@ -120,7 +120,7 @@ export default {
 ```html
 
 <template>
-    <Action-Sheet @on-confirm="confirm" :data="list"/>
+    <ActionSheet @on-confirm="confirm" :data="list"/>
 </template>
 
 <script>

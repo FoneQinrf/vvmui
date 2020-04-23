@@ -2,96 +2,73 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:09:23
+ * @LastEditTime: 2020-04-17 13:32:02
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <Picker :options="options" v-model="model" :model="type" />
+  <Picker :options="options" label="name" children="component" key-value="name" v-model="value" />
 </template>
 
 <script>
 export default {
   data() {
     return {
-      type: [],
+      value: [],
       options: [
         {
-          value: "zhejiang",
-          label: "浙江",
-          children: [
+          name: "浙江",
+          component: [
             {
-              value: "hangzhou",
-              label: "杭州",
-              children: [
+              name: "杭州",
+              component: [
                 {
                   value: "xihu",
-                  label: "西湖"
+                  name: "西湖"
                 }
               ]
             },
             {
-              value: "ninbo",
-              label: "宁波",
-              children: [
+              name: "宁波",
+              component: [
                 {
-                  value: "laomiao",
-                  label: "老庙"
+                  name: "老庙"
                 },
                 {
-                  value: "laojie",
-                  label: "老街"
+                  name: "老街"
                 }
               ]
             }
           ]
         },
         {
-          value: "jiangsu",
-          label: "江苏",
-          children: [
+          name: "江苏",
+          component: [
             {
-              value: "nanjing",
-              label: "南京",
-              children: [
+              name: "南京",
+              component: [
                 {
-                  value: "fuzimiao",
-                  label: "夫子庙"
+                  name: "夫子庙"
                 }
               ]
             },
             {
-              value: "suzhou",
-              label: "苏州",
-              children: [
+              name: "苏州",
+              component: [
                 {
-                  value: "zhuozhengyuan",
-                  label: "拙政园"
+                  name: "拙政园"
                 },
                 {
-                  value: "shizilin",
-                  label: "狮子林"
+                  name: "狮子林"
                 }
               ]
             }
           ]
         }
-      ],
-      model: {
-        city: "nanjing",
-        province: "jiangsu",
-        area: "fuzimiao"
-      }
+      ]
     };
-  },
-  mounted() {
-    const that = this;
-    const t = setTimeout(function() {
-      clearTimeout(t);
-      that.type = ["province", "city", "area"];
-    }, 2000);
   }
 };
 </script>

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 17:51:28
+ * @LastEditTime: 2020-04-23 11:44:08
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,37 +12,37 @@
   <demoTop gray text="ActionSheet">
     <Cell-Group title="使用方式">
       <Cell label="请选择">
-        <Action-Sheet :data="[{label:'选项一',value:1},{label:'选项二',value:2}]" />
+        <ActionSheet :data="[{label:'选项一',value:1},{label:'选项二',value:2}]" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="v-model使用">
       <Cell label="请选择">
-        <Action-Sheet v-model="value" :data="[{label:'男',value:1},{label:'女',value:2}]" />
+        <ActionSheet v-model="value" :data="[{label:'男',value:1},{label:'女',value:2}]" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="禁用">
       <Cell label="请选择">
-        <Action-Sheet disabled :value="1" :data="[{label:'男',value:1},{label:'女',value:2}]" />
+        <ActionSheet disabled :value="1" :data="[{label:'男',value:1},{label:'女',value:2}]" />
       </Cell>
     </Cell-Group>
     <Cell-Group v-if="false" title="禁用">
       <Cell label="请选择">
-        <Action-Sheet disabled :data="[{label:'男',value:1},{label:'女',value:2}]" />
+        <ActionSheet disabled :data="[{label:'男',value:1},{label:'女',value:2}]" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="禁用部分选项">
       <Cell label="请选择">
-        <Action-Sheet :data="list" />
+        <ActionSheet :data="list" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="异步数据">
       <Cell label="请选择">
-        <Action-Sheet @on-show="show" :data="data" />
+        <ActionSheet @on-show="show" :data="data" />
       </Cell>
     </Cell-Group>
     <Cell-Group title="事件">
       <Cell label="请选择">
-        <Action-Sheet @on-confirm="confirm" :data="list" />
+        <ActionSheet @on-confirm="confirm" :data="list" />
       </Cell>
     </Cell-Group>
   </demoTop>

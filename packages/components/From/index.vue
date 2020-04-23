@@ -2,16 +2,16 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:00:05
+ * @LastEditTime: 2020-04-23 16:15:38
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <form class="Am-Form">
+  <div class="Am-Form">
     <slot></slot>
-  </form>
+  </div>
 </template>
 
 <script>
@@ -71,7 +71,11 @@ export default {
   methods: {
     resetModel() {
       for (const key in this.model) {
-        model[key] = typeof this.model[key];
+        let type = typeof this.model[key];
+        if (type === "object") {
+          type = this.model[key] instanceof Array ? "array" : "object";
+        }
+        model[key] = type;
       }
     },
     init() {
@@ -91,7 +95,7 @@ export default {
         });
       });
     },
-    async validate(cb) {
+    async validate(cb = () => {}) {
       const array = [];
       let i = 0;
       while (i < this.components.length) {

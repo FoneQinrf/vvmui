@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 17:51:50
+ * @LastEditTime: 2020-04-17 14:08:00
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -12,11 +12,11 @@ import Card from '@/components/Card'
 import Vue from "vue";
 
 describe('Card.vue', () => {
-    it('Card不存在', () => {
+    it('Card存在', () => {
         const wrapper = mount(Card)
         expect(wrapper.exists()).toBe(true)
     })
-    it('title-text="头部标题"，数据异常', () => {
+    it('title-text="头部标题"，数据正常', () => {
         const wrapper = mount(Card, {
             propsData: {
                 titleText: '头部标题'
@@ -24,7 +24,7 @@ describe('Card.vue', () => {
         })
         expect(wrapper.props().titleText).toBe('头部标题')
     })
-    it(':is-title="false"，隐藏头部内容异常', () => {
+    it(':is-title="false"，隐藏头部内容正常', () => {
         const wrapper = mount(Card, {
             propsData: {
                 isTitle: false
@@ -32,7 +32,7 @@ describe('Card.vue', () => {
         })
         expect(wrapper.find('.Am-Card-title').exists()).toBe(false)
     })
-    it('左右上角slot，UI内容异常', async () => {
+    it('左右上角slot，UI内容正常', async () => {
         const wrapper = mount(Card, {
             slots: {
                 'title-right': '<span class="title-right">内容</span>',
@@ -43,7 +43,7 @@ describe('Card.vue', () => {
         expect(wrapper.find('.title-right').exists()).toBe(true)
         expect(wrapper.find('.title-left').exists()).toBe(true)
     })
-    it('shadow，背景阴影异常', async () => {
+    it('shadow，背景阴影正常', async () => {
         const wrapper = mount(Card, {
             propsData: {
                 shadow: true

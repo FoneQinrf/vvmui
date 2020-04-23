@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 15:18:24
+ * @LastEditTime: 2020-04-23 14:45:12
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -131,7 +131,7 @@ module.exports = {
       {
         test: /\.md$/,
         use: [
-          { loader: 'vue-loader' },
+          { loader: 'vue-markdown-loader' },
           {
             loader: require.resolve('./markdownLoader')
           }

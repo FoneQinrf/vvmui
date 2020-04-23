@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:58:13
+ * @LastEditTime: 2020-04-23 16:28:33
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -21,41 +21,11 @@ export const weekList = [{ name: '日', class: 'Am-Calendar-week-Weekend' },
 export const weeks = ['日', '一', '二', '三', '四', '五', '六'];
 
 /**
- * 时间date格式为YYYY-MM日期
+ * 时间date格式为YYYY/MM日期
  * @param {*} date 
  */
 export function getDate(date) {
-    return `${date.getFullYear()}-${date.getMonth() + 1}`
-}
-
-/**
- * 计算两个时间段所有月份
- * @param {*} start 
- * @param {*} end 
- */
-function getMonthBetween(start, end) {
-    const array = [];
-    let staYear = parseInt(start.getFullYear(), 10);
-    let staMon = start.getMonth() + 1;
-    const endYear = parseInt(end.getFullYear(), 10);
-    const endMon = end.getMonth() + 1;
-    while (staYear <= endYear) {
-        if (staYear === endYear) {
-            while (staMon < endMon) {
-                staMon += 1;
-                array.push(`${staYear}-${staMon}`);
-            }
-            staYear += 1;
-        } else {
-            if (staMon > 12) {
-                staMon = 1;
-                staYear += 1;
-            }
-            array.push(`${staYear}-${staMon}`);
-            staMon += 1;
-        }
-    }
-    return array;
+    return `${date.getFullYear()}/${date.getMonth() + 1}`
 }
 
 /**
@@ -93,11 +63,92 @@ function getDateList(count, element) {
     return array;
 }
 
-export function dateList(ctx) {
-    const monthBetween = getMonthBetween(ctx.minDate, ctx.maxDate);
-    const array = [];
-    monthBetween.forEach(element => {
-        array.push(getDateList(getCount(element), element));
+
+/**
+ * 根据时间获取 年月日 周几
+ * @param {*} date 
+ */
+export function optionsFnc(date) {
+    const options = new Date(date);
+    return {
+        year: options.getFullYear(),
+        month: options.getMonth() + 1,
+        day: options.getDate(),
+        week: getweekday(date)
+    }
+}
+
+/**
+ * 计算日期的前一个月
+ * @param {*} date 
+ */
+/* eslint-disable */
+function getPreMonth(date) {
+    const options = new Date(date)
+    let year = options.getFullYear()
+    let month = options.getMonth() + 1
+    return month - 1 > 0 ? `${year}/${month - 1}` : `${year - 1}/${12}`
+}
+/* eslint-disable */
+
+/**
+ * 计算日期的下一个月
+ * @param {*} date 
+ */
+/* eslint-disable */
+function getNextMonth(date) {
+    const options = new Date(date)
+    let year = options.getFullYear()
+    let month = options.getMonth() + 1
+    return month + 1 <= 12 ? `${year}/${month + 1}` : `${year + 1}/${1}`
+}
+/* eslint-disable */
+
+/**
+ * 根据时间计算上一个月的数据
+ * @param {*} date 
+ */
+export function getPreMonthList(date) {
+    const array = [getPreMonth(date)]
+    const list = [];
+    array.forEach(element => {
+        list.push(getDateList(getCount(element), element));
     });
-    return array;
+    return list
+}
+
+/**
+ * 根据时间计算下一个月的数据
+ * @param {*} date 
+ */
+export function getNextMonthList(date) {
+    const array = [getNextMonth(date)]
+    const list = [];
+    array.forEach(element => {
+        list.push(getDateList(getCount(element), element));
+    });
+    return list
+}
+
+/**
+ * 初始化时间
+ * @param {*} locationDate 
+ * @param {*} value 
+ * @param {*} type 
+ */
+export function initDate(locationDate, value, type) {
+    const list = []
+    let date;
+    let location = new Date()
+    if (value && value.length) {
+        date = type === 'range' ? value[0] : value
+        location = new Date(date)
+    } else {
+        date = locationDate ? `${locationDate.getFullYear()}/${locationDate.getMonth() + 1}` : `${location.getFullYear()}/${location.getMonth() + 1}`
+    }
+    const array = [getPreMonth(date), getDate(location), getNextMonth(date)]
+    array.forEach(element => {
+        list.push(getDateList(getCount(element), element));
+    });
+    return list
 }

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 14:57:47
+ * @LastEditTime: 2020-04-23 14:12:45
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -23,7 +23,7 @@
 <script>
 const direction = ["top", "left", "right", "bottom", "center"];
 export default {
-  name: "G-Layer",
+  name: "Modal",
   props: {
     value: {
       type: Boolean

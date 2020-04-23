@@ -13,7 +13,7 @@ import CheckboxGroup from '@/components/CheckboxGroup'
 import Vue from "vue";
 
 describe('Checkbox.vue', () => {
-    it('Checkbox不存在', () => {
+    it('Checkbox存在', () => {
         const wrapper = mount(CheckboxGroup, {
             slots: {
                 default: [Checkbox]
@@ -22,7 +22,7 @@ describe('Checkbox.vue', () => {
         expect(wrapper.exists()).toBe(true)
         expect(wrapper.find({ name: 'Checkbox' }).exists()).toBe(true)
     })
-    it('选中异常', async () => {
+    it('选中正常', async () => {
         const wrapper = mount(CheckboxGroup, {
             propsData: {
                 value: ['选项一']
@@ -39,7 +39,7 @@ describe('Checkbox.vue', () => {
         expect(find.at(1).vm.label).toBe('选项二')
         expect(find.at(0).vm.currentValue).toBe(true)
     })
-    it('单个Checkbox禁用异常', async () => {
+    it('单个Checkbox禁用正常', async () => {
         const wrapper = mount(CheckboxGroup, {
             slots: {
                 default: [Checkbox, Checkbox]
@@ -51,7 +51,7 @@ describe('Checkbox.vue', () => {
         expect(find.at(0).vm.parenDisabled).toBe(true)
         expect(find.at(1).vm.parenDisabled).toBe(false)
     })
-    it('CheckboxGroup禁用异常', async () => {
+    it('CheckboxGroup禁用正常', async () => {
         const wrapper = mount(CheckboxGroup, {
             propsData: {
                 disabled: true
@@ -66,7 +66,7 @@ describe('Checkbox.vue', () => {
         expect(find.at(0).vm.parenDisabled).toBe(true)
         expect(find.at(1).vm.parenDisabled).toBe(true)
     })
-    it('CheckboxGroup设置type异常', async () => {
+    it('CheckboxGroup设置type正常', async () => {
         const wrapper = mount(CheckboxGroup, {
             propsData: {
                 type: 'success'
@@ -81,7 +81,7 @@ describe('Checkbox.vue', () => {
         expect(find.at(0).vm.parentType).toBe('success')
         expect(find.at(1).vm.parentType).toBe('success')
     })
-    it('CheckboxGroup设置icon异常', async () => {
+    it('CheckboxGroup设置icon正常', async () => {
         const wrapper = mount(CheckboxGroup, {
             propsData: {
                 icon: 'success'

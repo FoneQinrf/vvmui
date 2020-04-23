@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:04:35
+ * @LastEditTime: 2020-04-23 11:13:50
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -15,14 +15,14 @@
       v-for="(item,$index) in currentValue"
       :key="$index"
       :index="$index"
-      :url="valueItemString ? item : item.value"
-      :isImage="valueItemString ? isImage : item.isImage"
+      :url="valueString ? item : item.value"
+      :isImage="valueString ? isImage : item.isImage"
       :showRemove="showRemove"
       @on-remove="onRemove"
     />
     <Upload
       v-if="show"
-      :style="{marginTop: '5px'}"
+      :style="{marginTop: '8px'}"
       :icon="icon"
       :size="size"
       :accept="accept"
@@ -72,14 +72,14 @@ export default {
       type: String,
       default: "iconzengjia1"
     },
-    valueItemString: Boolean
+    valueString: Boolean
   },
   data() {
     return {
       style: {
         width: 0,
         height: 0,
-        marginTop: "5px"
+        marginTop: "8px"
       },
       currentValue: this.value
     };
@@ -104,24 +104,7 @@ export default {
         this.$emit("input", this.currentValue);
         return;
       }
-
-      const before = this.beforeRemove(
-        this.currentValue[index],
-        this.currentValue
-      );
-      if (before && before.then) {
-        before.then(res => {
-          if (res !== false) {
-            this.currentValue.splice(index, 1);
-            this.$emit("input", this.currentValue);
-          }
-        });
-        return;
-      }
-      if (before !== false) {
-        this.currentValue.splice(index, 1);
-        this.$emit("input", this.currentValue);
-      }
+      this.beforeRemove(this.currentValue[index], this.currentValue, index);
     },
     input(val) {
       this.currentValue.push(val);
@@ -133,9 +116,14 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      const { offsetWidth, offsetHeight } = this.$refs.upload.$el;
-      this.style.width = `${offsetWidth}px`;
-      this.style.height = `${offsetHeight}px`;
+      if (this.$refs.upload) {
+        const { offsetWidth, offsetHeight } = this.$refs.upload.$el;
+        this.style.width = `${offsetWidth}px`;
+        this.style.height = `${offsetHeight}px`;
+        return;
+      }
+      this.style.width = `${136}px`;
+      this.style.height = `${80}px`;
     });
   }
 };

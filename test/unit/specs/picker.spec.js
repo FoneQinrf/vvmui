@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 17:29:21
+ * @LastEditTime: 2020-04-17 14:08:16
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -13,12 +13,12 @@ import { modal } from "#/views/mobile/From/components/date.js";
 const options = modal()
 
 describe('Picker.vue', () => {
-    it('Picker不存在', () => {
+    it('Picker存在', () => {
         const wrapper = mount(Picker)
         expect(wrapper.exists()).toBe(true)
     })
 
-    it('传入级联数据，渲染异常，数据异常', async () => {
+    it('传入级联数据，渲染正常，数据正常', async () => {
         const wrapper = mount(Picker, {
             propsData: {
                 options: options
@@ -30,7 +30,7 @@ describe('Picker.vue', () => {
         expect(wrapper.findAll({ name: 'Am-Picker' }).length).toBe(3)
     })
 
-    it('异步options数据，loading异常，数据异常', async (done) => {
+    it('异步options数据，loading正常，数据正常', async (done) => {
         const wrapper = mount(Picker)
         await wrapper.vm.$nextTick()
         expect(wrapper.find('.Am-Picker-loading').exists()).toBe(true)
@@ -49,7 +49,7 @@ describe('Picker.vue', () => {
         }, 2000)
     })
 
-    it('传入v-model，数据异常', async () => {
+    it('传入v-model，数据正常', async () => {
         const wrapper = mount(Picker, {
             propsData: {
                 options: options,
@@ -68,7 +68,7 @@ describe('Picker.vue', () => {
         expect(find.at(2).vm.index).toBe(2)
     })
 
-    it('异步的v-model，数据异常', async (done) => {
+    it('异步的v-model，数据正常', async (done) => {
         const wrapper = mount(Picker, {
             propsData: {
                 options: options,
@@ -92,7 +92,7 @@ describe('Picker.vue', () => {
         }, 2000)
     })
 
-    it('异步的v-model和级联数据，先v-model后级联数据，数据异常', async (done) => {
+    it('异步的v-model和级联数据，先v-model后级联数据，数据正常', async (done) => {
         const wrapper = mount(Picker, {
             propsData: {
                 keyValue: 'name',
@@ -120,7 +120,7 @@ describe('Picker.vue', () => {
         }, 2000)
     })
 
-    it('异步的v-model和级联数据，先级联数据后v-model，数据异常', async (done) => {
+    it('异步的v-model和级联数据，先级联数据后v-model，数据正常', async (done) => {
         const wrapper = mount(Picker, {
             propsData: {
                 keyValue: 'name',
@@ -148,7 +148,7 @@ describe('Picker.vue', () => {
         }, 2000)
     })
 
-    it('异步的v-model和级联数据，数据异常', async (done) => {
+    it('异步的v-model和级联数据，数据正常', async (done) => {
         const wrapper = mount(Picker, {
             propsData: {
                 keyValue: 'name',

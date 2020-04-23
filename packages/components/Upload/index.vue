@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:04:22
+ * @LastEditTime: 2020-04-23 16:18:41
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -79,7 +79,7 @@
         :type="type"
         :maxNumber="maxNumber"
         :isImage="isImage"
-        :value-item-string="valueItemString"
+        :value-item-string="valueString"
         ref="upload"
       >
         <slot></slot>
@@ -90,10 +90,10 @@
 </template>
 
 <script>
+import emitter from "@/utils/emitter.js";
 import AmUpload from "./components/upload";
 import mixins from "./components/mixins";
 import Multiple from "./components/multiple";
-import emitter from "../../utils/emitter";
 export default {
   name: "Upload",
   components: { AmUpload, Multiple },
@@ -103,7 +103,7 @@ export default {
       type: [String, Array]
     },
     icon: String,
-    valueItemString: {
+    valueString: {
       type: Boolean,
       default: true
     }

@@ -5,8 +5,14 @@
   "author": "Fone丶峰 <qinrifeng@163.com>",
   "private": false,
   "main": "lib/index.js",
-  "repository": "",
-  "bugs": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FoneQinrf/am-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/FoneQinrf/am-ui/issues",
+    "email": "qinrifeng@163.com"
+  },
   "homepage": "",
   "scripts": {
     "gulp:dev": "gulp --gulpfile build/gulp.config.js",

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 09:21:57
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 10:59:27
+ * @LastEditTime: 2020-04-23 13:25:31
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -14,7 +14,13 @@
   </div>
 </template>
 <script>
-const array = ["main", "main-introduce", "main-quickstart", "main-updata"];
+const array = [
+  "main",
+  "main-introduce",
+  "main-quickstart",
+  "main-updata",
+  "main-style"
+];
 export default {
   data() {
     return {

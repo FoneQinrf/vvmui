@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 11:17:40
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-15 14:05:37
+ * @LastEditTime: 2020-04-23 11:24:54
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -15,6 +15,7 @@
         :disabled="disabled"
         :placeholder="placeholder"
         v-model="placeholderText"
+        :right-icon="rightArrow ? 'iconrights' : ''"
       />
     </div>
     <Layer @on-mask="mask" :isMask="true" direction="bottom" v-model="show">
@@ -43,7 +44,7 @@ import Icon from "../Icon";
 import Input from "../Input";
 
 export default {
-  name: "Action-Sheet",
+  name: "ActionSheet",
   mixins: [emitter],
   components: { Layer, Icon, Input },
   props: {
@@ -75,7 +76,8 @@ export default {
     value: {
       type: [Number, String, Boolean],
       default: undefined
-    }
+    },
+    rightArrow: Boolean
   },
   data() {
     return {

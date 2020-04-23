@@ -2,6 +2,7 @@
     width: 100%;
     &-Model{
         width: 100%;
+        background: @B4;
         button{
             width: 100%;
             border: none; 
@@ -42,16 +43,16 @@
         cursor: pointer;
         position: relative;
         &.disabled{
-            color: @d2;
+            color: @disabled-color;
             cursor: not-allowed;
         }
     }
     &-placeholder{
         &.placeholder{
-            color: @d1;
+            color: @placeholder-color;
         }
         &.disabled{
-            color: @d2;
+            color: @disabled-color;
         }
     }
     &-loading{
