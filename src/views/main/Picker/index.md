@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 13:23:50
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 13:42:20
+ * @LastEditTime: 2020-04-23 11:44:16
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -412,6 +412,6 @@ export default {
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | on-cancel | 点击取消关闭时触发 |  无  |
-| on-change  | 滑动选择时触发 |  当前选中值的集合和所有选中的下标集合  |
+| on-change  | 滑动选择时触发 |  当前选中值的集合和所有选中的下标集合，`(value,item) => {}`  |
 | on-show  | 弹出选择框时触发 |  无  |
 | on-confirm | 点击确认时触发 |  当前选中值的集合  |

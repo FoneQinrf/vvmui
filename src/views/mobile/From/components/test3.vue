@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-26 11:20:44
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:08:26
+ * @LastEditTime: 2020-04-22 13:36:50
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -98,10 +98,5 @@ h3 {
 .bto {
   display: flex;
   justify-content: space-around;
-}
-</style>
-<style scoped>
-.form >>> .mm-Upload-default-icon {
-  border: 1px solid #999;
 }
 </style>

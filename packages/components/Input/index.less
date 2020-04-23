@@ -4,24 +4,28 @@
         align-items: center;
         width: 100%;
         &-context{
-            border: none;
+            display: block;
+            box-sizing: border-box;
             font-size: 16px;
-            font-family:Tahoma;
+            //font-family:Tahoma;
             width: 100%;
             min-width: 0;
             margin: 0;
             padding: 0;
+            border: 0;
             resize: none;
+            line-height: inherit;
             &::placeholder {
-                color: @d1;
+                color: @placeholder-color;
                 font-size: 16px;
+                font-family:Tahoma;
               }
               &:disabled {
                 border: none;
-                color: @d2;
+                color: @disabled-color;
                 background-color: #fff;
                 font-size: 16px;
-                -webkit-text-fill-color: @d2;
+                -webkit-text-fill-color: @disabled-color;
                 -webkit-opacity: 1;
                 opacity: 1;
                 font-family:Tahoma;

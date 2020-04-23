@@ -1,4 +1,5 @@
 .Am-Calendar{
+    width: 100%;
     &-wrp{
         width: 100%;
         height: 560px;
@@ -42,7 +43,7 @@
             align-items: center;
         }
         &-Weekend{
-            color: @C1;
+            color: @theme-color;
         }
     }
     &-DateList{
@@ -100,7 +101,7 @@
                             position: absolute;
                             width: 80%;
                             height: 100%;
-                            background: @C1;
+                            background: @theme-color;
                             border-radius: 8px;
                         }
                         span{
@@ -144,7 +145,7 @@
                 }
                 &.disabledDate{
                     .Am-Calendar-DateList-day-render{
-                        color: @d2;
+                        color: @disabled-color;
                     }
                 }
             }
@@ -185,10 +186,10 @@
     }
     &-text{
         &.placeholder{
-            color: @d1;
+            color: @placeholder-color;
         }
         &.disabled{
-            color: @d2;
+            color: @disabled-color;
         }
     }
 }

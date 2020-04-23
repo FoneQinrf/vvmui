@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-15 13:43:49
+ * @LastEditTime: 2020-04-23 11:50:57
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -12,10 +12,10 @@ module.exports = [
     {
         name: '开发指南',
         children: [
-            {
-                name: '介绍',
-                path: '/main/introduce'
-            },
+           // {
+             //   name: '介绍',
+             //   path: '/main/introduce'
+            //},
             {
                 name: '快速上手',
                 path: '/main/quickstart'

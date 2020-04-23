@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:10:52
+ * @LastEditTime: 2020-04-23 11:17:17
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -37,7 +37,7 @@
         :quality="0.7"
         :beforeUpload="fileBeforeUpload"
       >
-        <i class="Am-iconfont iconupload"></i>
+        <Icon icon="iconupload"/>
       </Upload>
     </section>
     <section class="demo-button-row">
@@ -59,18 +59,49 @@
         :maxNumber="3"
       />
     </section>
+    <section class="demo-button-row">
+      <h3>多文件展示控制</h3>
+      <Upload
+        v-model="files"
+        type="multiple"
+        disabled
+        :showRemove="false"
+        :maxNumber="4"
+        :value-string="false"
+      />
+    </section>
+    <Test />
   </demoTop>
 </template>
 
 <script>
+import Test from "./components/test.vue";
 export default {
+  components: { Test },
   data() {
     return {
       src: "",
       value: "",
       array: [],
       list: [],
-      file: ""
+      file: "",
+      files: [
+        {
+          value:
+            "https://user-gold-cdn.xitu.io/2020/3/4/170a44b4cbae7897?imageView2/1/w/1304/h/734/q/85/format/webp/interlace/1",
+          isImage: true
+        },
+        {
+          value:
+            "https://user-gold-cdn.xitu.io/2020/3/4/170a3678f7d5904c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1",
+          isImage: true
+        },
+        {
+          value:
+            "https://user-gold-cdn.xitu.io/2020/3/4/170a3678f7d5904c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1",
+          isImage: false
+        }
+      ]
     };
   },
   methods: {

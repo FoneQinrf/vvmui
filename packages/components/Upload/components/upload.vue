@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:04:41
+ * @LastEditTime: 2020-04-22 16:21:00
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -45,6 +45,7 @@ import { getType, fetch } from "./utils";
 import Toast from "../../~Toast"; //自定义组件
 const compressList = ["png", "PNG", "jpg", "JPG", "jpeg", "JPEG"];
 export default {
+  name: "single-upload",
   components: { UploadPlaceholder },
   mixins: [mixins],
   props: {
@@ -193,21 +194,7 @@ export default {
         fetch(this, file);
         return;
       }
-
-      const before = this.beforeUpload(file);
-      if (before && before.then) {
-        before.then(res => {
-          if (res !== false) {
-            fetch(this, file);
-            return;
-          }
-          this.progress = 0;
-        });
-        return;
-      }
-      if (before !== false) {
-        fetch(this, file);
-      }
+      this.beforeUpload(file);
     },
     /**
      * 删除文件
@@ -219,19 +206,7 @@ export default {
           this.$emit("input", "");
           return;
         }
-
-        const before = this.beforeRemove(this.file, this.value);
-        if (before && before.then) {
-          before.then(res => {
-            if (res !== false) {
-              this.$emit("input", "");
-            }
-          });
-          return;
-        }
-        if (before !== false) {
-          this.$emit("input", "");
-        }
+        this.beforeRemove(this.file, this.value);
       }
     },
     clearInput() {

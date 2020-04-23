@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 15:10:52
+ * @LastEditTime: 2020-04-23 16:23:28
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -51,7 +51,8 @@ module.exports = {
     'guard-for-in': 'off',
     'no-multi-spaces': 'off',
     'valid-typeof': 'off',
-    'no-await-in-loop': 'off'
+    'no-await-in-loop': 'off',
+    'no-lonely-if' : 'off'
   },
   parserOptions: {
     parser: 'babel-eslint',

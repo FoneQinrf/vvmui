@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 17:56:33
+ * @LastEditTime: 2020-04-21 17:53:52
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -110,8 +110,9 @@ export default {
       this.$emit("on-close");
     },
     confirm() {
-      this.$emit("on-confirm", Number(this.currentValue));
-      this.dispatch("From-Item", "change", Number(this.currentValue));
+      const value = this.currentValue ? Number(this.currentValue) : "";
+      this.$emit("on-confirm", value);
+      this.dispatch("From-Item", "change", value);
       this.show = false;
     },
     keyup(key) {
@@ -121,7 +122,9 @@ export default {
         }
       }
       this.currentValue += String(key);
-      this.$emit("input", Number(this.currentValue));
+      const value = Number(this.currentValue);
+      this.$emit("input", value);
+      this.dispatch("From-Item", "change", value);
     },
     remove() {
       if (this.currentValue) {
@@ -129,10 +132,13 @@ export default {
           0,
           this.currentValue.length - 1
         );
-        this.$emit("input", this.currentValue ? Number(this.currentValue) : '');
-        this.$emit("on-remove", this.currentValue ? Number(this.currentValue) : '');
+        const value = this.currentValue ? Number(this.currentValue) : "";
+        this.$emit("input", value);
+        this.$emit("on-remove", value);
+        this.dispatch("From-Item", "change", value);
         return;
       }
+      this.dispatch("From-Item", "change", "");
       this.$emit("on-remove", "");
     }
   },

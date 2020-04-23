@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-15 13:40:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 14:37:57
+ * @LastEditTime: 2020-04-23 11:41:46
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,7 +10,7 @@
 <template>
   <div class="Am-DatetimePicker">
     <div @click="click" class="Am-DatetimePicker-input">
-      <Input readonly :disabled="disabled" v-model="currentValue" :placeholder="placeholder" />
+      <Input readonly :disabled="disabled" :right-icon="rightArrow ? 'iconrights' : ''" v-model="currentValue" :placeholder="placeholder" />
     </div>
     <Modal v-if="!disabled" direction="bottom" isMask v-model="show">
       <template>
@@ -89,7 +89,8 @@ export default {
     height: Number,
     formatter: {
       type: Function
-    }
+    },
+    rightArrow: Boolean
   },
   data() {
     return {

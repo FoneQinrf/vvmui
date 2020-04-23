@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:06:02
+ * @LastEditTime: 2020-04-21 16:04:54
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -32,7 +32,9 @@
       <div class="main">
         <div class="description">
           <transition name="fade" mode="out-in">
-            <router-view></router-view>
+            <keep-alive>
+              <router-view></router-view>
+            </keep-alive>
           </transition>
           <div style="height:20px;"></div>
         </div>

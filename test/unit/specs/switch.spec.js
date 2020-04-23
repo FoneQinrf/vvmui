@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 14:08:29
+ * @LastEditTime: 2020-04-21 13:50:20
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -58,5 +58,14 @@ describe('Switch.vue', () => {
         expect(wrapper.vm.currentValue).toBe(1)
         target.trigger('click')
         expect(wrapper.vm.currentValue).toBe(0)
+    })
+    it('v-model传入空值，数据正常', async () => {
+        const wrapper = mount(Switch, {
+            propsData: {
+                value: ""
+            }
+        })
+        await wrapper.vm.$nextTick();
+        expect(wrapper.vm.active).toBe('')
     })
 })

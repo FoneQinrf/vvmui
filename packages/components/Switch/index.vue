@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 17:39:16
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 15:02:58
+ * @LastEditTime: 2020-04-21 13:49:33
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -23,17 +23,17 @@ export default {
   mixins: [type, emitter],
   props: {
     value: {
-      type: [Number, Boolean, String]
+      type: [String, Number, Boolean]
     },
     disabled: {
       type: Boolean
     },
     activeValue: {
-      type: [Number, Boolean, String],
+      type: [String, Number, Boolean],
       default: undefined
     },
     inactiveValue: {
-      type: [Number, Boolean, String],
+      type: [String, Number, Boolean],
       default: undefined
     }
   },
