@@ -1,157 +1,90 @@
 <!--
- * @Descripttion: 
  * @Author: Fone丶峰
- * @LastModifiedBy: Fone丶峰
- * @Date: 2019-08-08 15:39:35
+ * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 15:54:56
- * @email: 15921712019@163.com
- * @gitHub: https://github.com/FoneQinrf
+ * @LastEditTime: 2020-04-24 09:51:16
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
  -->
+### 快速上手
+---
+#### 安装
+``` cmd
 
-# 目录结构描述
+# 通过 npm 安装
+npm i vvmui -S
 
-```
-├─build                               打包服务
-│   build.gulp.js                     最终gulp打包用
-│   build.js
-│   check-versions.js                 
-│   gulp.config.js                    开发时gulp监听服务                  
-│   strip-dom.js
-│   utils.js
-│   vue-loader.conf.js
-│   webpack.base.conf.js
-│   webpack.dev.conf.js
-│   webpack.packages.dev.conf.js      组件打包配置
-│   webpack.prod.conf.js
-│   writeFile.config.js
-├─config
-│  │ dev.env.js
-│  │ index.js
-│  │ postcss.config.js                组件样式打包postcss规则
-│  │ prod.env.js
-│  │ test.env.js
-├─lib                                 组件打包放置文件夹
-├─packages                            组件开发目录
-│  │  index.js                        所有组件入口
-│  │  style.less                      样式入口
-│  ├─assets                
-│  │  └─style                         通用样式目录
-│  └─components                       组件放置目录
-├─src                                 example目录
-│  │  App.vue
-│  │  main.js
-│  ├─assets
-│  ├─components
-│  ├─router
-│  ├─utils
-│  └─views
-│      │  home.vue
-│      ├─main                         PC端路由组件目录 以.md为主
-│      └─mobile                       移动端路由组件目录 以.vue为主
-│
-├─static
-├─test
-├─.babelrc
-├─.editorconfig
-├─.eslintignore
-├─.eslintrc.js
-├─.gitignore
-├─.postcssrc.js
-├─index.html
-├─package.json
-├─components.json                        所有可按需加载组件（给使用者看）
-└─README.md
-```
-
-# main和mobile文件夹规则
+# 通过 yarn 安装
+yarn add vvmui
 
 ```
-views/main/Input/index.md     会生成路径为/main/Input的路由
+#### 使用方式
+##### 引入样式
+```javascript
 
-views/mobile/Input/index.vue  会生成路径为/mobile/Input的路由
-
-注：只有为index.md或者index.vue的文件才会生成路由，如遇路由未生成可重启项目
-```
-
-# 核心配置说明
+//不管哪种引入方式都需要引入样式
+import 'vvmui/style.css';
 
 ```
-├─config
-│  │ index.js                   
-│  │ postcss.config.js        组件打包样式配置
+##### 按需引入
+安装 babel-plugin-import 插件     
+``` javascript
 
-index.js  关键配置字段
-    name: 'G-UI',              //组件库名称
-    component: {
-        templateApi: '_',      //模板注册和createApi调用共存的组件命名前缀
-        createApi: '~'         //createApi调用组件命名前缀
-    },
-    gulpConfig: {
-        watchRouter: true,      //是否自动生成路由    路由不符合当前约定的情况可用 （需要手动配置路由）
-        watchComponents: true   //是否自动生成组件入口 生成入口文件过于复杂不符合当前情况下可用 （需手动配置组件打包入口）
-    }
-```
-
-# 开发说明
-
-开发时引用packages/index.js、lib/style.css即可
-```
-├─packages                            
-│  │  index.js  
-│  │  style.less   
-```
-网站侧边导航配置
-```
-├─utils                           
-│  │  navList.js   
-```
-
-# 相关命令
-```
-yarn serve  开发模式
-yarn build:package  单独打包组件内部资源
-# 生成lib示例
-│  G-UI.js
-│  G-UI.js.gz
-│  G-UI.js.map
-│  style.css
-│  style.css.map
-│
-└─components
-    ├─Button
-    │      index.js
-    │      index.js.gz
-    │      index.js.map
-    │
-    ├─Input
-    │      index.js
-    │      index.js.gz
-    │      index.js.map
-    │
-    └─Toast
-            index.js
-            index.js.map
-
-
-
-yarn build  用于发布应用命令
-```
-
-# 使用者按需加载说明
-```
-# 安装 babel-plugin-import 插件
-npm i babel-plugin-import -D   或 yarn add babel-plugin-import   
-
-
+// npm i babel-plugin-import -D   或 yarn add babel-plugin-import 
 // 在.babelrc中添加插件配置
 {
   "plugins": [
     ["import", {
-      "libraryName": "name",       UI库文件夹名称
+      "libraryName": "vvmui", 
       "libraryDirectory": "lib/components"
     }]
   ]
 }
+
+// 接着你可以在代码中直接引入vvmui组件
+import { Button } from 'vvmui';
+
+```
+##### 手动按需引入
+``` javascript
+
+import Button from 'vvmui/lib/Button';
+
+```
+##### 一次性引入所有
+``` javascript
+
+import Vue from 'vue';
+import vvmui from 'vvmui';
+import 'vvmui/style.css';
+
+Vue.use(vvmui);
+
+```
+#### 定制主题
+##### 样式覆盖的方式
+``` css
+
+/*theme-variables.less*/
+
+/*主题色*/
+@theme-color:#7e60ff;
+
+@errer-color:#F23363;
+@success-color:#1FAF70;
+@warning-color:#F9A62B;
+
+import 'vvmui/style.less';
+
+```
+然后在项目入口引入以上文件
+``` javascript
+
+import Vue from 'vue'
+import vvmui from 'vvmui'
+import './theme-variables.less'
+
+Vue.use(vvmui)
 
 ```
