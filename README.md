@@ -7,9 +7,14 @@
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
-<p align="center">![](https://foneqinrf.github.io/vvmui/static/logo.png)</p>
+<p align="center">
+  <img width="78" height="40" src="https://foneqinrf.github.io/vvmui/static/logo.png" alt="vvmui" />
+</p>
 <p align="center">轻量、易上手的Vue移动端组件库</p>
-<p align="center">[![Build Status](https://www.travis-ci.org/FoneQinrf/vvmui.svg?branch=master)](https://www.travis-ci.org/FoneQinrf/vvmui)</p>
+<p align="center">
+  <img src="https://www.travis-ci.org/FoneQinrf/vvmui.svg?branch=master" alt="vvmui" />
+</p>
+
 ### 快速上手
 ---
 #### 安装
