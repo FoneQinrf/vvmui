@@ -15,13 +15,13 @@
   <img src="https://www.travis-ci.org/FoneQinrf/vvmui.svg?branch=master" alt="vvmui" />
 </p>
 <p align="center">
-  <a herf="https://foneqinrf.github.io/vvmui">文档地址</a>
+  <a href="https://foneqinrf.github.io/vvmui">文档地址</a>
 </p>
 <p align="center">
   扫码移动端体验更佳
 </p>
 <p align="center">
-  <img width="120" height="120" src="https://foneqinrf.github.io/vvmui/static/code.pngr" alt="vvmui" />
+  <img width="120" height="120" src="https://foneqinrf.github.io/vvmui/static/code.png" alt="vvmui" />
 </p>
 
 ### 快速上手
