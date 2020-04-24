@@ -9,8 +9,8 @@
  -->
 
 <template>
-  <div class="Am-Calendar">
-    <div @click="openCalendar" class="Am-Calendar-text Am-ellipsis">
+  <div class="vvm-Calendar">
+    <div @click="openCalendar" class="vvm-Calendar-text vvm-ellipsis">
       <Input
         readonly
         :right-icon="rightArrow ? 'iconrights' : ''"
@@ -20,15 +20,15 @@
       />
     </div>
     <Modal v-if="!disabled" direction="bottom" isMask v-model="show" @on-mask="close">
-      <div class="Am-Calendar-wrp">
-        <div class="Am-Calendar-model-top">
-          <div class="Am-Calendar-title">
+      <div class="vvm-Calendar-wrp">
+        <div class="vvm-Calendar-model-top">
+          <div class="vvm-Calendar-title">
             <div class="title">{{ titleText }}</div>
-            <span @click="close" class="Am-Calendar-close">
+            <span @click="close" class="vvm-Calendar-close">
               <Icon icon="iconcuowu" />
             </span>
           </div>
-          <div class="Am-Calendar-week Am-hairline-bottom" ref="title">
+          <div class="vvm-Calendar-week vvm-hairline-bottom" ref="title">
             <span
               v-for="(item,$index) in weekList"
               :key="$index"
@@ -52,16 +52,16 @@
               :class="clasess(param)"
               @click="clickDate(index,param)"
             >
-              <div class="Am-Calendar-DateList-day-render">
+              <div class="vvm-Calendar-DateList-day-render">
                 <slot name="dateItem" :node="param">
                   <span>{{param.day}}</span>
                 </slot>
               </div>
             </li>
           </template>
-          <div class="Am-Calendar-DateList-bottom">
+          <div class="vvm-Calendar-DateList-bottom">
             <slot>
-              <ul class="Am-Calendar-value">
+              <ul class="vvm-Calendar-value">
                 <template v-if="type === 'range'">
                   <li class="startValue">
                     {{startText}}：
@@ -89,7 +89,7 @@
                 </template>
               </ul>
             </slot>
-            <div class="Am-Calendar-confirm" @click="confirm">
+            <div class="vvm-Calendar-confirm" @click="confirm">
               <span>{{confirmText}}</span>
             </div>
           </div>

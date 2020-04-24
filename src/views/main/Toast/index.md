@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue';
-import { Toast } from 'am-ui';
+import { Toast } from 'vvmui';
 
 Vue.use(Toast);
 

@@ -9,12 +9,12 @@
  -->
 
 <template>
-  <div class="Am-Layer">
+  <div class="vvm-Layer">
     <transition v-if="maskShow" name="fade">
-      <div ref="ref" @click="click" v-show="value" class="Am-Layer-mask"></div>
+      <div ref="ref" @click="click" v-show="value" class="vvm-Layer-mask"></div>
     </transition>
     <transition :name="direction">
-      <div v-show="value" :class="['Am-Layer-body',direction]">
+      <div v-show="value" :class="['vvm-Layer-body',direction]">
         <slot></slot>
       </div>
     </transition>

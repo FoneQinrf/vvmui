@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 14:45:25
+ * @LastEditTime: 2020-04-24 10:05:36
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -23,21 +23,21 @@ describe('DatetimePicker.vue', () => {
         expect(wrapper.vm.type).toBe('date')
         await Vue.nextTick()
         expect(wrapper.vm.options.length).toBe(3)
-        const picker = wrapper.findAll('.Am-PickerColumn-wrp')
+        const picker = wrapper.findAll('.vvm-PickerColumn-wrp')
         expect(picker.length).toBe(3)
 
         wrapper.setProps({ type: 'time' })
         expect(wrapper.vm.type).toBe('time')
         await Vue.nextTick()
         expect(wrapper.vm.options.length).toBe(3)
-        const time = wrapper.findAll('.Am-PickerColumn-wrp')
+        const time = wrapper.findAll('.vvm-PickerColumn-wrp')
         expect(time.length).toBe(3)
 
         wrapper.setProps({ type: 'datetime' })
         expect(wrapper.vm.type).toBe('datetime')
         await Vue.nextTick()
         expect(wrapper.vm.options.length).toBe(6)
-        const datetime = wrapper.findAll('.Am-PickerColumn-wrp')
+        const datetime = wrapper.findAll('.vvm-PickerColumn-wrp')
         expect(datetime.length).toBe(6)
     })
 
@@ -51,7 +51,7 @@ describe('DatetimePicker.vue', () => {
         expect(wrapper.vm.currentValue).toBe('1969/12/12 23:23:23')
         expect(wrapper.vm.timeItem).toEqual([1969, 12, 12, 23, 23, 23])
         expect(wrapper.vm.index).toEqual([0, 11, 11])
-        const picker = wrapper.findAll({ name: 'Am-Picker' })
+        const picker = wrapper.findAll({ name: 'v-Picker' })
         expect(picker.at(0).vm.index).toBe(0)
         expect(picker.at(1).vm.index).toBe(11)
         expect(picker.at(2).vm.index).toBe(11)
@@ -70,7 +70,7 @@ describe('DatetimePicker.vue', () => {
             expect(wrapper.vm.currentValue).toBe('1970/11/11 22:22:22')
             expect(wrapper.vm.timeItem).toEqual([1970, 11, 11, 22, 22, 22])
             expect(wrapper.vm.index).toEqual([1, 10, 10, 22, 22, 22])
-            const picker = wrapper.findAll({ name: 'Am-Picker' })
+            const picker = wrapper.findAll({ name: 'v-Picker' })
             expect(picker.at(0).vm.index).toBe(1)
             expect(picker.at(1).vm.index).toBe(10)
             expect(picker.at(2).vm.index).toBe(10)
@@ -89,7 +89,7 @@ describe('DatetimePicker.vue', () => {
             }
         })
         await wrapper.vm.$nextTick()
-        const find = wrapper.findAll({ name: 'Am-Picker' })
+        const find = wrapper.findAll({ name: 'v-Picker' })
         find.at(0).vm.$emit('on-change', [1, 3])
         find.at(1).vm.$emit('on-change', [2, 2])
         find.at(2).vm.$emit('on-change', [3, 23])
@@ -97,7 +97,7 @@ describe('DatetimePicker.vue', () => {
 
         wrapper.setProps({ type: 'time' })
         await wrapper.vm.$nextTick()
-        const time = wrapper.findAll({ name: 'Am-Picker' })
+        const time = wrapper.findAll({ name: 'v-Picker' })
         time.at(0).vm.$emit('on-change', [1, 21])
         time.at(1).vm.$emit('on-change', [2, 22])
         time.at(2).vm.$emit('on-change', [3, 0])
@@ -105,7 +105,7 @@ describe('DatetimePicker.vue', () => {
 
         wrapper.setProps({ type: 'datetime' })
         await wrapper.vm.$nextTick()
-        const datetime = wrapper.findAll({ name: 'Am-Picker' })
+        const datetime = wrapper.findAll({ name: 'v-Picker' })
         datetime.at(0).vm.$emit('on-change', [1, 4])
         datetime.at(1).vm.$emit('on-change', [2, 3])
         datetime.at(2).vm.$emit('on-change', [3, 24])

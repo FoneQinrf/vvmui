@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-23 15:03:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:41:44
+ * @LastEditTime: 2020-04-24 10:00:03
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue';
-import { Backtop } from 'am-ui';
+import { Backtop } from 'vvmui';
 
 Vue.component(Backtop);
 
@@ -29,7 +29,7 @@ Vue.component(Backtop);
 ``` html
 
 <Backtop target=".demo-body.gray">
-    <i class="Am-iconfont icon15"></i>
+    <Icon icon="icon15" />
 </Backtop>
 
 ```

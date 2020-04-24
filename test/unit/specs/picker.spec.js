@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 14:08:16
+ * @LastEditTime: 2020-04-24 10:04:08
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -27,20 +27,20 @@ describe('Picker.vue', () => {
         await wrapper.vm.$nextTick()
         expect(wrapper.vm.list.length).toBe(3)
         expect(wrapper.vm.index).toEqual([0, 0, 0])
-        expect(wrapper.findAll({ name: 'Am-Picker' }).length).toBe(3)
+        expect(wrapper.findAll({ name: 'v-Picker' }).length).toBe(3)
     })
 
     it('异步options数据，loading正常，数据正常', async (done) => {
         const wrapper = mount(Picker)
         await wrapper.vm.$nextTick()
-        expect(wrapper.find('.Am-Picker-loading').exists()).toBe(true)
+        expect(wrapper.find('.vvm-Picker-loading').exists()).toBe(true)
         setTimeout(async () => {
             wrapper.setProps({ options: options })
             await wrapper.vm.$nextTick()
-            expect(wrapper.find('.Am-Picker-loading').exists()).toBe(false)
+            expect(wrapper.find('.vvm-Picker-loading').exists()).toBe(false)
             expect(wrapper.vm.list.length).toBe(3)
             expect(wrapper.vm.index).toEqual([0, 0, 0])
-            const find = wrapper.findAll({ name: 'Am-Picker' })
+            const find = wrapper.findAll({ name: 'v-Picker' })
             expect(find.length).toBe(3)
             expect(find.at(0).vm.index).toBe(0)
             expect(find.at(1).vm.index).toBe(0)
@@ -61,7 +61,7 @@ describe('Picker.vue', () => {
         await wrapper.vm.$nextTick()
         expect(wrapper.vm.list.length).toBe(3)
         expect(wrapper.vm.index).toEqual([2, 0, 2])
-        const find = wrapper.findAll({ name: 'Am-Picker' })
+        const find = wrapper.findAll({ name: 'v-Picker' })
         expect(find.length).toBe(3)
         expect(find.at(0).vm.index).toBe(2)
         expect(find.at(1).vm.index).toBe(0)
@@ -83,7 +83,7 @@ describe('Picker.vue', () => {
             await wrapper.vm.$nextTick()
             expect(wrapper.vm.list.length).toBe(3)
             expect(wrapper.vm.index).toEqual([2, 0, 2])
-            const find = wrapper.findAll({ name: 'Am-Picker' })
+            const find = wrapper.findAll({ name: 'v-Picker' })
             expect(find.length).toBe(3)
             expect(find.at(0).vm.index).toBe(2)
             expect(find.at(1).vm.index).toBe(0)
@@ -110,7 +110,7 @@ describe('Picker.vue', () => {
                 await wrapper.vm.$nextTick()
                 expect(wrapper.vm.list.length).toBe(3)
                 expect(wrapper.vm.index).toEqual([2, 0, 2])
-                const find = wrapper.findAll({ name: 'Am-Picker' })
+                const find = wrapper.findAll({ name: 'v-Picker' })
                 expect(find.length).toBe(3)
                 expect(find.at(0).vm.index).toBe(2)
                 expect(find.at(1).vm.index).toBe(0)
@@ -138,7 +138,7 @@ describe('Picker.vue', () => {
                 await wrapper.vm.$nextTick()
                 expect(wrapper.vm.list.length).toBe(3)
                 expect(wrapper.vm.index).toEqual([2, 0, 2])
-                const find = wrapper.findAll({ name: 'Am-Picker' })
+                const find = wrapper.findAll({ name: 'v-Picker' })
                 expect(find.length).toBe(3)
                 expect(find.at(0).vm.index).toBe(2)
                 expect(find.at(1).vm.index).toBe(0)
@@ -162,7 +162,7 @@ describe('Picker.vue', () => {
             await wrapper.vm.$nextTick()
             expect(wrapper.vm.list.length).toBe(3)
             expect(wrapper.vm.index).toEqual([2, 0, 2])
-            const find = wrapper.findAll({ name: 'Am-Picker' })
+            const find = wrapper.findAll({ name: 'v-Picker' })
             expect(find.length).toBe(3)
             expect(find.at(0).vm.index).toBe(2)
             expect(find.at(1).vm.index).toBe(0)

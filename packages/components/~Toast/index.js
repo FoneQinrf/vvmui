@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-21 16:42:30
+ * @LastEditTime: 2020-04-24 10:00:29
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -62,7 +62,7 @@ function init(options, type) {
 
 const type = ["success", "errer", "warning", "loading"]
 const fnc = {
-    name: 'G-Toast',
+    name: 'Toast',
     info: (options = {}) => {
         init(options)
     },

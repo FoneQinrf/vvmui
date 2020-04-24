@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 10:26:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 14:08:46
+ * @LastEditTime: 2020-04-24 10:01:58
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -24,7 +24,7 @@ describe('Button.vue', () => {
             }
         })
         expect(wrapper.props().type).toBe('success')
-        expect(wrapper.classes()).toContain('Am-Button-type-success')
+        expect(wrapper.classes()).toContain('vvm-Button-type-success')
     })
     it('传入disabled，禁用正常', async () => {
         const wrapper = mount(Button, {
@@ -35,7 +35,7 @@ describe('Button.vue', () => {
         await Vue.nextTick()
         expect(wrapper.props().disabled).toBe(true)
         expect(wrapper.vm.tagDisabled).toBe(true)
-        expect(wrapper.classes()).toContain('Am-Button-disabled')
+        expect(wrapper.classes()).toContain('vvm-Button-disabled')
     })
     it('传入loading，loading正常', async () => {
         const wrapper = mount(Button, {

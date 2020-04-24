@@ -9,19 +9,19 @@
  -->
 
 <template>
-  <label class="Am-Radio">
-    <span :class="['Am-Radio-icon',`Am-text-color-${parentType}`,parentDisabled ? 'disabled' : '']">
+  <label class="vvm-Radio">
+    <span :class="['vvm-Radio-icon',`vvm-text-color-${parentType}`,parentDisabled ? 'disabled' : '']">
       <transition name="fade">
         <Icon v-show="active" :size="20" :icon="parentIcon" />
       </transition>
     </span>
-    <span :class="['Am-Radio-text',parentDisabled ? 'disabled' : '']">
+    <span :class="['vvm-Radio-text',parentDisabled ? 'disabled' : '']">
       <slot>{{label}}</slot>
     </span>
     <input
       v-if="parent"
       :disabled="parentDisabled"
-      class="Am-Radio-input"
+      class="vvm-Radio-input"
       :value="label"
       type="radio"
       name="radio"
@@ -31,7 +31,7 @@
       v-else
       name="radio"
       :disabled="parentDisabled"
-      class="Am-Radio-input"
+      class="vvm-Radio-input"
       type="radio"
       @change="change"
     />

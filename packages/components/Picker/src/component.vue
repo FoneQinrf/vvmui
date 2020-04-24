@@ -2,26 +2,26 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 17:14:48
+ * @LastEditTime: 2020-04-24 10:04:43
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <div ref="ref" class="Am-PickerColumn-wrp" :style="PickerHeight">
-    <ul class="Am-PickerColumn-group" :style="styleY">
+  <div ref="ref" class="vvm-PickerColumn-wrp" :style="PickerHeight">
+    <ul class="vvm-PickerColumn-group" :style="styleY">
       <li
         v-for="(item,$index) in options"
         :key="$index"
         :style="style"
-        :class="['Am-PickerColumn-label',{'Am-text-color-default':$index===curreIndex}]"
+        :class="['vvm-PickerColumn-label',{'vvm-text-color-default':$index===curreIndex}]"
       >
-        <span class="Am-ellipsis">{{item[label] || item}}</span>
+        <span class="vvm-ellipsis">{{item[label] || item}}</span>
       </li>
     </ul>
-    <i class="Am-PickerColumn-top Am-hairline-bottom" :style="maskHeight"></i>
-    <i class="Am-PickerColumn-bottom Am-hairline-top" :style="maskHeight"></i>
+    <i class="vvm-PickerColumn-top vvm-hairline-bottom" :style="maskHeight"></i>
+    <i class="vvm-PickerColumn-bottom vvm-hairline-top" :style="maskHeight"></i>
   </div>
 </template>
 
@@ -47,7 +47,7 @@ function isMobile() {
 }
 
 export default {
-  name: "Am-Picker",
+  name: "v-Picker",
   mixins: [mixins],
   data() {
     return {

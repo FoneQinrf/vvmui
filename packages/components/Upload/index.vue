@@ -2,16 +2,16 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 16:18:41
+ * @LastEditTime: 2020-04-24 09:57:55
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <div class="Am-Upload">
+  <div class="v-Upload">
     <template v-if="type === 'single'">
-      <Am-Upload
+      <v-Upload
         :icon="icon"
         :size="size"
         :accept="accept"
@@ -45,7 +45,7 @@
         ref="upload"
       >
         <slot></slot>
-      </Am-Upload>
+      </v-Upload>
     </template>
     <template v-else>
       <Multiple
@@ -91,12 +91,12 @@
 
 <script>
 import emitter from "@/utils/emitter.js";
-import AmUpload from "./components/upload";
+import vUpload from "./components/upload";
 import mixins from "./components/mixins";
 import Multiple from "./components/multiple";
 export default {
   name: "Upload",
-  components: { AmUpload, Multiple },
+  components: { vUpload, Multiple },
   mixins: [mixins, emitter],
   props: {
     value: {

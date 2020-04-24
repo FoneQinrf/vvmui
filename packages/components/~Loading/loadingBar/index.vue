@@ -10,8 +10,8 @@
 
 <template>
   <transition>
-    <div class="Am-Loading-loadingBar" v-show="show">
-      <div :class="['Am-loadingBar',status]" :style="style"></div>
+    <div class="vvm-Loading-loadingBar" v-show="show">
+      <div :class="['vvm-loadingBar',status]" :style="style"></div>
     </div>
   </transition>
 </template>

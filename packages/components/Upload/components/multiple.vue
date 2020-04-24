@@ -9,7 +9,7 @@
  -->
 
 <template>
-  <div class="Am-Upload-multiple">
+  <div class="vvm-Upload-multiple">
     <Upload-Placeholder
       :style="style"
       v-for="(item,$index) in currentValue"

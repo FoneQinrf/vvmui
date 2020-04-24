@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-14 13:24:55
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 17:52:34
+ * @LastEditTime: 2020-04-24 10:08:57
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -32,13 +32,13 @@ describe('NumberInput.vue', () => {
             }
         })
         await Vue.nextTick()
-        wrapper.find('.Am-Number-Input-input').trigger('click')
+        wrapper.find('.vvm-Number-Input-input').trigger('click')
         expect(wrapper.vm.show).toBe(false)
     })
     it('键盘点击，值正常', async () => {
         const wrapper = mount(NumberInput)
         await Vue.nextTick()
-        const keyboard = wrapper.find({ name: 'G-Number-keyboard' })
+        const keyboard = wrapper.find({ name: 'Number-keyboard' })
         keyboard.vm.keyup(1)
         keyboard.vm.keyup(2)
         keyboard.vm.keyup(3)
@@ -52,7 +52,7 @@ describe('NumberInput.vue', () => {
             }
         })
         await Vue.nextTick()
-        const keyboard = wrapper.find({ name: 'G-Number-keyboard' })
+        const keyboard = wrapper.find({ name: 'Number-keyboard' })
         keyboard.vm.keyup(1)
         keyboard.vm.keyup(2)
         keyboard.vm.keyup(3)
@@ -66,7 +66,7 @@ describe('NumberInput.vue', () => {
             }
         })
         await Vue.nextTick()
-        const keyboard = wrapper.find({ name: 'G-Number-keyboard' })
+        const keyboard = wrapper.find({ name: 'Number-keyboard' })
         keyboard.vm.remove()
         expect(wrapper.vm.currentValue).toBe('123')
     })
@@ -77,7 +77,7 @@ describe('NumberInput.vue', () => {
             }
         })
         await Vue.nextTick()
-        const keyboard = wrapper.find({ name: 'G-Number-keyboard' })
+        const keyboard = wrapper.find({ name: 'Number-keyboard' })
         keyboard.vm.keyup(1)
         keyboard.vm.keyup(2)
         keyboard.vm.remove()

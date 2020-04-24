@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { ActionSheet } from 'am-ui'
+import { ActionSheet } from 'vvmui'
 
 Vue.component(ActionSheet)
 

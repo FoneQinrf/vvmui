@@ -9,14 +9,14 @@
  -->
 
 <template>
-  <div class="Am-Number-Input">
-    <div class="Am-Number-Input-icon" v-if="icon">
+  <div class="vvm-Number-Input">
+    <div class="vvm-Number-Input-icon" v-if="icon">
       <Icon :icon="icon" :size="16" />
     </div>
-    <div @click="focus" :class="['Am-Number-Input-input', align]">
+    <div @click="focus" :class="['vvm-Number-Input-input', align]">
       <Input readonly :disabled="disabled" :placeholder="placeholder" v-model="currentValue" />
     </div>
-    <div v-if="unity" class="Am-Number-Input-unity">{{unity}}</div>
+    <div v-if="unity" class="vvm-Number-Input-unity">{{unity}}</div>
     <keyboard
       v-model="show"
       :confirmText="confirmText"

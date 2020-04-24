@@ -10,7 +10,7 @@
 
 
 <template>
-  <div class="Am-Upload-default-icon">
+  <div class="vvm-Upload-default-icon">
     <template v-if="!url">
       <slot>
         <Icon :size="iconSize" :icon="icon" />
@@ -18,12 +18,12 @@
     </template>
     <template v-else>
       <template v-if="isImage">
-        <img class="Am-Upload-img" :src="url" />
+        <img class="vvm-Upload-img" :src="url" />
       </template>
       <template v-else>
         <Icon :size="34" icon="iconicon-" />
       </template>
-      <span @click.stop="onRemove" v-if="showRemove" class="Am-Upload-removeImg">
+      <span @click.stop="onRemove" v-if="showRemove" class="vvm-Upload-removeImg">
         <Icon :size="14" icon="iconcuowu" color="#fff" />
       </span>
     </template>

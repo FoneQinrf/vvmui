@@ -10,8 +10,8 @@
 
 <template>
   <button :disabled="tagDisabled" @click="click" :class="clasess">
-    <Icon v-show="currentLoading" class="Am-loading" icon="iconloading1" />
-    <span :class="[this.plain ? `Am-text-color-${this.type}` : '']">
+    <Icon v-show="currentLoading" class="vvm-loading" icon="iconloading1" />
+    <span :class="[this.plain ? `vvm-text-color-${this.type}` : '']">
       <template v-if="currentLoading">{{loadingText}}</template>
       <template v-else>
         <slot></slot>
@@ -62,13 +62,13 @@ export default {
   computed: {
     clasess() {
       return [
-        "Am-Button",
-        `Am-Button-type-${this.type}`,
-        this.plain ? `Am-Button-plain Am-border-color-${this.type}` : "",
+        "vvm-Button",
+        `vvm-Button-type-${this.type}`,
+        this.plain ? `vvm-Button-plain vvm-border-color-${this.type}` : "",
         {
-          "Am-Button-round": this.round,
-          "Am-Button-disabled": this.tagDisabled,
-          "Am-Button-long": this.long
+          "vvm-Button-round": this.round,
+          "vvm-Button-disabled": this.tagDisabled,
+          "vvm-Button-long": this.long
         }
       ];
     },

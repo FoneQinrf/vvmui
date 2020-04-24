@@ -1,6 +1,6 @@
 {
   "name": "vvmui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Vue.js mobile ui",
   "author": "Fone丶峰 <qinrifeng@163.com>",
   "private": false,
@@ -28,13 +28,15 @@
     "build:gulp": "node build/build.gulp.js",
     "dev:package": "webpack --watch --config build/webpack.packages.dev.conf.js",
     "test:build": "node build/build.js",
-    "build:style": "webpack --config build/webpack.theme.conf.js"
+    "build:style": "webpack --config build/webpack.theme.conf.js",
+    "publish:build": "npm run build:package && npm run build:style"
   },
   "dependencies": {
     "async-validator": "^3.2.4",
     "jest": "^25.2.4",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vvmui": "^0.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { Switch } from 'am-ui'
+import { Switch } from 'vvmui'
 
 Vue.component(Switch)
 

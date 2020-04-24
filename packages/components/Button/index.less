@@ -1,4 +1,4 @@
-.Am-Button{
+.vvm-Button{
     display: inline-block;
     border: none;
     text-align: center;
@@ -9,7 +9,7 @@
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0);
     cursor: pointer;
-    &.Am-Button-type-{
+    &.vvm-Button-type-{
         &default{
             background: @theme-color;
             &:active{
@@ -44,13 +44,13 @@
         }
     }
     
-    &.Am-Button-plain{
+    &.vvm-Button-plain{
         background: @B6;
         &:active{
             background: @B5;
             opacity: 0.5;
         }
-        &.Am-border-color-{
+        &.vvm-border-color-{
             &default{
                 border: 1px solid  @theme-color;
             }
@@ -68,7 +68,7 @@
 
     &-round{
         border-radius: 10em;
-        &.Am-border-color{
+        &.vvm-border-color{
             &-default,&-success,&-warning,&-errer{
                 &::after{
                     border-radius: 10em;
@@ -76,23 +76,23 @@
             }
         }
     }
-    &.Am-Button-disabled{
+    &.vvm-Button-disabled{
         opacity: 0.6;
         &:active{
             opacity: 0.6;
         }
     }
-    .Am-loading{
+    .vvm-loading{
         display: inline-block;
     }
-    &.Am-Button-long{
+    &.vvm-Button-long{
         width: 100%;
     }
 }
 button + button{
     margin-left: 5px;
 }
-[class*='.Am-border-color']{
+[class*='.vvm-border-color']{
     &::after {
         position: absolute;
         box-sizing: border-box;

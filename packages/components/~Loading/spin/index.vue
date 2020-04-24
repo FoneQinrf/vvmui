@@ -9,13 +9,13 @@
  -->
 
 <template>
-  <div class="Am-Loading-spin">
+  <div class="vvm-Loading-spin">
     <transition name="fade">
-      <div v-show="show" class="Am-spin-mask"></div>
+      <div v-show="show" class="vvm-spin-mask"></div>
     </transition>
     <transition name="fade">
-      <div v-show="show" class="Am-spin-body">
-        <div :class="['Am-spin-icon',{'Am-loading':!img}]">
+      <div v-show="show" class="vvm-spin-body">
+        <div :class="['vvm-spin-icon',{'vvm-loading':!img}]">
           <template v-if="img">
             <img :src="img" />
           </template>
@@ -23,7 +23,7 @@
             <Icon :icon="icon" :size="36" color="#fff" />
           </template>
         </div>
-        <div class="Am-spin-context">{{this.context}}</div>
+        <div class="vvm-spin-context">{{this.context}}</div>
       </div>
     </transition>
   </div>

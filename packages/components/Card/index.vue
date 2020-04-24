@@ -8,8 +8,8 @@
  * @Github: https://github.com/FoneQinrf
  -->
 <template>
-  <div :class="['Am-Card',{shadow:shadow}]">
-    <div v-if="isTitle" class="Am-Card-title Am-hairline-bottom">
+  <div :class="['vvm-Card',{shadow:shadow}]">
+    <div v-if="isTitle" class="vvm-Card-title vvm-hairline-bottom">
       <div>
         <template v-if="$slots['title-left']">
           <slot name="title-left"></slot>
@@ -20,7 +20,7 @@
         <slot name="title-right"></slot>
       </div>
     </div>
-    <div class="Am-Card-body">
+    <div class="vvm-Card-body">
       <slot></slot>
     </div>
   </div>

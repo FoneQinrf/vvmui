@@ -2,44 +2,44 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-15 14:06:52
+ * @LastEditTime: 2020-04-24 10:08:34
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <div @click.stop class="Am-Number-keyboard">
+  <div @click.stop class="vvm-Number-keyboard">
     <Layer :mask-show="false" direction="bottom" v-model="value">
-      <div class="Am-Number-Input-layer">
-        <div class="Am-Number-Input-keyboard">
-          <div class="Am-Number-Input-keyboard-title">
+      <div class="vvm-Number-Input-layer">
+        <div class="vvm-Number-Input-keyboard">
+          <div class="vvm-Number-Input-keyboard-title">
             <div @click.stop="close">
               <Icon icon="iconxiangxia" />
             </div>
           </div>
-          <div class="Am-Number-Input-key">
-            <ul class="Am-Number-Input-key-number">
+          <div class="vvm-Number-Input-key">
+            <ul class="vvm-Number-Input-key-number">
               <li
-                class="Am-Number-Input-key-item"
+                class="vvm-Number-Input-key-item"
                 v-for="item in 9"
                 @click.stop="keyup(item)"
                 :key="item"
               >{{item}}</li>
               <template v-if="isDecimal">
-                <li class="Am-Number-Input-key-item" @click.stop="keyup('.')">
+                <li class="vvm-Number-Input-key-item" @click.stop="keyup('.')">
                   <Icon icon="icondian" />
                 </li>
               </template>
               <template v-else>
-                <li class="Am-Number-Input-key-item"></li>
+                <li class="vvm-Number-Input-key-item"></li>
               </template>
-              <li class="Am-Number-Input-key-item" @click.stop="keyup('0')">0</li>
-              <li class="Am-Number-Input-key-item" @click.stop="remove">
+              <li class="vvm-Number-Input-key-item" @click.stop="keyup('0')">0</li>
+              <li class="vvm-Number-Input-key-item" @click.stop="remove">
                 <Icon icon="iconshanchu" />
               </li>
             </ul>
-            <div class="Am-Number-Input-key-right">
+            <div class="vvm-Number-Input-key-right">
               <template v-if="negativeNumber">
                 <label class="right-cut" @click.stop="keyup('-')">
                   <Icon icon="iconiconfontmove" />
@@ -61,7 +61,7 @@
 import Layer from "../../Modal";
 import Icon from "../../Icon";
 export default {
-  name: "G-Number-keyboard",
+  name: "Number-keyboard",
   components: { Layer, Icon },
   methods: {
     keyup(key) {

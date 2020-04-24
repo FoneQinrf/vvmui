@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     clasess() {
-      return `Am-iconfont ${this.icon}`;
+      return `vvm-iconfont ${this.icon}`;
     },
     style() {
       const witdh = document.body.clientWidth;

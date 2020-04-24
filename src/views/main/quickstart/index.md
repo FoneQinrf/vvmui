@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 13:49:17
+ * @LastEditTime: 2020-04-24 09:51:16
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,10 +13,10 @@
 ``` cmd
 
 # 通过 npm 安装
-npm i am-ui -S
+npm i vvmui -S
 
 # 通过 yarn 安装
-yarn add am-ui
+yarn add vvmui
 
 ```
 #### 使用方式
@@ -24,7 +24,7 @@ yarn add am-ui
 ```javascript
 
 //不管哪种引入方式都需要引入样式
-import 'am-ui/style.css';
+import 'vvmui/style.css';
 
 ```
 ##### 按需引入
@@ -36,35 +36,35 @@ import 'am-ui/style.css';
 {
   "plugins": [
     ["import", {
-      "libraryName": "am-ui", 
+      "libraryName": "vvmui", 
       "libraryDirectory": "lib/components"
     }]
   ]
 }
 
-// 接着你可以在代码中直接引入am-ui组件
-import { Button } from 'vant';
+// 接着你可以在代码中直接引入vvmui组件
+import { Button } from 'vvmui';
 
 ```
 ##### 手动按需引入
 ``` javascript
 
-import Button from 'am-ui/lib/Button';
+import Button from 'vvmui/lib/Button';
 
 ```
 ##### 一次性引入所有
 ``` javascript
 
 import Vue from 'vue';
-import Amui from 'am-ui';
-import 'am-ui/style.css';
+import vvmui from 'vvmui';
+import 'vvmui/style.css';
 
-Vue.use(Amui);
+Vue.use(vvmui);
 
 ```
 #### 定制主题
 ##### 样式覆盖的方式
-``` css
+``` javascript
 
 /*theme-variables.less*/
 
@@ -75,16 +75,16 @@ Vue.use(Amui);
 @success-color:#1FAF70;
 @warning-color:#F9A62B;
 
-import 'am-ui/style.less';
+import 'vvmui/style.less';
 
 ```
 然后在项目入口引入以上文件
 ``` javascript
 
 import Vue from 'vue'
-import Amui from 'am-ui'
+import vvmui from 'vvmui'
 import './theme-variables.less'
 
-Vue.use(Amui)
+Vue.use(vvmui)
 
 ```

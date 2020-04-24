@@ -12,19 +12,19 @@
   <li
     @click="click"
     :class="[
-        'Am-Cell',
+        'vvm-Cell',
         {
           'cell-active': to || url || arrow,
           'cell-block':model === 'block'
         }
       ]"
   >
-    <div class="Am-Cell-label Am-ellipsis">
+    <div class="vvm-Cell-label vvm-ellipsis">
       <Icon style="margin-right: 3px;" v-if="icon" :icon="icon" />
       <slot name="label">{{label}}</slot>
     </div>
     <template v-if="model === 'block'">
-      <div class="Am-Cell-botton">
+      <div class="vvm-Cell-botton">
         <slot>{{context}}</slot>
       </div>
     </template>
@@ -68,9 +68,9 @@ export default {
   computed: {
     clasess() {
       return [
-        "Am-Cell-value",
+        "vvm-Cell-value",
         {
-          "Am-Cell-right": this.label
+          "vvm-Cell-right": this.label
         }
       ];
     }

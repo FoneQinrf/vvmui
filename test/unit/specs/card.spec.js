@@ -30,7 +30,7 @@ describe('Card.vue', () => {
                 isTitle: false
             }
         })
-        expect(wrapper.find('.Am-Card-title').exists()).toBe(false)
+        expect(wrapper.find('.vvm-Card-title').exists()).toBe(false)
     })
     it('左右上角slot，UI内容正常', async () => {
         const wrapper = mount(Card, {

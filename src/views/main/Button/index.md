@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { Button } from 'am-ui'
+import { Button } from 'vvmui'
 
 Vue.component(Button)
 

@@ -8,8 +8,8 @@
  * @Github: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="Am-Action-Sheet">
-    <div @click="click" class="Am-Action-Sheet-placeholder">
+  <div class="vvm-Action-Sheet">
+    <div @click="click" class="vvm-Action-Sheet-placeholder">
       <Input
         readonly
         :disabled="disabled"
@@ -19,19 +19,19 @@
       />
     </div>
     <Layer @on-mask="mask" :isMask="true" direction="bottom" v-model="show">
-      <div class="Am-Action-Sheet-Model">
-        <div v-if="data.length === 0" class="Am-Action-Sheet-loading">
-          <Icon icon="iconloading1" :size="24" class="Am-loading" />
+      <div class="vvm-Action-Sheet-Model">
+        <div v-if="data.length === 0" class="vvm-Action-Sheet-loading">
+          <Icon icon="iconloading1" :size="24" class="vvm-loading" />
         </div>
-        <div v-else class="Am-Action-Sheet-Model-list">
+        <div v-else class="vvm-Action-Sheet-Model-list">
           <button
             v-for="(item,$index) in data"
             @click="clickItem(item)"
             :key="$index"
-            :class="[item.disabled ? 'Am-Action-Sheet-item disabled' : 'Am-Action-Sheet-item']"
+            :class="[item.disabled ? 'vvm-Action-Sheet-item disabled' : 'vvm-Action-Sheet-item']"
           >{{item[label]}}</button>
         </div>
-        <button @click="close" class="Am-Action-Sheet-close">{{closeText}}</button>
+        <button @click="close" class="vvm-Action-Sheet-close">{{closeText}}</button>
       </div>
     </Layer>
   </div>

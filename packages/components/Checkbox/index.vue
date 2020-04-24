@@ -9,20 +9,20 @@
  -->
 
 <template>
-  <label class="Am-Checkbox">
-    <span :class="['Am-Checkbox-icon',`Am-text-color-${parentType}`,{['disabled']:parenDisabled}]">
+  <label class="vvm-Checkbox">
+    <span :class="['vvm-Checkbox-icon',`vvm-text-color-${parentType}`,{['disabled']:parenDisabled}]">
       <transition name="fade">
         <Icon v-show="currentValue" :size="20" :icon="parentIcon" />
       </transition>
     </span>
-    <span :class="['Am-Checkbox-text',{['disabled']:parenDisabled}]">
+    <span :class="['vvm-Checkbox-text',{['disabled']:parenDisabled}]">
       <slot>{{label}}</slot>
     </span>
     <input
       v-if="parent"
       type="checkbox"
       :value="label"
-      class="Am-Checkbox-input"
+      class="vvm-Checkbox-input"
       @change="change"
       v-model="model"
       :disabled="parenDisabled"
@@ -30,7 +30,7 @@
     <input
       v-else
       type="checkbox"
-      class="Am-Checkbox-input"
+      class="vvm-Checkbox-input"
       :checked="currentValue"
       @change="change"
       :disabled="parenDisabled"

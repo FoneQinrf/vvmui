@@ -6,7 +6,7 @@ Ported by Fabrício Tavares de Oliveira
 
 */
 
-.hljs,.language-javascript,.language-html,.language-css,.language-json,.language-cmd {
+.hljs,.language-javascript,.language-html,.language-css,.language-json,.language-cmd,.language-js {
   display: inline-block;
   width: 100%;
   overflow-y: auto;

@@ -16,7 +16,7 @@
 ```js
 
 import Vue from 'vue'
-import { Cell, CellGroup } from 'am-ui'
+import { Cell, CellGroup } from 'vvmui'
 
 Vue.component(Cell)
 Vue.component(CellGroup)

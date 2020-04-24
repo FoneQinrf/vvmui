@@ -9,9 +9,9 @@
  -->
 
 <template>
-  <div :class="['Am-Switch',active ? 'color-active' : '', type]" @click="click">
-    <span :class="['Am-Switch-radius',active ? 'active' : 'close']"></span>
-    <div v-if="disabled" class="Am-Switch-disabled"></div>
+  <div :class="['vvm-Switch',active ? 'color-active' : '', type]" @click="click">
+    <span :class="['vvm-Switch-radius',active ? 'active' : 'close']"></span>
+    <div v-if="disabled" class="vvm-Switch-disabled"></div>
   </div>
 </template>
 
@@ -19,7 +19,7 @@
 import { type } from "../../mixins/props";
 import emitter from "../../utils/emitter";
 export default {
-  name: "Am-Switch",
+  name: "v-Switch",
   mixins: [type, emitter],
   props: {
     value: {

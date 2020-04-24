@@ -10,7 +10,7 @@
 
 
 <template>
-  <div :class="['Am-CheckboxGroup',{['inline']:inline}]">
+  <div :class="['vvm-CheckboxGroup',{['inline']:inline}]">
     <slot></slot>
   </div>
 </template>
