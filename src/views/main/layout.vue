@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 15:51:49
+ * @LastEditTime: 2020-04-24 17:52:42
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -187,6 +187,9 @@ export default {
 }
 </style>
 <style lang="less">
+html,body{
+    font-size: 14px;
+}
 .introduce {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 13:43:10
+ * @LastEditTime: 2020-04-24 18:01:27
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -23,6 +23,7 @@
             :label="opt.name"
             :reture-value="opt"
             @on-click="click"
+            v-if="opt.path !== '/main/Icon'"
           >
             <Icon icon="iconlist-rigthl" />
           </Cell>
@@ -45,6 +46,9 @@ export default {
       /* eslint-disable */
       if (parent && parent.window && parent.window.initState) {
         parent.window.pushRouter(item.path);
+      } else {
+        const name = item.path.replace("main", "mobile");
+        this.$router.push(name);
       }
       /* eslint-disable */
     }
@@ -56,11 +60,11 @@ export default {
 .Amui-home {
   padding: 0 12px 12px 12px;
   .logo {
-    height: 80px;
+    height: 100px;
     padding-top: 20px;
     text-align: center;
-    img{
-      height: 40px;
+    img {
+      height: 60px;
     }
   }
   .vvm-Card {
