@@ -187,9 +187,6 @@ export default {
 }
 </style>
 <style lang="less">
-html,body{
-    font-size: 14px;
-}
 .introduce {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   padding: 20px;
