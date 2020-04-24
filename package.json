@@ -21,7 +21,7 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src packages && npm run test",
+    "lint": "eslint --ext .js,.vue src packages",
     "build": "node build/build.gulp.js && npm run build:package && npm run build:style && node build/build.js",
     "serve": "concurrently \"npm run gulp:dev\" \"npm run dev:package\" \"npm run dev\"",
     "build:package": "webpack --config build/webpack.packages.build.conf.js",
