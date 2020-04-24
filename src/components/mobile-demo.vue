@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 09:21:57
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 14:57:01
+ * @LastEditTime: 2020-04-24 17:41:00
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -30,7 +30,7 @@ export default {
       path:
         process.env.NODE_ENV === "development"
           ? window.location.origin
-          : "https://foneqinrf.github.io/vvmui/"
+          : "https://foneqinrf.github.io/vvmui"
     };
   },
   watch: {
