@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 13:23:50
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:42:05
+ * @LastEditTime: 2020-04-24 15:43:53
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -172,3 +172,7 @@ Vue.component(Button)
 |------|------------|------------|------------|
 | showLoading  | 开启loading状态 |  无  | 无 |
 | removeLoading  | 关闭loading状态 |  无  | 无 |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

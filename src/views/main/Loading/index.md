@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:12:31
+ * @LastEditTime: 2020-04-24 15:46:51
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -77,3 +77,7 @@ setTimeout(() => {
 | context  | 提示内容     | String        | 无 |
 | icon  | 自定义icon标签   | String        | iconzhuangtaijiazai |
 | img  |  自定义展示的图片地址  | String        | 无 |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

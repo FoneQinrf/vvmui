@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 11:17:17
+ * @LastEditTime: 2020-04-24 14:16:55
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -37,7 +37,7 @@
         :quality="0.7"
         :beforeUpload="fileBeforeUpload"
       >
-        <Icon icon="iconupload"/>
+        <Icon icon="iconfile"/>
       </Upload>
     </section>
     <section class="demo-button-row">

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-21 16:04:54
+ * @LastEditTime: 2020-04-24 15:51:49
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,7 +11,14 @@
  
 <template>
   <div class="G-home">
-    <div class="top-nav"></div>
+    <div class="top-nav">
+      <router-link class="logo" to="/">
+        <img src="@/assets/logo.png" />
+      </router-link>
+      <a class="github" href="https://github.com/FoneQinrf/vvmui" target="_blank">
+        <Icon icon="icongithub" />
+      </a>
+    </div>
     <div class="G-body">
       <div class="left-nav-wrp">
         <div class="left-nav">
@@ -72,6 +79,19 @@ export default {
     box-shadow: 2px 4px 6px #e0e0eb;
     z-index: 10;
     background: #fff;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    .logo {
+      height: 40px;
+      img {
+        height: 100%;
+      }
+    }
+    .github{
+      margin-left: 80px;
+    }
   }
   .G-body {
     width: 100%;
@@ -153,5 +173,36 @@ export default {
 }
 .description {
   color: #666;
+}
+.description >>> ul{
+  padding-left: 20px;
+}
+.description >>> li{
+  list-style-type: circle;
+}
+.description >>> blockquote{
+  padding: 5px 0 5px 10px;
+  margin: 15px 0;
+  border-left: 3px solid #532FE6;
+}
+</style>
+<style lang="less">
+.introduce {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  > div{
+    flex: 1;
+  }
+  img{
+    height: 40px;
+  }
+  .code{
+    img{
+      height: 120px;
+      margin-top: 10px;
+    }
+  }
 }
 </style>

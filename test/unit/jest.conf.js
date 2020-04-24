@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-08-09 10:31:35
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-22 10:54:37
+ * @LastEditTime: 2020-04-24 16:29:10
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -31,7 +31,8 @@ module.exports = {
   mapCoverage: true,
   coverageDirectory: '<rootDir>/test/unit/coverage',
   collectCoverageFrom: [
-    'packages/components/**/*.{js}',
+    'packages/components/**/*.{js,vue}',
+    '!build/**.{js,png}',
     '!src/**/*.{js,vue}',
     '!src/main.js',
     '!src/router/index.js',

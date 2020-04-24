@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 11:04:56
+ * @LastEditTime: 2020-04-24 15:47:21
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -121,3 +121,7 @@ Vue.component(CellGroup)
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | on-click  | 点击`Cell`时触发 |  无  |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

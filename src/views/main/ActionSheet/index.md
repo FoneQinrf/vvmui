@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 13:23:50
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 11:35:53
+ * @LastEditTime: 2020-04-24 15:43:37
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -164,3 +164,7 @@ export default {
 | on-mask  | 点击上拉选择框背景蒙层时触发 |  无  |
 | on-show  | 上拉选择框弹出时触发 |  无  |
 | on-confirm | 点击上拉选择框选项时触发 |  选中的值和选中的整个对象  |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

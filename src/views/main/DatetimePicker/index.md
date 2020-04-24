@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 13:23:50
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-16 15:11:50
+ * @LastEditTime: 2020-04-24 15:47:11
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -135,3 +135,7 @@ export default {
 | on-change  | 滑动选择时间时触发 |  当前选中的时间  |
 | on-show  | 弹出时间选择框时触发 |  无  |
 | on-confirm | 点击确认时触发 |  当前选中的时间  |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

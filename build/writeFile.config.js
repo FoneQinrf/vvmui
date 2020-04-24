@@ -1,12 +1,13 @@
+
 /*
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:50:00
+ * @LastEditTime: 2020-04-24 16:21:27
  * @Description: 
  * @Email: qinrifeng@163.com
  */
-
+/* eslint-disable */
 const { component } = require('../config')
 
 module.exports = {
@@ -52,9 +53,10 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-        path: '/',
+        path: '*',
         name: 'home',
-        component: () => import('@/views/home.vue')
+        //component: () => import('@/views/home.vue')
+        redirect: '/main/introduce'
     },
     {
         path: '/main',
@@ -117,3 +119,4 @@ export default install
     return str
   }
 }
+/* eslint-disable */

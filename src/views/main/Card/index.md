@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 10:04:34
+ * @LastEditTime: 2020-04-24 15:44:11
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -85,3 +85,7 @@ Vue.component(Card)
 | 无  | 自定义的主体内容 |
 | title-left | 标题栏左边内容 |
 | title-right | 标题栏右边内容 |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

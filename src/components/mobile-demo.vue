@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 09:21:57
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 13:25:31
+ * @LastEditTime: 2020-04-24 14:57:01
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -19,7 +19,8 @@ const array = [
   "main-introduce",
   "main-quickstart",
   "main-updata",
-  "main-style"
+  "main-style",
+  "main-Icon"
 ];
 export default {
   data() {
@@ -29,7 +30,7 @@ export default {
       path:
         process.env.NODE_ENV === "development"
           ? window.location.origin
-          : "https://foneqinrf.github.io/am-ui/"
+          : "https://foneqinrf.github.io/vvmui/"
     };
   },
   watch: {
