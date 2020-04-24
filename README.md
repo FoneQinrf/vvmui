@@ -7,6 +7,7 @@
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
+![](https://foneqinrf.github.io/vvmui/static/logo.png)
 ### 快速上手
 ---
 #### 安装
