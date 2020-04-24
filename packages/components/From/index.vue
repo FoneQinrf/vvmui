@@ -9,7 +9,7 @@
  -->
 
 <template>
-  <div class="Am-Form">
+  <div class="vvm-Form">
     <slot></slot>
   </div>
 </template>

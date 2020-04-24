@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { DatetimePicker } from 'am-ui'
+import { DatetimePicker } from 'vvmui'
 
 Vue.component(DatetimePicker)
 

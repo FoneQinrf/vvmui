@@ -10,14 +10,14 @@
 
 
 <template>
-  <div class="Am-Calendar-DateList-wrp">
-    <div class="Am-Calendar-DateList" @scroll="onScroll" ref="scroll">
+  <div class="vvm-Calendar-DateList-wrp">
+    <div class="vvm-Calendar-DateList" @scroll="onScroll" ref="scroll">
       <div>
         <div v-for="(item,$index) in date" :key="$index+'A'" :ref="$index">
-          <div class="Am-Calendar-DateList-item-title">
+          <div class="vvm-Calendar-DateList-item-title">
             <b>{{item.name}}</b>
           </div>
-          <ul class="Am-Calendar-DateList-item">
+          <ul class="vvm-Calendar-DateList-item">
             <slot name="dateItem" :item="item.list"></slot>
           </ul>
         </div>

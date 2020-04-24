@@ -9,9 +9,9 @@
  -->
 
 <template>
-  <div class="Am-CellGroup">
-    <div v-if="title" class="Am-CellGroup-title">{{title}}</div>
-    <ul class="Am-Cell-wrp">
+  <div class="vvm-CellGroup">
+    <div v-if="title" class="vvm-CellGroup-title">{{title}}</div>
+    <ul class="vvm-Cell-wrp">
       <slot></slot>
     </ul>
   </div>

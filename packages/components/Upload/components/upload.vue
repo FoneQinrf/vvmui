@@ -10,7 +10,7 @@
 
 
 <template>
-  <div class="Am-Upload-single">
+  <div class="vvm-Upload-single">
     <Upload-Placeholder
       :url="value"
       :iconSize="iconSize"
@@ -22,7 +22,7 @@
       <slot></slot>
     </Upload-Placeholder>
     <input
-      class="Am-Upload-input"
+      class="vvm-Upload-input"
       @change="change"
       :disabled="computedDisabled"
       :name="name"
@@ -32,8 +32,8 @@
     <!-- 图片压缩需要用到的canvas -->
     <canvas hidden="hidden" v-if="compress" ref="canvas"></canvas>
     <!-- 进度条 -->
-    <div v-if="progress > 0" class="Am-Upload-progress">
-      <div :style="{width:`${progress}%`}" class="Am-Upload-progress-bar"></div>
+    <div v-if="progress > 0" class="vvm-Upload-progress">
+      <div :style="{width:`${progress}%`}" class="vvm-Upload-progress-bar"></div>
     </div>
   </div>
 </template>

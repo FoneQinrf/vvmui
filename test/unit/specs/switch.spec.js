@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-21 13:50:20
+ * @LastEditTime: 2020-04-24 10:04:20
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -40,8 +40,8 @@ describe('Switch.vue', () => {
         })
         await Vue.nextTick()
         expect(wrapper.props().disabled).toBe(true)
-        expect(wrapper.html()).toContain('<div class="Am-Switch-disabled"></div>')
-        const target = wrapper.find('.Am-Switch')
+        expect(wrapper.html()).toContain('<div class="vvm-Switch-disabled"></div>')
+        const target = wrapper.find('.vvm-Switch')
         target.trigger('click')
         expect(wrapper.vm.currentValue).toBe(true)
     })
@@ -52,7 +52,7 @@ describe('Switch.vue', () => {
                 inactiveValue: 0
             }
         })
-        const target = wrapper.find('.Am-Switch')
+        const target = wrapper.find('.vvm-Switch')
         target.trigger('click')
         await Vue.nextTick()
         expect(wrapper.vm.currentValue).toBe(1)

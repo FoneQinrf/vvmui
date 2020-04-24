@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { From, FromItem } from 'am-ui'
+import { From, FromItem } from 'vvmui'
 
 Vue.component(From)
 Vue.component(FromItem)

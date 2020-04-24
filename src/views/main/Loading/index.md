@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue';
-import { Loading } from 'am-ui';
+import { Loading } from 'vvmui';
 
 Vue.use(Loading);
 

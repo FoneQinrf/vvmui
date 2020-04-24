@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-26 15:59:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-21 16:45:55
+ * @LastEditTime: 2020-04-24 09:58:29
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -68,7 +68,7 @@
         <Calendar v-model="model.date" />
       </From-Item>
       <From-Item label="开关" prop="switch">
-        <Am-Switch v-model="model.switch" />
+        <v-Switch v-model="model.switch" />
       </From-Item>
       <From-Item
         :cell-inline="false"
@@ -143,7 +143,7 @@ h3 {
 }
 </style>
 <style scoped>
-.form >>> .Am-Upload-default-icon {
+.form >>> .vvm-Upload-default-icon {
   border: 1px solid #999;
 }
 </style>

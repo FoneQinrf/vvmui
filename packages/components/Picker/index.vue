@@ -2,16 +2,16 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 11:37:57
+ * @LastEditTime: 2020-04-24 09:54:59
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <div class="Am-Picker">
+  <div class="vvm-Picker">
     <div :class="[
-        'Am-Picker-context'
+        'vvm-Picker-context'
       ]" @click="click">
       <Input
         readonly
@@ -23,12 +23,12 @@
     </div>
     <Layer v-if="!disabled" direction="bottom" isMask v-model="LayerVal">
       <template>
-        <div class="Am-Picker-title">
+        <div class="vvm-Picker-title">
           <span @click="onCancel" class="cancel-text">{{cancelText}}</span>
-          <span @click="onConfirm" class="confirm-text Am-text-color-default">{{confirmText}}</span>
+          <span @click="onConfirm" class="confirm-text vvm-text-color-default">{{confirmText}}</span>
         </div>
-        <div class="Am-Picker-body">
-          <Am-Picker
+        <div class="vvm-Picker-body">
+          <v-Picker
             v-for="(item,$index) in list"
             :options="item"
             :height="height"
@@ -40,8 +40,8 @@
             :ref="$index"
           />
           <transition name="fade">
-            <div v-if="options.length===0" class="Am-Picker-loading" :style="PickerHeight">
-              <Icon class="Am-loading" icon="iconloading1" :size="30" />
+            <div v-if="options.length===0" class="vvm-Picker-loading" :style="PickerHeight">
+              <Icon class="vvm-loading" icon="iconloading1" :size="30" />
             </div>
           </transition>
         </div>
@@ -52,7 +52,7 @@
 
 <script>
 import Layer from "../Modal";
-import AmPicker from "./src/component.vue";
+import vPicker from "./src/component.vue";
 import mixins from "./src/mixins";
 import { initIndex, initPlaceholder, initModel } from "./utils";
 import emitter from "../../utils/emitter";
@@ -64,7 +64,7 @@ export default {
   mixins: [mixins, emitter],
   components: {
     Layer,
-    AmPicker,
+    vPicker,
     Icon,
     Input
   },

@@ -14,7 +14,7 @@
     <div
       v-show="show"
       @click.stop="click"
-      class="Am-Backtop"
+      class="vvm-Backtop"
       :style="{right:`${right}px`,bottom:`${bottom}px`}"
     >
       <slot></slot>

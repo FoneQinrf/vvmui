@@ -1,52 +1,52 @@
 
 /*背景色定义*/
-.Am-back-color-default{
+.vvm-back-color-default{
     background: @theme-color;
 }
-.Am-back-color-errer{
+.vvm-back-color-errer{
     background: @errer-color;
 }
-.Am-back-color-success{
+.vvm-back-color-success{
     background: @success-color;
 }
-.Am-back-color-warning{
+.vvm-back-color-warning{
     background: @warning-color;
 }
 
 /*字体颜色定义*/
-.Am-text-color-default{
+.vvm-text-color-default{
     color: @theme-color;
 }
-.Am-text-color-errer{
+.vvm-text-color-errer{
   color: @errer-color;
 }
-.Am-text-color-success{
+.vvm-text-color-success{
   color: @success-color;
 }
-.Am-text-color-warning{
+.vvm-text-color-warning{
   color: @warning-color;
 }
 
 /*主题相关边框颜色定义*/
-.Am-border-color--default{
+.vvm-border-color--default{
     border-color: @theme-color;
     &::after{
       border-color: @theme-color;
     }
 }
-.Am-border-color--errer{
+.vvm-border-color--errer{
     border-color: @errer-color;
     &::after{
       border-color: @errer-color;
     }
 }
-.Am-border-color--success{
+.vvm-border-color--success{
     border-color: @success-color;
     &::after{
       border-color: @success-color;
     }
 }
-.Am-border-color--warning{
+.vvm-border-color--warning{
     border-color: @warning-color;
     &::after{
       border-color: @warning-color;
@@ -54,14 +54,14 @@
 }
 
 /*文字超出省略*/
-.Am-ellipsis{
+.vvm-ellipsis{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 /*1px 边框*/
-  [class*='Am-hairline'] {
+  [class*='vvm-hairline'] {
     &::after {
         position: absolute;
         box-sizing: border-box;
@@ -75,7 +75,7 @@
         transform: scale(0.5);
     }
   }
-  .Am-hairline {
+  .vvm-hairline {
     &-top,
     &-left,
     &-right,

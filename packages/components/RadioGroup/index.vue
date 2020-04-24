@@ -9,7 +9,7 @@
  -->
 
 <template>
-  <div :class="['Am-Radio-Group',inline ? 'inline' : '']">
+  <div :class="['vvm-Radio-Group',inline ? 'inline' : '']">
     <slot></slot>
   </div>
 </template>

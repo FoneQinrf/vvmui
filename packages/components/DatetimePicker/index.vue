@@ -2,24 +2,24 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-15 13:40:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 11:41:46
+ * @LastEditTime: 2020-04-24 09:56:18
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 <template>
-  <div class="Am-DatetimePicker">
-    <div @click="click" class="Am-DatetimePicker-input">
+  <div class="vvm-DatetimePicker">
+    <div @click="click" class="vvm-DatetimePicker-input">
       <Input readonly :disabled="disabled" :right-icon="rightArrow ? 'iconrights' : ''" v-model="currentValue" :placeholder="placeholder" />
     </div>
     <Modal v-if="!disabled" direction="bottom" isMask v-model="show">
       <template>
-        <div class="Am-DatetimePicker-title">
+        <div class="vvm-DatetimePicker-title">
           <span @click="onCancel" class="cancel-text">{{cancelText}}</span>
-          <span @click="onConfirm" class="confirm-text Am-text-color-default">{{confirmText}}</span>
+          <span @click="onConfirm" class="confirm-text vvm-text-color-default">{{confirmText}}</span>
         </div>
-        <div class="Am-Picker-body">
-          <Am-Picker
+        <div class="vvm-Picker-body">
+          <v-Picker
             v-for="(item,$index) in options"
             :options="item"
             :height="height"
@@ -38,7 +38,7 @@
 <script>
 import Input from "@/components/Input";
 import Modal from "@/components/Modal";
-import AmPicker from "@/components/Picker/src/component";
+import vPicker from "@/components/Picker/src/component";
 import emitter from "@/utils/emitter";
 import {
   createYear,
@@ -52,7 +52,7 @@ import {
 } from "./src/utils";
 export default {
   name: "DatetimePicker",
-  components: { Input, Modal, AmPicker },
+  components: { Input, Modal, vPicker },
   mixins: [emitter],
   props: {
     placeholder: {

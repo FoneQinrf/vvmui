@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { NumberInput } from 'am-ui'
+import { NumberInput } from 'vvmui'
 
 Vue.component(NumberInput)
 

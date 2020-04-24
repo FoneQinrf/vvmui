@@ -9,13 +9,13 @@
  -->
 
 <template>
-  <div :class="['Am-From-Item',{'cellInline':cellInline,'block':!cellInline}]">
-    <div class="Am-From-Item-label" :style="style">
-      <span class="Am-From-Item-label-required" v-if="required">*</span>
+  <div :class="['vvm-From-Item',{'cellInline':cellInline,'block':!cellInline}]">
+    <div class="vvm-From-Item-label" :style="style">
+      <span class="vvm-From-Item-label-required" v-if="required">*</span>
       <slot name="label">{{label}}</slot>
       <span
         v-if="!cellInline"
-        :class="['Am-From-Item-statusIcon',ruleState,{'cellInline':!cellInline}]"
+        :class="['vvm-From-Item-statusIcon',ruleState,{'cellInline':!cellInline}]"
         v-show="statusIcon"
       >
         <transition name="fade" mode="out-in">
@@ -24,17 +24,17 @@
         </transition>
       </span>
     </div>
-    <div :class="['Am-From-Item-body',{'statusIcon':statusIcon}]">
+    <div :class="['vvm-From-Item-body',{'statusIcon':statusIcon}]">
       <slot></slot>
       <transition name="slide-fade">
-        <label class="Am-From-Item-message Am-ellipsis" v-if="ruleState === 'error'">{{message}}</label>
+        <label class="vvm-From-Item-message vvm-ellipsis" v-if="ruleState === 'error'">{{message}}</label>
       </transition>
       <span
         v-if="cellInline"
-        :class="['Am-From-Item-statusIcon',ruleState,{'loading':loadingShow},{'cellInline':!cellInline}]"
+        :class="['vvm-From-Item-statusIcon',ruleState,{'loading':loadingShow},{'cellInline':!cellInline}]"
         v-show="statusIcon"
       >
-        <Icon :class="[loadingShow ? 'Am-loading' : '']" :icon="icon" :size="12" />
+        <Icon :class="[loadingShow ? 'vvm-loading' : '']" :icon="icon" :size="12" />
       </span>
     </div>
   </div>

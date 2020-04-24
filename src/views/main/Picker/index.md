@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { Picker } from 'am-ui'
+import { Picker } from 'vvmui'
 
 Vue.component(Picker)
 

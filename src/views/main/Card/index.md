@@ -16,7 +16,7 @@
 ```js
 
 import Vue from 'vue'
-import { Card } from 'am-ui'
+import { Card } from 'vvmui'
 
 Vue.component(Card)
 

@@ -1,4 +1,4 @@
-.Am-Calendar{
+.vvm-Calendar{
     width: 100%;
     &-wrp{
         width: 100%;
@@ -93,7 +93,7 @@
                 padding: 4px 0;
                 &.selectDate{
                     background: @B6;
-                    .Am-Calendar-DateList-day-render{
+                    .vvm-Calendar-DateList-day-render{
                         color: @B6;
                         &::after{
                             content: ' ';
@@ -111,7 +111,7 @@
                     }
                 }
                 &.startDate{
-                    .Am-Calendar-DateList-day-render{
+                    .vvm-Calendar-DateList-day-render{
                         &::before{
                             content: ' ';
                             display: block;
@@ -125,7 +125,7 @@
                     }
                 }
                 &.endDate{
-                    .Am-Calendar-DateList-day-render{
+                    .vvm-Calendar-DateList-day-render{
                         &::before{
                             content: ' ';
                             display: block;
@@ -139,12 +139,12 @@
                     }
                 }
                 &.select-Date-Middle{
-                   .Am-Calendar-DateList-day-render{
+                   .vvm-Calendar-DateList-day-render{
                         background: @B5;
                    }
                 }
                 &.disabledDate{
-                    .Am-Calendar-DateList-day-render{
+                    .vvm-Calendar-DateList-day-render{
                         color: @disabled-color;
                     }
                 }
@@ -194,6 +194,6 @@
     }
 }
 
-.Am-Calendar-DateList::-webkit-scrollbar {
+.vvm-Calendar-DateList::-webkit-scrollbar {
     width: 0px;    
 }

@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { Radio, RadioGroup } from 'am-ui'
+import { Radio, RadioGroup } from 'vvmui'
 
 Vue.component(Radio)
 Vue.component(RadioGroup)

@@ -65,7 +65,7 @@ h3 {
 }
 </style>
 <style scoped>
-.form >>> .Am-Upload-default-icon {
+.form >>> .vvm-Upload-default-icon {
   border: 1px solid #999;
 }
 </style>

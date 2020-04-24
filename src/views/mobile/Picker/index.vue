@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 13:31:20
+ * @LastEditTime: 2020-04-24 09:53:21
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -93,7 +93,7 @@ export default {
 </script>
 
 <style scoped>
-.Am-CellGroup >>> .Am-Input-context{
+.vvm-CellGroup >>> .vvm-Input-context{
   text-align: right;
 }
 </style>

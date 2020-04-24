@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { Input } from 'am-ui'
+import { Input } from 'vvmui'
 
 Vue.component(Input)
 

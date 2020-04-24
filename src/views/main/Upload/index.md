@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue 'vue'
-import { Upload } 'am-ui'
+import { Upload } 'vvmui'
 
 Vue.component(Upload)
 

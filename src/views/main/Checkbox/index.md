@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { Checkbox, CheckboxGroup } from 'am-ui'
+import { Checkbox, CheckboxGroup } from 'vvmui'
 
 Vue.component(Checkbox)
 Vue.component(CheckboxGroup)

@@ -9,17 +9,17 @@
  -->
 
 <template>
-  <div class="Am-Input">
-    <div class="Am-Input-icon" v-if="icon">
+  <div class="vvm-Input">
+    <div class="vvm-Input-icon" v-if="icon">
       <Icon :size="20" :icon="icon" />
     </div>
-    <div class="Am-Input-input">
+    <div class="vvm-Input-input">
       <template v-if="readonly">
         <input
           :disabled="disabled"
           :placeholder="placeholder"
           v-model.trim="currentValue"
-          class="Am-Input-context readonly"
+          class="vvm-Input-context readonly"
           readonly="readonly"
           :type="type"
           :maxlength="maxlength"
@@ -33,7 +33,7 @@
           :disabled="disabled"
           :placeholder="placeholder"
           v-model.trim="currentValue"
-          class="Am-Input-context"
+          class="vvm-Input-context"
           :type="type"
           :maxlength="maxlength"
           @input="change"
@@ -41,7 +41,7 @@
           @focus="focus"
         />
       </template>
-      <div :style="style" class="Am-Input-button">
+      <div :style="style" class="vvm-Input-button">
         <slot></slot>
       </div>
       <span v-if="rightIcon || unity" @click="click">

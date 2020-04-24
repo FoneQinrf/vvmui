@@ -9,18 +9,18 @@
  -->
 
 <template>
-  <div class="Am-Toast">
+  <div class="vvm-Toast">
     <template v-if="mask">
       <transition name="fade">
-        <div v-show="value" class="Am-Toast-mask"></div>
+        <div v-show="value" class="vvm-Toast-mask"></div>
       </transition>
     </template>
     <transition name="fade">
-      <div v-show="value" :class="['Am-Toast-body',type]">
-        <div class="Am-Toast-iconfont" v-show="type">
+      <div v-show="value" :class="['vvm-Toast-body',type]">
+        <div class="vvm-Toast-iconfont" v-show="type">
           <Icon :icon="iconfont" :size="26" color="#fff" />
         </div>
-        <div class="Am-Toast-context">{{context}}</div>
+        <div class="vvm-Toast-context">{{context}}</div>
       </div>
     </transition>
   </div>

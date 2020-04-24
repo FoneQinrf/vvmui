@@ -16,7 +16,7 @@
 ``` javascript
 
 import Vue from 'vue'
-import { Calendar } from 'am-ui'
+import { Calendar } from 'vvmui'
 
 Vue.component(Calendar)
 

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-23 13:24:00
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 15:12:43
+ * @LastEditTime: 2020-04-24 09:44:02
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,20 +13,20 @@
 ``` javascript
 
 //文字超出省略
-Am-ellipsis
+vvm-ellipsis
 
 //上0.5px边框
-Am-hairline-top
+vvm-hairline-top
 //下0.5px边框
-Am-hairline-bottom
+vvm-hairline-bottom
 //左0.5px边框
-Am-hairline-left
+vvm-hairline-left
 //右0.5px边框
-Am-hairline-right
+vvm-hairline-right
 //上下0.5px边框
-Am-hairline-top-bottom
+vvm-hairline-top-bottom
 //全边框0.5px
-Am-hairline-surround
+vvm-hairline-surround
 
 ```
 #### 内置动画
@@ -49,6 +49,6 @@ left
 bottom
 
 //旋转loading
-Am-loading
+vvm-loading
 
 ```

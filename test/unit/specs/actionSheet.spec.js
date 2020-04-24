@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-17 14:07:48
+ * @LastEditTime: 2020-04-24 10:01:51
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -63,7 +63,7 @@ describe('ActionSheet.vue', () => {
         })
         await Vue.nextTick()
         expect(wrapper.props().disabled).toBe(true)
-        wrapper.find('.Am-Action-Sheet-placeholder').trigger('click')
+        wrapper.find('.vvm-Action-Sheet-placeholder').trigger('click')
         expect(wrapper.vm.show).toBe(false)
     })
 })

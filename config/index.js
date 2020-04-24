@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 09:21:56
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:55:09
+ * @LastEditTime: 2020-04-23 18:25:27
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -15,7 +15,7 @@
 const path = require('path')
 
 module.exports = {
-  name: 'Am-ui',  //组件库名称
+  name: 'vvmui',  //组件库名称
   component: {
     templateApi: '_',   //模板注册和createApi调用共存的组件命名前缀
     createApi: '~'    //createApi调用组件命名前缀
@@ -69,7 +69,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/am-ui/',
+    assetsPublicPath: '/vvmui/',
 
     /**
      * Source Maps
