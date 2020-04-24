@@ -18,7 +18,7 @@ jobs:
       - run: npm install
       - run: npm ci
       - run: npm test
-      - run: npm publish:build
+      - run: npm run publish:build
 
   publish-npm:
     needs: build
