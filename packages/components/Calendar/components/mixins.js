@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-20 16:58:37
+ * @LastEditTime: 2020-04-24 14:15:41
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -37,7 +37,7 @@ export default {
                 const date = `${this.options.year}/${this.options.month}/${this.options.day}`;
                 if (this.type === 'single') {
                     return [
-                        "Am-Calendar-DateList-item-day",
+                        "vvm-Calendar-DateList-item-day",
                         { selectDate: optionsDate === date },
                         {
                             disabledDate:
@@ -51,7 +51,7 @@ export default {
                         `${this.options[0].year}/${this.options[0].month}/${this.options[0].day}`
                     ).getTime();
                     return [
-                        "Am-Calendar-DateList-item-day",
+                        "vvm-Calendar-DateList-item-day",
                         { selectDate: timestamp1 === timestamp2 },
                         {
                             disabledDate:
@@ -68,7 +68,7 @@ export default {
                         `${this.options[1].year}/${this.options[1].month}/${this.options[1].day}`
                     ).getTime();
                     return [
-                        "Am-Calendar-DateList-item-day",
+                        "vvm-Calendar-DateList-item-day",
                         {
                             selectDate: timestamp1 === timestamp2 && timestamp2 === timestamp3
                         },
@@ -92,7 +92,7 @@ export default {
                     ];
                 }
                 return [
-                    "Am-Calendar-DateList-item-day",
+                    "vvm-Calendar-DateList-item-day",
                     {
                         disabledDate:
                             this.oldDateDisabledFnc(timestamp2) ||

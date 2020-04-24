@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 11:02:58
+ * @LastEditTime: 2020-04-24 13:43:10
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,7 +10,10 @@
 
 <template>
   <div class="Amui-home">
-    <div class="logo"></div>
+    <div class="logo">
+      <img src="@/assets/logo.png" />
+      <p>轻量、易上手的Vue移动端组件库</p>
+    </div>
     <Card v-for="(item,$index) in options" :key="$index" shadow :title-text="item.name">
       <div class="body-wrp">
         <Cell-Group>
@@ -40,7 +43,7 @@ export default {
   methods: {
     click(item) {
       /* eslint-disable */
-      if (parent) {
+      if (parent && parent.window && parent.window.initState) {
         parent.window.pushRouter(item.path);
       }
       /* eslint-disable */
@@ -54,8 +57,13 @@ export default {
   padding: 0 12px 12px 12px;
   .logo {
     height: 80px;
+    padding-top: 20px;
+    text-align: center;
+    img{
+      height: 40px;
+    }
   }
-  .Am-Card {
+  .vvm-Card {
     margin-top: 14px;
   }
 }

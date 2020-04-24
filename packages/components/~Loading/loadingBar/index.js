@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:56:41
+ * @LastEditTime: 2020-04-24 14:37:28
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -38,6 +38,9 @@ function newInstall() {
                 this.percent = options.percent;
                 this.status = options.status;
                 this.show = options.show;
+            },
+            destroyed() {
+                this.$destroy()
             }
         }
     })
@@ -114,7 +117,8 @@ export default {
         })
     },
     destroyed() {
+        install.$mount().destroyed()
         document.body.removeChild(install.$mount().$el)
-        install.$destroyed()
+        install = null
     }
 }

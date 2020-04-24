@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-02 10:04:13
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-09 15:43:24
+ * @LastEditTime: 2020-04-24 15:46:30
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -118,3 +118,7 @@ export default {
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | on-change  | 状态发生变化时的回调函数 |  新状态的值  |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

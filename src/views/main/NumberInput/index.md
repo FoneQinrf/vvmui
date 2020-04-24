@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 13:22:20
+ * @LastEditTime: 2020-04-24 15:45:14
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -77,3 +77,7 @@ Vue.component(NumberInput)
 | on-close | 关闭键盘触发 |  无  |
 | on-remove | 删除内容的时候触发 |  当前的值  |
 | on-confirm | 点击确认的时候触发 |  当前的值  |
+
+##### 更新日志
+| 版本 |类型|内容|
+|:-------------:|:-|:-|

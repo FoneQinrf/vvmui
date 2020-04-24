@@ -13,7 +13,7 @@
     <div @click="openCalendar" class="vvm-Calendar-text vvm-ellipsis">
       <Input
         readonly
-        :right-icon="rightArrow ? 'iconrights' : ''"
+        :right-icon="rightArrow ? 'iconlist-rigthl' : ''"
         :disabled="disabled"
         v-model="modelValue"
         :placeholder="placeholder"

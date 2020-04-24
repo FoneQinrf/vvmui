@@ -2,20 +2,20 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 09:48:03
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 16:28:33
+ * @LastEditTime: 2020-04-24 14:15:31
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  */
 
 
-export const weekList = [{ name: '日', class: 'Am-Calendar-week-Weekend' },
+export const weekList = [{ name: '日', class: 'vvm-Calendar-week-Weekend' },
 { name: '一', class: '' },
 { name: '二', class: '' },
 { name: '三', class: '' },
 { name: '四', class: '' },
 { name: '五', class: '' },
-{ name: '六', class: 'Am-Calendar-week-Weekend' },
+{ name: '六', class: 'vvm-Calendar-week-Weekend' },
 ];
 
 export const weeks = ['日', '一', '二', '三', '四', '五', '六'];

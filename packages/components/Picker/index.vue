@@ -16,7 +16,7 @@
       <Input
         readonly
         :disabled="disabled"
-        :right-icon="rightArrow ? 'iconrights' : ''"
+        :right-icon="rightArrow ? 'iconlist-rigthl' : ''"
         :placeholder="placeholder"
         v-model="context"
       />

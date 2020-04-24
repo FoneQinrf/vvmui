@@ -15,7 +15,7 @@
         :disabled="disabled"
         :placeholder="placeholder"
         v-model="placeholderText"
-        :right-icon="rightArrow ? 'iconrights' : ''"
+        :right-icon="rightArrow ? 'iconlist-rigthl' : ''"
       />
     </div>
     <Layer @on-mask="mask" :isMask="true" direction="bottom" v-model="show">

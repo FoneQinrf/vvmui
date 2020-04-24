@@ -10,7 +10,7 @@
 <template>
   <div class="vvm-DatetimePicker">
     <div @click="click" class="vvm-DatetimePicker-input">
-      <Input readonly :disabled="disabled" :right-icon="rightArrow ? 'iconrights' : ''" v-model="currentValue" :placeholder="placeholder" />
+      <Input readonly :disabled="disabled" :right-icon="rightArrow ? 'iconlist-rigthl' : ''" v-model="currentValue" :placeholder="placeholder" />
     </div>
     <Modal v-if="!disabled" direction="bottom" isMask v-model="show">
       <template>

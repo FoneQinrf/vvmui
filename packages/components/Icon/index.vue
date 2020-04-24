@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:00:38
+ * @LastEditTime: 2020-04-24 14:55:48
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -22,8 +22,7 @@ export default {
       type: String
     },
     size: {
-      type: Number,
-      default: 14
+      type: Number
     }
   },
   computed: {
@@ -34,7 +33,7 @@ export default {
       const witdh = document.body.clientWidth;
       return {
         color: this.color,
-        fontSize: `${(this.size * 100) / witdh}vw`
+        fontSize: this.size ? `${(this.size * 100) / witdh}vw` : ''
       };
     }
   }

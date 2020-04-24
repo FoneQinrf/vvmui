@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 09:21:57
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 16:08:52
+ * @LastEditTime: 2020-04-24 14:59:50
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -24,7 +24,7 @@ export default {
       this.$router.replace(`/mobile/${name}`);
     };
     /* eslint-disable */
-    if (parent) {
+    if (parent && parent.window && parent.window.initState) {
       parent.window.initState();
     }
     /* eslint-disable */
