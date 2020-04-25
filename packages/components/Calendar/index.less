@@ -2,10 +2,10 @@
     width: 100%;
     &-wrp{
         width: 100%;
-        height: 560px;
+        height: 1000px;
         background: @B6;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         position: relative;
     }
     &-model-top{
@@ -15,14 +15,14 @@
     &-title{
         position: relative;
         width: 100%;
-        height: 48px;
+        height: 60px;
         .title{
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 18px;
+            font-size: 16Px;
             color: @B1;
         }
     }
@@ -34,7 +34,7 @@
     }
     &-week{
         width: 100%;
-        height: 32px;
+        height: 62px;
         display: flex;
         .item{
             flex: 0 0 100/7%;
@@ -48,7 +48,7 @@
     }
     &-DateList{
         width: 100%;
-        height: 390px;
+        height: 800px;
         overflow-y: auto;
         &-title{
             padding: 10px 15px;
@@ -60,7 +60,7 @@
             width: 100%;
             height: 100%;
             box-sizing: border-box;
-            padding-top: 100px;
+            padding-top: 120px;
         }
         &-day{
             &-render{
@@ -69,7 +69,7 @@
                 height: 100%;
                 justify-content: center;
                 align-items: center;
-                font-size: 18px;
+                font-size: 16Px;
                 color: @B2;
                 position: relative;
             }
@@ -84,12 +84,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 18px;
-                padding: 10px 0;
+                font-size: 16Px;
+                padding: 20px 0;
+                box-sizing: border-box;
             }
             &-day{
                 flex: 0 0 100/7%;
-                height: 50px;
+                height: 80px;
                 padding: 4px 0;
                 &.selectDate{
                     background: @B6;
@@ -102,7 +103,7 @@
                             width: 80%;
                             height: 100%;
                             background: @theme-color;
-                            border-radius: 8px;
+                            border-radius: 12px;
                         }
                         span{
                             position: static;
@@ -155,7 +156,7 @@
             width: 100%;
             left: 0;
             bottom: 0;
-            height: 60px;
+            height: 100px;
             background: @B2;
             box-sizing: border-box;
             padding: 0 15px;
@@ -166,7 +167,7 @@
     }
     &-confirm{
         color: @B6;
-        font-size: 16px;
+        font-size: 16Px;
         padding: 2px 30px;
         border-left: 1px solid @B5;
     }
@@ -174,7 +175,7 @@
         display: block;
         color: @B4;
         .startValue,.endValue{
-            font-size: 12px;
+            font-size: 12Px;
             text-align: left;
             span{
                 color: @B6;

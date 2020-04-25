@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-21 17:53:52
+ * @LastEditTime: 2020-04-25 11:35:51
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -14,9 +14,14 @@
       <Icon :icon="icon" :size="16" />
     </div>
     <div @click="focus" :class="['vvm-Number-Input-input', align]">
-      <Input readonly :disabled="disabled" :placeholder="placeholder" v-model="currentValue" />
+      <Input
+        readonly
+        :unity="unity"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        v-model="currentValue"
+      />
     </div>
-    <div v-if="unity" class="vvm-Number-Input-unity">{{unity}}</div>
     <keyboard
       v-model="show"
       :confirmText="confirmText"

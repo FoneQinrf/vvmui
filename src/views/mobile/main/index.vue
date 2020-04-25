@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 18:01:27
+ * @LastEditTime: 2020-04-25 12:02:49
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -60,11 +60,10 @@ export default {
 .Amui-home {
   padding: 0 12px 12px 12px;
   .logo {
-    height: 100px;
     padding-top: 20px;
     text-align: center;
     img {
-      height: 60px;
+      height: 80px;
     }
   }
   .vvm-Card {
