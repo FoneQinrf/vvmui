@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-02 15:44:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-15 11:53:46
+ * @LastEditTime: 2020-04-25 10:18:53
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -69,7 +69,7 @@
     <section class="demo-button-row">
       <h3>CheckboxGroup的type属性</h3>
       <div class="cell">
-        <Checkbox-Group type="success" :value="['选项二']">
+        <Checkbox-Group type="success" :value="values">
           <Checkbox label="选项一" />
           <Checkbox label="选项二" />
           <Checkbox label="选项三" />
@@ -114,7 +114,8 @@ export default {
   data() {
     return {
       model: ["选项二"],
-      value: 0
+      value: 0,
+      values: ["选项二"]
     };
   },
   methods: {

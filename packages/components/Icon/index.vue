@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 14:55:48
+ * @LastEditTime: 2020-04-25 10:16:34
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -33,7 +33,7 @@ export default {
       const witdh = document.body.clientWidth;
       return {
         color: this.color,
-        fontSize: this.size ? `${(this.size * 100) / witdh}vw` : ''
+        fontSize: `${this.size}px`
       };
     }
   }
