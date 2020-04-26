@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 16:15:38
+ * @LastEditTime: 2020-04-26 10:06:49
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -49,8 +49,7 @@ export default {
       default: "iconcuowu"
     },
     labelWidth: {
-      type: Number,
-      default: 70
+      type: Number
     }
   },
   watch: {

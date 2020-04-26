@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-25 16:10:01
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:08:19
+ * @LastEditTime: 2020-04-26 10:07:59
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,7 +11,7 @@
 <template>
   <div class="form">
     <h3>表单校验</h3>
-    <From ref="from" status-icon :model="model">
+    <From ref="from" status-icon :label-width="60" :model="model">
       <From-Item label="姓名" prop="uasrName" :rule="[{required:true,message:'请输入姓名'}]">
         <Input v-model="model.uasrName" />
       </From-Item>

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-25 10:28:20
+ * @LastEditTime: 2020-04-26 10:20:14
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -19,7 +19,7 @@ export default {
         },
         height: {
             type: Number,
-            default: 48
+            default: 44
         },
         label: {
             type: String,

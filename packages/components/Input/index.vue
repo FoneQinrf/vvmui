@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 20:23:50
+ * @LastEditTime: 2020-04-26 10:12:14
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,7 +11,7 @@
 <template>
   <div class="vvm-Input">
     <div class="vvm-Input-icon" v-if="icon">
-      <Icon :size="20" :icon="icon" />
+      <Icon :icon="icon" />
     </div>
     <div class="vvm-Input-input">
       <template v-if="readonly">
