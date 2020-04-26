@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-07 14:18:36
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-15 14:59:48
+ * @LastEditTime: 2020-04-26 17:37:53
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -16,6 +16,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const config = require('../config')
 const utils = require('./utils')
 const glob = require('glob');
+
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
@@ -73,7 +74,8 @@ module.exports = {
             test: /\.(js|css|less)$/,
             threshold: 1024,
             minRatio: 0.8
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ],
     resolve: {
         extensions: ['.js', '.vue', '.less', '.json'],

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 09:21:56
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 18:25:27
+ * @LastEditTime: 2020-04-26 14:08:23
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -22,7 +22,7 @@ module.exports = {
   },
   gulpConfig: {
     watchRouter: true,      //是否自动生成路由
-    watchComponents: true    //是否自动生成组件入口
+    watchComponents: false    //是否自动生成组件入口
   },
   dev: {
 

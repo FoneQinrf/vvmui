@@ -26,7 +26,7 @@
     "serve": "concurrently \"npm run gulp:dev\" \"npm run dev:package\" \"npm run dev\"",
     "build:package": "webpack --config build/webpack.packages.build.conf.js",
     "build:gulp": "node build/build.gulp.js",
-    "dev:package": "webpack --watch --config build/webpack.packages.dev.conf.js",
+    "dev:package": "webpack -p --watch --config build/webpack.packages.dev.conf.js",
     "test:build": "node build/build.js",
     "build:style": "webpack --config build/webpack.theme.conf.js",
     "publish:build": "npm run build:package && npm run build:style"
