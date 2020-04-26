@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-26 15:59:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 09:58:29
+ * @LastEditTime: 2020-04-26 10:08:10
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,7 +11,7 @@
 <template>
   <div class="form">
     <h3>可用于表单校验的组件</h3>
-    <From ref="from" :model="model">
+    <From ref="from" :label-width="60" :model="model">
       <From-Item label="输入框" prop="uasrName" :rule="[{required:true,message:'请输入内容'}]">
         <Input v-model="model.uasrName" />
       </From-Item>

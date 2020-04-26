@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:00:23
+ * @LastEditTime: 2020-04-26 10:30:58
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -42,7 +42,7 @@
 
 <script>
 import AsyncValidator from "async-validator";
-import { findComponentUpward, vwWitdh } from "../../utils";
+import { findComponentUpward } from "../../utils";
 import Icon from "../Icon";
 
 export default {
@@ -118,14 +118,20 @@ export default {
     },
     style() {
       if (this.parent) {
+        let width;
+        if (!this.cellInline) {
+          width = "100%";
+        } else {
+          width = this.labelWidth
+            ? `${this.labelWidth}px`
+            : `${this.parent.labelWidth}px`;
+        }
         return {
-          width: !this.cellInline ? '100%' : vwWitdh(
-            this.labelWidth ? this.labelWidth : this.parent.labelWidth
-          )
+          width
         };
       }
       return {
-        width: vwWitdh(this.labelWidth) || "auto"
+        width: "auto"
       };
     },
     icon() {

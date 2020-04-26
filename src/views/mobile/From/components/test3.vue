@@ -11,7 +11,7 @@
 <template>
   <div class="form">
     <h3>自定义校验</h3>
-    <From ref="from" status-icon :rules="rules" :model="model">
+    <From ref="from" status-icon :label-width="60" :rules="rules" :model="model">
       <From-Item validate-loading label="用户名" prop="uasrName">
         <Input v-model="model.uasrName" />
       </From-Item>

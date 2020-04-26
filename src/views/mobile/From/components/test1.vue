@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-25 14:36:47
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:08:14
+ * @LastEditTime: 2020-04-26 10:07:50
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,7 +11,7 @@
 <template>
   <div class="form">
     <h3>基本用法</h3>
-    <From :model="model">
+    <From :model="model" :label-width="60">
       <From-Item label="姓名" prop="uasrName">
         <Input v-model="model.uasrName" />
       </From-Item>
