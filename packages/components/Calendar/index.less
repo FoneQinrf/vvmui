@@ -2,7 +2,7 @@
     width: 100%;
     &-wrp{
         width: 100%;
-        height: 1000px;
+        height: 1100px;
         background: @B6;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -15,7 +15,7 @@
     &-title{
         position: relative;
         width: 100%;
-        height: 60px;
+        height: 70px;
         .title{
             width: 100%;
             height: 100%;
@@ -23,6 +23,7 @@
             justify-content: center;
             align-items: center;
             color: @B1;
+            font-size: @size-16;
         }
     }
     &-close{
@@ -47,21 +48,22 @@
     }
     &-DateList{
         width: 100%;
-        height: 780px;
+        height: 848px;
         overflow-y: auto;
-        &-title:extend(.px-26){
+        &-title{
             padding: 10px 15px;
             text-align: left;
             box-shadow: 1px 2px 3px @B4;
+            font-size: @size-14;
         }
         &-wrp{
             width: 100%;
             height: 100%;
             box-sizing: border-box;
-            padding-top: 120px;
+            padding-top: 130px;
         }
         &-day{
-            &-render:extend(.px-28){
+            &-render{
                 display: flex;
                 width: 100%;
                 height: 100%;
@@ -69,6 +71,7 @@
                 align-items: center;
                 color: @B2;
                 position: relative;
+                font-size: @size-14;
             }
         }
         &-item{
@@ -77,12 +80,13 @@
             margin: 0;
             flex-wrap: wrap;
             border-bottom: 1px dashed @B3;
-            &-title:extend(.px-30){
+            &-title{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 20px 0;
                 box-sizing: border-box;
+                font-size: @size-16;
             }
             &-day{
                 flex: 0 0 100/7%;
@@ -92,7 +96,7 @@
                     background: @B6;
                     .vvm-Calendar-DateList-day-render{
                         color: @B6;
-                        &::after:extend(.px-24){
+                        &::after{
                             content: ' ';
                             display: block;
                             position: absolute;
@@ -100,6 +104,7 @@
                             height: 100%;
                             background: @theme-color;
                             border-radius: 8px;
+                            font-size: @size-14;
                         }
                         span{
                             position: static;
@@ -152,7 +157,7 @@
             width: 100%;
             left: 0;
             bottom: 0;
-            height: 100px;
+            height: 120px;
             background: @B2;
             box-sizing: border-box;
             padding: 0 15px;
@@ -161,16 +166,18 @@
             align-items: center;
         }
     }
-    &-confirm:extend(.px-28){
+    &-confirm{
         color: @B6;
         padding: 2px 30px;
         border-left: 1px solid @B5;
+        font-size: @size-16;
     }
     &-value{
         display: block;
         color: @B4;
-        .startValue:extend(.px-24),.endValue:extend(.px-24){
+        .startValue,.endValue{
             text-align: left;
+            font-size: @size-12;
             span{
                 color: @B6;
             }

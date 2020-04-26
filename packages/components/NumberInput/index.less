@@ -1,16 +1,7 @@
 .vvm-Number-Input{
     width: 100%;
     height: 100%;
-    display: flex;
-    &-icon{
-        padding: 0 4px;
-        display: flex;
-        align-items: center;
-    }
-    &-unity{
-        padding-left: 4px;
-    }
-    &-input:extend(.px-26){
+    &-input{
         border: none;
         height: 100%;
         display: flex;
@@ -59,7 +50,7 @@
             height: 100%;
             flex-wrap: wrap;
         }
-        &-item:extend(.px-28){
+        &-item{
             display: flex;
             flex: 0 0 190px;
             height: 86px;
@@ -69,6 +60,7 @@
             margin-left: 10px;
             background: #fff;
             border-radius: 6px;
+            font-size: @size-14;
             &:active {
                 background: @B4;
             }
@@ -87,10 +79,11 @@
                 align-items: center;
                 justify-content: center;
             }
-            .right-confirm:extend(.px-28){
+            .right-confirm{
                 margin-top: 10px;
                 background: @theme-color;
                 color: #fff;
+                font-size: @size-16;
             }
         }
     }

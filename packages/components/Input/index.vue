@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 10:12:14
+ * @LastEditTime: 2020-04-26 10:45:39
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -44,7 +44,7 @@
       <div :style="style" class="vvm-Input-button">
         <slot></slot>
       </div>
-      <span v-if="rightIcon || unity" @click="click">
+      <span v-if="rightIcon || unity" @click="click" class="vvm-Input-unity">
         <template v-if="rightIcon">
           <Icon :icon="rightIcon" />
         </template>

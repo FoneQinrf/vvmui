@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:06:47
+ * @LastEditTime: 2020-04-26 11:28:08
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,7 +10,7 @@
 
 <template>
   <div class="demo-top">
-    <div class="context-wrp">
+    <div v-if="isMobile" class="context-wrp">
       <div class="context">
         <span @click="click" class="left">
           <Icon icon="iconxiangzuo" />
@@ -18,7 +18,7 @@
         {{text}}
       </div>
     </div>
-    <div :class="[gray ? 'demo-body gray' : 'demo-body']">
+    <div :class="[gray ? 'demo-body gray' : 'demo-body', {isMobile: !isMobile}]">
       <slot></slot>
     </div>
   </div>
@@ -36,8 +36,15 @@ export default {
       this.$router.go(-1);
       /* eslint-disable */
       //if (parent) {
-        //parent.window.routerPush();
+      //parent.window.routerPush();
       //}
+      /* eslint-disable */
+    }
+  },
+  computed: {
+    isMobile() {
+      /* eslint-disable */
+      return parent && parent.window && parent.window.initState;
       /* eslint-disable */
     }
   }
@@ -76,6 +83,9 @@ export default {
     }
     &.gray {
       background: #f2f2f4;
+    }
+    &.isMobile {
+      padding: 4px 0 5px 0;
     }
   }
 }

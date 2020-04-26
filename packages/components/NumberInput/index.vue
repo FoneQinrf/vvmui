@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-25 11:35:51
+ * @LastEditTime: 2020-04-26 10:50:07
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,12 +10,10 @@
 
 <template>
   <div class="vvm-Number-Input">
-    <div class="vvm-Number-Input-icon" v-if="icon">
-      <Icon :icon="icon" :size="16" />
-    </div>
     <div @click="focus" :class="['vvm-Number-Input-input', align]">
       <Input
         readonly
+        :icon="icon"
         :unity="unity"
         :disabled="disabled"
         :placeholder="placeholder"

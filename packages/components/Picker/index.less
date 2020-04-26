@@ -10,26 +10,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 60px;
+            height: 70px;
             background: @B6;
-            .cancel-text:extend(.px-30){
+            .cancel-text{
+                font-size: @size-16;
                 color: @B3;
             }
-            .confirm-text:extend(.px-30){
-            }
-        }
-        &-context:extend(.px-30){
-            &.placeholder{
-                color: @placeholder-color;
-                -webkit-text-fill-color: @placeholder-color;
-                -webkit-opacity: 1;
-                opacity: 1;
-            }
-            &.disabled{
-                color: @disabled-color;
-                -webkit-text-fill-color: @disabled-color;
-                -webkit-opacity: 1;
-                opacity: 1;
+            .confirm-text{
+                font-size: @size-16;
             }
         }
         &-loading{
@@ -46,11 +34,12 @@
             cursor: grab;
             position: relative;
         }
-        &-label:extend(.px-28){
+        &-label{
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0 4px;
+            font-size: @size-14;
             &.vvm-text-color-default{
                 font-weight: 550;
             }
