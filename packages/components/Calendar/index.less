@@ -22,7 +22,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 16Px;
             color: @B1;
         }
     }
@@ -48,12 +47,11 @@
     }
     &-DateList{
         width: 100%;
-        height: 800px;
+        height: 780px;
         overflow-y: auto;
-        &-title{
+        &-title:extend(.px-26){
             padding: 10px 15px;
             text-align: left;
-            font-size: 14px;
             box-shadow: 1px 2px 3px @B4;
         }
         &-wrp{
@@ -63,13 +61,12 @@
             padding-top: 120px;
         }
         &-day{
-            &-render{
+            &-render:extend(.px-28){
                 display: flex;
                 width: 100%;
                 height: 100%;
                 justify-content: center;
                 align-items: center;
-                font-size: 16Px;
                 color: @B2;
                 position: relative;
             }
@@ -80,11 +77,10 @@
             margin: 0;
             flex-wrap: wrap;
             border-bottom: 1px dashed @B3;
-            &-title{
+            &-title:extend(.px-30){
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 16Px;
                 padding: 20px 0;
                 box-sizing: border-box;
             }
@@ -96,14 +92,14 @@
                     background: @B6;
                     .vvm-Calendar-DateList-day-render{
                         color: @B6;
-                        &::after{
+                        &::after:extend(.px-24){
                             content: ' ';
                             display: block;
                             position: absolute;
                             width: 80%;
                             height: 100%;
                             background: @theme-color;
-                            border-radius: 12px;
+                            border-radius: 8px;
                         }
                         span{
                             position: static;
@@ -165,17 +161,15 @@
             align-items: center;
         }
     }
-    &-confirm{
+    &-confirm:extend(.px-28){
         color: @B6;
-        font-size: 16Px;
         padding: 2px 30px;
         border-left: 1px solid @B5;
     }
     &-value{
         display: block;
         color: @B4;
-        .startValue,.endValue{
-            font-size: 12Px;
+        .startValue:extend(.px-24),.endValue:extend(.px-24){
             text-align: left;
             span{
                 color: @B6;
