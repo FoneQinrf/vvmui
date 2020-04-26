@@ -12,16 +12,13 @@
             justify-content: space-between;
             height: 60px;
             background: @B6;
-            .cancel-text{
-                font-size: 16Px;
+            .cancel-text:extend(.px-30){
                 color: @B3;
             }
-            .confirm-text{
-                font-size: 16Px;
+            .confirm-text:extend(.px-30){
             }
         }
-        &-context{
-            font-size: 16Px;
+        &-context:extend(.px-30){
             &.placeholder{
                 color: @placeholder-color;
                 -webkit-text-fill-color: @placeholder-color;
@@ -49,11 +46,10 @@
             cursor: grab;
             position: relative;
         }
-        &-label{
+        &-label:extend(.px-28){
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14Px;
             padding: 0 4px;
             &.vvm-text-color-default{
                 font-weight: 550;

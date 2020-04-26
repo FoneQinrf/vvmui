@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-02 15:39:54
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:59:34
+ * @LastEditTime: 2020-04-25 13:57:14
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,7 +12,7 @@
   <label class="vvm-Checkbox">
     <span :class="['vvm-Checkbox-icon',`vvm-text-color-${parentType}`,{['disabled']:parenDisabled}]">
       <transition name="fade">
-        <Icon v-show="currentValue" :size="20" :icon="parentIcon" />
+        <Icon v-show="currentValue" :icon="parentIcon" />
       </transition>
     </span>
     <span :class="['vvm-Checkbox-text',{['disabled']:parenDisabled}]">

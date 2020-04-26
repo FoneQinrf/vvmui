@@ -10,9 +10,8 @@
     &-unity{
         padding-left: 4px;
     }
-    &-input{
+    &-input:extend(.px-26){
         border: none;
-        font-size: 14Px;
         height: 100%;
         display: flex;
         flex-grow: 1;
@@ -60,7 +59,7 @@
             height: 100%;
             flex-wrap: wrap;
         }
-        &-item{
+        &-item:extend(.px-28){
             display: flex;
             flex: 0 0 190px;
             height: 86px;
@@ -70,7 +69,6 @@
             margin-left: 10px;
             background: #fff;
             border-radius: 6px;
-            font-size: 18Px;
             &:active {
                 background: @B4;
             }
@@ -89,11 +87,10 @@
                 align-items: center;
                 justify-content: center;
             }
-            .right-confirm{
+            .right-confirm:extend(.px-28){
                 margin-top: 10px;
                 background: @theme-color;
                 color: #fff;
-                font-size: 18Px;
             }
         }
     }
