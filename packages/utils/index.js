@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-25 13:52:01
+ * @LastEditTime: 2020-04-27 15:58:45
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -88,4 +88,14 @@ export const vwWitdh = (px) => {
         console.log(witdh)
         return `${(px * 100) / witdh}vw` || 'auto'
     }
+}
+
+/**
+ * type对应背景色class
+ */
+export const backColorClass = {
+    info: 'vvm-back-color-default',
+    errer: 'vvm-back-color-errer',
+    success: 'vvm-back-color-success',
+    warning: 'vvm-back-color-warning'
 }

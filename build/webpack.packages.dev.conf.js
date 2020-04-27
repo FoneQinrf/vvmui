@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:25
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-15 15:01:18
+ * @LastEditTime: 2020-04-26 17:37:45
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -16,6 +16,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const config = require('../config')
 const utils = require('./utils')
 const glob = require('glob');
+
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)

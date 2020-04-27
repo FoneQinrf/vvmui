@@ -1,3 +1,12 @@
+/*
+ * @Author: Fone丶峰
+ * @Date: 2020-04-23 16:35:16
+ * @LastEditors: Fone丶峰
+ * @LastEditTime: 2020-04-27 10:37:45
+ * @Description: msg
+ * @Email: qinrifeng@163.com
+ * @Github: https://github.com/FoneQinrf
+ */
 import ActionSheet from "./components/ActionSheet";
 import Backtop from "./components/Backtop";
 import Button from "./components/Button";
@@ -21,22 +30,26 @@ import Switch from "./components/Switch";
 import Upload from "./components/Upload";
 import Loading from "./components/~Loading";
 import Toast from "./components/~Toast";
- 
+import Emitter from "./components/Emitter";
+import Filter from "./components/Filter";
+import Notify from "./components/Notify";
 
-const components = [ActionSheet,Backtop,Button,Calendar,Card,Cell,CellGroup,Checkbox,CheckboxGroup,DatetimePicker,From,FromItem,Icon,Input,Modal,NumberInput,Picker,Radio,RadioGroup,Switch,Upload]
+
+const components = [ActionSheet, Backtop, Button, Calendar, Card, Cell, CellGroup, Checkbox, CheckboxGroup, DatetimePicker, From, FromItem, Icon, Input, Modal, NumberInput, Picker, Radio, RadioGroup, Switch, Upload]
 
 const install = function (Vue) {
-      if (install.installed) return;
-      components.map(component => Vue.component(component.name, component))
-      Vue.prototype.$Loading = Loading;
-Vue.prototype.$Toast = Toast;
-
+    if (install.installed) return;
+    components.map(component => Vue.component(component.name, component))
+    Vue.prototype.$Loading = Loading;
+    Vue.prototype.$Toast = Toast;
+    Vue.prototype.$Notify = Notify;
+    Vue.mixin(Emitter)
+    Vue.mixin(Filter)
 };
-      
+
 // auto install
 if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.use(components)
 }
-      
+
 export default install
-    
