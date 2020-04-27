@@ -1,14 +1,20 @@
 .vvm-Button{
-    display: inline-block;
+    display: flex;
     border: none;
     text-align: center;
     color: @B6;
     position: relative;
-    padding: 25px 36px;
+    padding: 26px 40px;
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0);
     cursor: pointer;
     font-size: @size-14;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    .vvm-button-text{
+        padding-left: 10px;
+    }
     &.vvm-Button-type-{
         &default{
             background: @theme-color;

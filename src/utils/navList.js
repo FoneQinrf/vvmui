@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 11:49:09
+ * @LastEditTime: 2020-04-27 10:34:54
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -107,7 +107,7 @@ module.exports = [
                 name: '交互组件',
                 children: [
                     {
-                        name: 'Toast - 消息提示',
+                        name: 'Toast - 轻提示',
                         path: '/main/Toast'
                     },
                     {
@@ -117,6 +117,10 @@ module.exports = [
                     {
                         name: 'Backtop - 返回顶部',
                         path: '/main/Backtop'
+                    },
+                    {
+                        name: 'Notify - 消息通知',
+                        path: '/main/Notify'
                     }
                 ]
             }

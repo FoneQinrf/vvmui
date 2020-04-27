@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 18:11:57
+ * @LastEditTime: 2020-04-27 09:57:31
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -81,13 +81,16 @@ const fnc = {
     },
     close: () => {
         Install.close()
-    },
-    Install: Install
+    }
 }
 type.forEach(element => {
     fnc[element] = (options = {}) => {
         init(options, element)
     }
 });
+
+if (process.env.NODE_ENV === 'test') {
+    fnc.Install = Install
+}
 
 export default fnc

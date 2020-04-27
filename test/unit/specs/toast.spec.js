@@ -2,14 +2,13 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-26 16:00:11
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 18:13:27
+ * @LastEditTime: 2020-04-27 10:04:55
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  */
 import Toast from '@/components/~Toast'
 import Vue from "vue";
-
 describe('Toast', () => {
     it('info', async () => {
         Toast.info('info');
