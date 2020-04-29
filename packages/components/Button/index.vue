@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-27 13:52:30
+ * @LastEditTime: 2020-04-28 11:51:56
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -20,8 +20,8 @@
   </button>
 </template>
 <script>
-import links from "../../mixins/links";
-import Icon from "../Icon";
+import links from "@/mixins/links";
+import Icon from "@/components/Icon";
 export default {
   name: "Button",
   components: { Icon },

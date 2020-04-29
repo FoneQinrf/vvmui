@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 10:06:49
+ * @LastEditTime: 2020-04-28 11:55:28
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { findComponentsDownward } from "../../utils";
+import { findComponentsDownward } from "@/utils";
 const model = {};
 export default {
   name: "From",

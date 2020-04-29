@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 17:39:16
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-21 13:49:33
+ * @LastEditTime: 2020-04-28 12:53:40
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -16,11 +16,11 @@
 </template>
 
 <script>
-import { type } from "../../mixins/props";
-import emitter from "../../utils/emitter";
+import { type } from "@/mixins/props";
+import dispatch from "@/components/Emitter";
 export default {
   name: "v-Switch",
-  mixins: [type, emitter],
+  mixins: [type],
   props: {
     value: {
       type: [String, Number, Boolean]
@@ -62,7 +62,7 @@ export default {
       }
       this.$emit("on-change", this.currentValue);
       this.$emit("input", this.currentValue);
-      this.dispatch("From-Item", "change", this.currentValue);
+      dispatch("From-Item", "change", this.currentValue, this);
     }
   },
   computed: {

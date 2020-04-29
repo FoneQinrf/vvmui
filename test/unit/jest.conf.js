@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-08-09 10:31:35
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 16:29:10
+ * @LastEditTime: 2020-04-28 16:49:07
  * @Description: 
  * @Email: qinrifeng@163.com
  */
@@ -17,7 +17,8 @@ module.exports = {
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/packages/$1',
-    '^#/(.*)$': '<rootDir>/src/$1'
+    '^~/(.*)$': '<rootDir>/src/$1',
+    '^#/(.*)$': '<rootDir>/$1'
   },
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',

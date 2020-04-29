@@ -2,14 +2,14 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-01 11:07:37
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 10:04:08
+ * @LastEditTime: 2020-04-28 16:49:15
  * @Description: 
  * @Email: qinrifeng@163.com
  */
 
 import { mount } from 'vue-test-utils'
 import Picker from '@/components/Picker'
-import { modal } from "#/views/mobile/From/components/date.js";
+import { modal } from "~/views/mobile/From/components/date.js";
 const options = modal()
 
 describe('Picker.vue', () => {

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 14:18:58
+ * @LastEditTime: 2020-04-29 10:16:56
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -73,7 +73,6 @@ Toast.success({
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------------|------------|------------|
 | context  | 提示内容     | String        | 无 |
-| type  | 提示类型，可选值`success` `errer` `warning`   | String        | 无 |
 | icon  | 自定义icon标签   | String        | 无 |
 | duration  |  Toast延迟关闭事件，单位毫秒  | Number        | 3000 |
 | clear  |  Toast关闭后触发的回调  | Function        | 无 |
@@ -81,3 +80,4 @@ Toast.success({
 ##### 更新日志
 | 版本 |类型|内容|
 |:-------------:|:-|:-|
+|<Badge text="v0.05"/>|-|去除`type`入参|

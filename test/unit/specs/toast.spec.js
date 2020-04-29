@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-26 16:00:11
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-27 10:04:55
+ * @LastEditTime: 2020-04-28 11:17:30
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -16,7 +16,6 @@ describe('Toast', () => {
         const Install = Toast.Install.instance.$mount();
         expect(Install.context).toBe('info')
         expect(Install.value).toBe(true);
-        expect(Install.type).toBe(undefined);
     })
 
     it('success', async () => {
@@ -25,7 +24,6 @@ describe('Toast', () => {
         const Install = Toast.Install.instance.$mount();
         expect(Install.context).toBe('success')
         expect(Install.value).toBe(true);
-        expect(Install.type).toBe('success');
         expect(Install.$el.querySelector('.success').className).toMatch(/success/);
     })
 
@@ -35,7 +33,6 @@ describe('Toast', () => {
         const Install = Toast.Install.instance.$mount();
         expect(Install.context).toBe('errer')
         expect(Install.value).toBe(true);
-        expect(Install.type).toBe('errer');
         expect(Install.$el.querySelector('.errer').className).toMatch(/errer/);
     })
 
@@ -45,7 +42,6 @@ describe('Toast', () => {
         const Install = Toast.Install.instance.$mount();
         expect(Install.context).toBe('warning')
         expect(Install.value).toBe(true);
-        expect(Install.type).toBe('warning');
         expect(Install.$el.querySelector('.warning').className).toMatch(/warning/);
     })
 
@@ -59,23 +55,20 @@ describe('Toast', () => {
         const Install = Toast.Install.instance.$mount();
         expect(Install.context).toBe('info')
         expect(Install.value).toBe(true);
-        expect(Install.type).toBe(undefined);
         expect(Install.duration).toBe(4000);
         expect(Install.mask).toBe(true);
     })
 
     it('success object', async () => {
-        Toast.info({
+        Toast.success({
             context: 'success',
             duration: 4000,
-            mask: true,
-            type: 'success'
+            mask: true
         });
         await Vue.nextTick()
         const Install = Toast.Install.instance.$mount();
         expect(Install.context).toBe('success')
         expect(Install.value).toBe(true);
-        expect(Install.type).toBe('success');
         expect(Install.duration).toBe(4000);
         expect(Install.mask).toBe(true);
         expect(Install.$el.querySelector('.success').className).toMatch(/success/);

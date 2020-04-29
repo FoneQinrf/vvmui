@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-02 15:40:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:59:50
+ * @LastEditTime: 2020-04-28 11:54:35
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import { type } from "../../mixins/props";
-import { findComponentsDownward } from "../../utils/index";
-import emitter from "../../utils/emitter";
+import { type } from "@/mixins/props";
+import { findComponentsDownward } from "@/utils/index";
+import dispatch from "@/components/Emitter";
 export default {
   name: "Checkbox-Group",
-  mixins: [type, emitter],
+  mixins: [type],
   data() {
     return {
       childrens: [],
@@ -67,7 +67,7 @@ export default {
       this.currentValue = value;
       this.$emit("input", value);
       this.$emit("on-change", value);
-      this.dispatch("From-Item", "change", value);
+      dispatch("From-Item", "change", value, this);
       this.updateModel();
     }
   },

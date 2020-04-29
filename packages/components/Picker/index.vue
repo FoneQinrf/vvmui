@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 09:54:59
+ * @LastEditTime: 2020-04-28 13:10:18
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -51,17 +51,17 @@
 </template>
 
 <script>
-import Layer from "../Modal";
+import Layer from "@/components/Modal";
+import dispatch from "@/components/Emitter";
+import Icon from "@/components/Icon";
+import Input from "@/components/Input";
 import vPicker from "./src/component.vue";
 import mixins from "./src/mixins";
 import { initIndex, initPlaceholder, initModel } from "./utils";
-import emitter from "../../utils/emitter";
-import Icon from "../Icon";
-import Input from "../Input";
 
 export default {
   name: "Picker",
-  mixins: [mixins, emitter],
+  mixins: [mixins],
   components: {
     Layer,
     vPicker,
@@ -142,7 +142,7 @@ export default {
       this.model = model;
       this.$emit("input", model);
       this.$emit("on-confirm", model);
-      this.dispatch("From-Item", "change", model);
+      dispatch("From-Item", "change", model, this);
       this.initPlaceholder();
       this.LayerVal = false;
     },

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 14:53:18
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-14 10:53:14
+ * @LastEditTime: 2020-04-28 11:52:40
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -37,8 +37,8 @@
   </li>
 </template>
 <script>
-import Icon from "../Icon";
-import links from "../../mixins/links";
+import Icon from "@/components/Icon";
+import links from "@/mixins/links";
 export default {
   name: "Cell",
   components: { Icon },

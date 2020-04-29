@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-25 14:00:39
+ * @LastEditTime: 2020-04-28 11:59:48
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,7 +10,9 @@
 
 <template>
   <label class="vvm-Radio">
-    <span :class="['vvm-Radio-icon',`vvm-text-color-${parentType}`,parentDisabled ? 'disabled' : '']">
+    <span
+      :class="['vvm-Radio-icon',`vvm-text-color-${parentType}`,parentDisabled ? 'disabled' : '']"
+    >
       <transition name="fade">
         <Icon v-show="active" :icon="parentIcon" />
       </transition>
@@ -39,12 +41,11 @@
 </template>
 
 <script>
-import Icon from "../Icon";
-import { findComponentUpward } from "../../utils";
-import emitter from "../../utils/emitter";
+import Icon from "@/components/Icon";
+import { findComponentUpward } from "@/utils";
+import dispatch from "@/components/Emitter";
 export default {
   name: "Radio",
-  mixins: [emitter],
   components: { Icon },
   props: {
     value: {
@@ -88,7 +89,7 @@ export default {
       this.currentValue = e.target.checked;
       this.$emit("input", this.currentValue);
       this.$emit("on-change", this.currentValue);
-      this.dispatch("From-Item", "change", this.currentValue);
+      dispatch("From-Item", "change", this.currentValue, this);
     },
     parentFnc(options) {
       if (this.parent) {

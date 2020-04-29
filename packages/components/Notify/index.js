@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-27 10:25:39
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-27 16:01:15
+ * @LastEditTime: 2020-04-28 13:06:32
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,6 +10,7 @@
 import Vue from "vue";
 import { backColorClass } from "@/utils/index.js";
 import Icon from "@/components/Icon";
+const { version } = require('#/package.json')
 
 function create(options) {
     const install = new Vue({
@@ -67,7 +68,10 @@ function create(options) {
     return install.$mount()
 }
 
-const Notify = {}
+const Notify = {
+    name: 'Notify',
+    version
+}
 
 const array = ['info', 'success', 'errer', 'warning']
 

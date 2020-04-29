@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-13 16:38:03
+ * @LastEditTime: 2020-04-28 11:26:22
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -19,7 +19,6 @@ Vue.component("demoTop", demoTop);
 require("#/lib/style.css");
 Vue.config.productionTip = false
 Vue.use(UI)
-
 new Vue({
     router,
     render: h => h(App)

@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-27 10:34:54
+ * @LastEditTime: 2020-04-28 15:00:22
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -51,6 +51,10 @@ module.exports = [
                     {
                         name: 'Card - 卡片',
                         path: '/main/Card'
+                    },
+                    {
+                        name: 'Image - 图片展示',
+                        path: '/main/Image'
                     }
                 ]
             },

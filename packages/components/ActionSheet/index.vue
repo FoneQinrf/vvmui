@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 11:17:40
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 11:24:54
+ * @LastEditTime: 2020-04-28 11:51:26
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -38,14 +38,13 @@
 </template>
 
 <script>
-import emitter from "../../utils/emitter";
-import Layer from "../Modal";
-import Icon from "../Icon";
-import Input from "../Input";
+import dispatch from "@/components/Emitter";
+import Layer from "@/components/Modal";
+import Icon from "@/components/Icon";
+import Input from "@/components/Input";
 
 export default {
   name: "ActionSheet",
-  mixins: [emitter],
   components: { Layer, Icon, Input },
   props: {
     placeholder: {
@@ -99,7 +98,7 @@ export default {
       this.currentValue = item[this.returnKey];
       this.$emit("input", this.currentValue);
       this.$emit("on-confirm", this.currentValue, item);
-      this.dispatch("From-Item", "change", this.currentValue);
+      dispatch("From-Item", "change", this.currentValue, this);
     },
     close() {
       this.show = false;

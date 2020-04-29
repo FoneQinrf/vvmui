@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-23 16:35:16
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-27 10:37:45
+ * @LastEditTime: 2020-04-28 14:59:41
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -33,9 +33,10 @@ import Toast from "./components/~Toast";
 import Emitter from "./components/Emitter";
 import Filter from "./components/Filter";
 import Notify from "./components/Notify";
+import Image from "./components/Image"
 
 
-const components = [ActionSheet, Backtop, Button, Calendar, Card, Cell, CellGroup, Checkbox, CheckboxGroup, DatetimePicker, From, FromItem, Icon, Input, Modal, NumberInput, Picker, Radio, RadioGroup, Switch, Upload]
+const components = [ActionSheet, Backtop, Image, Button, Calendar, Card, Cell, CellGroup, Checkbox, CheckboxGroup, DatetimePicker, From, FromItem, Icon, Input, Modal, NumberInput, Picker, Radio, RadioGroup, Switch, Upload]
 
 const install = function (Vue) {
     if (install.installed) return;
@@ -43,7 +44,7 @@ const install = function (Vue) {
     Vue.prototype.$Loading = Loading;
     Vue.prototype.$Toast = Toast;
     Vue.prototype.$Notify = Notify;
-    Vue.mixin(Emitter)
+    Vue.prototype.$emitterDispatch = Emitter
     Vue.mixin(Filter)
 };
 

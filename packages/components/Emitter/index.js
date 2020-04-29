@@ -2,25 +2,29 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-26 14:09:27
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 16:12:24
+ * @LastEditTime: 2020-04-28 11:42:51
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  */
-import emitter from '@/utils/emitter.js'
+import { parentComponent } from '@/utils/index.js'
 
-export default {
-    mixins: [emitter],
-    methods: {
-        /**
-         * from触发校验方法
-         * @param {*} ctx 
-         * @param {*} componentName 
-         * @param {*} eventName 
-         * @param {*} params 
-         */
-        vvmDispatch(componentName, eventName, params, ctx) {
-            this.dispatch(componentName, eventName, params, ctx)
-        },
-    },
-};
+/**
+ * 
+ * @param {*} componentName 
+ * @param {*} eventName 
+ * @param {*} params 
+ * @param {*} ctx 
+ * @param {*} parent 
+ */
+function dispatch(componentName, eventName, params, ctx, parent) {
+    parent = parentComponent(ctx, componentName)
+    if (!parent) {
+        return
+    }
+    parent.itemVal = params;
+    parent.eventName = eventName;
+    parent.validator(eventName, params);
+}
+
+export default dispatch;
