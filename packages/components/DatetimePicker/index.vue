@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-15 13:40:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 09:56:18
+ * @LastEditTime: 2020-04-28 11:55:12
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,7 +10,13 @@
 <template>
   <div class="vvm-DatetimePicker">
     <div @click="click" class="vvm-DatetimePicker-input">
-      <Input readonly :disabled="disabled" :right-icon="rightArrow ? 'iconlist-rigthl' : ''" v-model="currentValue" :placeholder="placeholder" />
+      <Input
+        readonly
+        :disabled="disabled"
+        :right-icon="rightArrow ? 'iconlist-rigthl' : ''"
+        v-model="currentValue"
+        :placeholder="placeholder"
+      />
     </div>
     <Modal v-if="!disabled" direction="bottom" isMask v-model="show">
       <template>
@@ -39,7 +45,7 @@
 import Input from "@/components/Input";
 import Modal from "@/components/Modal";
 import vPicker from "@/components/Picker/src/component";
-import emitter from "@/utils/emitter";
+import dispatch from "@/components/Emitter";
 import {
   createYear,
   format,
@@ -53,7 +59,6 @@ import {
 export default {
   name: "DatetimePicker",
   components: { Input, Modal, vPicker },
-  mixins: [emitter],
   props: {
     placeholder: {
       type: String,
@@ -177,7 +182,7 @@ export default {
       this.show = false;
       this.$emit("input", this.currentValue);
       this.$emit("on-confirm", this.currentValue);
-      this.dispatch("From-Item", "change", this.currentValue);
+      dispatch("From-Item", "change", this.currentValue, this);
     },
     click() {
       if (this.disabled) {

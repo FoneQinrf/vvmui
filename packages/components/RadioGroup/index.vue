@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-05 10:53:12
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:03:51
+ * @LastEditTime: 2020-04-28 12:00:22
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -15,10 +15,9 @@
 </template>
 
 <script>
-import emitter from "../../utils/emitter";
+import dispatch from "@/components/Emitter";
 export default {
   name: "Radio-Group",
-  mixins: [emitter],
   props: {
     inline: {
       type: Boolean
@@ -45,7 +44,7 @@ export default {
       this.currentValue = val;
       this.$emit("input", val);
       this.$emit("on-change", val);
-      this.dispatch("From-Item", "change", val);
+      dispatch("From-Item", "change", val, this);
     }
   },
   watch: {

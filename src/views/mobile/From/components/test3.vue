@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-26 11:20:44
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-22 13:36:50
+ * @LastEditTime: 2020-04-29 11:28:15
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,7 +11,7 @@
 <template>
   <div class="form">
     <h3>自定义校验</h3>
-    <From ref="from" status-icon :label-width="60" :rules="rules" :model="model">
+    <From ref="from" status-icon :label-width="80" :rules="rules" :model="model">
       <From-Item validate-loading label="用户名" prop="uasrName">
         <Input v-model="model.uasrName" />
       </From-Item>

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-01-02 15:39:54
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-25 13:57:14
+ * @LastEditTime: 2020-04-28 11:53:45
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,7 +10,9 @@
 
 <template>
   <label class="vvm-Checkbox">
-    <span :class="['vvm-Checkbox-icon',`vvm-text-color-${parentType}`,{['disabled']:parenDisabled}]">
+    <span
+      :class="['vvm-Checkbox-icon',`vvm-text-color-${parentType}`,{['disabled']:parenDisabled}]"
+    >
       <transition name="fade">
         <Icon v-show="currentValue" :icon="parentIcon" />
       </transition>
@@ -39,14 +41,14 @@
 </template>
 
 <script>
-import Icon from "../Icon";
-import { findComponentUpward } from "../../utils";
-import { type } from "../../mixins/props";
-import emitter from "../../utils/emitter";
+import Icon from "@/components/Icon";
+import { findComponentUpward } from "@/utils";
+import { type } from "@/mixins/props";
+import dispatch from "@/components/Emitter";
 export default {
   name: "Checkbox",
   components: { Icon },
-  mixins: [type, emitter],
+  mixins: [type],
   data() {
     return {
       parent: "",
@@ -113,7 +115,7 @@ export default {
       this.currentValue = e.target.checked;
       this.$emit("input", this.currentValue);
       this.$emit("on-change", this.currentValue);
-      this.dispatch("From-Item", "change", this.currentValue);
+      dispatch("From-Item", "change", this.currentValue, this);
     }
   },
   computed: {

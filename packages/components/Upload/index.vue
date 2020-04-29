@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 09:57:55
+ * @LastEditTime: 2020-04-28 12:01:28
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -90,14 +90,14 @@
 </template>
 
 <script>
-import emitter from "@/utils/emitter.js";
+import dispatch from "@/components/Emitter";
 import vUpload from "./components/upload";
 import mixins from "./components/mixins";
 import Multiple from "./components/multiple";
 export default {
   name: "Upload",
   components: { vUpload, Multiple },
-  mixins: [mixins, emitter],
+  mixins: [mixins],
   props: {
     value: {
       type: [String, Array]
@@ -116,7 +116,7 @@ export default {
   watch: {
     value(val) {
       this.currentValue = val;
-      this.dispatch("From-Item", "change", val);
+      dispatch("From-Item", "change", val, this);
     }
   },
   methods: {

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-27 15:01:09
+ * @LastEditTime: 2020-04-29 11:29:32
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -41,9 +41,6 @@
           @focus="focus"
         />
       </template>
-      <div :style="style" class="vvm-Input-button">
-        <slot></slot>
-      </div>
       <div v-if="rightIcon || unity" @click="click" class="vvm-Input-unity">
         <span>
           <template v-if="rightIcon">
@@ -57,12 +54,10 @@
 </template>
 
 <script>
-import Icon from "../Icon";
-import emitter from "../../utils/emitter";
-import { vwWitdh } from "../../utils";
+import dispatch from "@/components/Emitter";
+import Icon from "@/components/Icon";
 export default {
   name: "Input",
-  mixins: [emitter],
   components: {
     Icon
   },
@@ -120,11 +115,11 @@ export default {
       this.currentValue = val;
       this.$emit("input", val);
       this.$emit("on-change", val);
-      this.dispatch("From-Item", "change", val);
+      dispatch("From-Item", "change", val, this);
     },
     blur() {
       this.$emit("on-blur", this.currentValue);
-      this.dispatch("From-Item", "blur", this.currentValue);
+      dispatch("From-Item", "blur", this.currentValue, this);
       const scrollDom = this.scrollTarget
         ? document.querySelector(this.scrollTarget)
         : document.body;
@@ -132,16 +127,6 @@ export default {
     },
     focus() {
       this.$emit("on-focus", this.currentValue);
-    }
-  },
-  computed: {
-    style() {
-      if (this.$slots.default) {
-        return {
-          flex: `1 1 ${vwWitdh(160)}`
-        };
-      }
-      return {};
     }
   }
 };

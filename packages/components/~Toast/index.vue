@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:57:08
+ * @LastEditTime: 2020-04-28 11:11:28
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -17,7 +17,7 @@
     </template>
     <transition name="fade">
       <div v-show="value" :class="['vvm-Toast-body',type]">
-        <div class="vvm-Toast-iconfont" v-show="type">
+        <div class="vvm-Toast-iconfont" v-show="type !== 'info'">
           <Icon :icon="iconfont" :size="26" color="#fff" />
         </div>
         <div class="vvm-Toast-context">{{context}}</div>
@@ -34,7 +34,7 @@ export default {
     type: {
       type: String,
       validator: function(value) {
-        return ["success", "errer", "warning", "loading"].includes(value);
+        return ["success", "errer", "warning", "info"].includes(value);
       }
     },
     value: {

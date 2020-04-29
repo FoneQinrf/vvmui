@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 10:50:07
+ * @LastEditTime: 2020-04-28 13:12:38
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -34,15 +34,14 @@
 </template>
 
 <script>
-import bus from "../../utils/bus";
+import bus from "@/utils/bus";
+import Icon from "@/components/Icon";
+import dispatch from "@/components/Emitter";
+import Input from "@/components/Input";
 import keyboard from "./component/keyboard";
-import Icon from "../Icon";
-import emitter from "../../utils/emitter";
-import Input from "../Input";
 
 export default {
   name: "Number-Input",
-  mixins: [emitter],
   components: { Icon, keyboard, Input },
   props: {
     value: {
@@ -115,7 +114,7 @@ export default {
     confirm() {
       const value = this.currentValue ? Number(this.currentValue) : "";
       this.$emit("on-confirm", value);
-      this.dispatch("From-Item", "change", value);
+      dispatch("From-Item", "change", value, this);
       this.show = false;
     },
     keyup(key) {
@@ -127,7 +126,7 @@ export default {
       this.currentValue += String(key);
       const value = Number(this.currentValue);
       this.$emit("input", value);
-      this.dispatch("From-Item", "change", value);
+      dispatch("From-Item", "change", value, this);
     },
     remove() {
       if (this.currentValue) {
@@ -138,10 +137,10 @@ export default {
         const value = this.currentValue ? Number(this.currentValue) : "";
         this.$emit("input", value);
         this.$emit("on-remove", value);
-        this.dispatch("From-Item", "change", value);
+        dispatch("From-Item", "change", value, this);
         return;
       }
-      this.dispatch("From-Item", "change", "");
+      dispatch("From-Item", "change", "", this);
       this.$emit("on-remove", "");
     }
   },

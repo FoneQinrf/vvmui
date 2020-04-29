@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 10:30:58
+ * @LastEditTime: 2020-04-28 11:55:51
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -42,8 +42,8 @@
 
 <script>
 import AsyncValidator from "async-validator";
-import { findComponentUpward } from "../../utils";
-import Icon from "../Icon";
+import { findComponentUpward } from "@/utils";
+import Icon from "@/components/Icon";
 
 export default {
   name: "From-Item",

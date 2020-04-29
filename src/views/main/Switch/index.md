@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-02 10:04:13
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 15:46:30
+ * @LastEditTime: 2020-04-29 10:01:55
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -18,7 +18,7 @@
 import Vue from 'vue'
 import { Switch } from 'vvmui'
 
-Vue.component(Switch)
+Vue.component(Switch.name, Switch)
 
 ```
 
@@ -28,10 +28,10 @@ Vue.component(Switch)
 
 ```html
 
-<Am-Switch />
-<Am-Switch type="success" />
-<Am-Switch type="warning" />
-<Am-Switch type="errer" />
+<v-Switch />
+<v-Switch type="success" />
+<v-Switch type="warning" />
+<v-Switch type="errer" />
 
 ```
 
@@ -40,7 +40,7 @@ Vue.component(Switch)
 
 ```html
 <template>
-    <Am-Switch v-model="value" />
+    <v-Switch v-model="value" />
 </template>
 
 <script>
@@ -63,7 +63,7 @@ export default {
 ```html
 
 <template>
-    <Am-Switch :active-value="1" :inactive-value="0" @on-change="change" />
+    <v-Switch :active-value="1" :inactive-value="0" @on-change="change" />
 </template>
 
 <script>
@@ -86,8 +86,8 @@ export default {
 
 <template>
     <div>
-        <Am-Switch disabled />
-        <Am-Switch disabled v-model="value" />
+        <v-Switch disabled />
+        <v-Switch disabled v-model="value" />
     </div>
 </template>
 
