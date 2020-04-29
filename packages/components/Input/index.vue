@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 11:51:03
+ * @LastEditTime: 2020-04-29 11:29:32
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -41,9 +41,6 @@
           @focus="focus"
         />
       </template>
-      <div :style="style" class="vvm-Input-button">
-        <slot></slot>
-      </div>
       <div v-if="rightIcon || unity" @click="click" class="vvm-Input-unity">
         <span>
           <template v-if="rightIcon">
@@ -59,7 +56,6 @@
 <script>
 import dispatch from "@/components/Emitter";
 import Icon from "@/components/Icon";
-import { vwWitdh } from "@/utils";
 export default {
   name: "Input",
   components: {
@@ -131,16 +127,6 @@ export default {
     },
     focus() {
       this.$emit("on-focus", this.currentValue);
-    }
-  },
-  computed: {
-    style() {
-      if (this.$slots.default) {
-        return {
-          flex: `1 1 ${vwWitdh(160)}`
-        };
-      }
-      return {};
     }
   }
 };
