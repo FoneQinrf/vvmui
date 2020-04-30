@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 09:56:11
+ * @LastEditTime: 2020-04-30 14:04:46
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -58,5 +58,6 @@ export default {
     destroyed() {
         document.body.removeChild(install.$mount().$el)
         install.$destroyed()
-    }
+    },
+    Install: process.env.NODE_ENV === 'test' ? install : undefined
 }
