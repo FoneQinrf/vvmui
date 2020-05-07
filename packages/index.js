@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-23 16:35:16
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 14:59:41
+ * @LastEditTime: 2020-05-06 11:02:26
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -33,10 +33,12 @@ import Toast from "./components/~Toast";
 import Emitter from "./components/Emitter";
 import Filter from "./components/Filter";
 import Notify from "./components/Notify";
-import Image from "./components/Image"
+import Image from "./components/Image";
+import Collapse from "./components/Collapse";
+import CollapseGroup from "./components/CollapseGroup";
 
 
-const components = [ActionSheet, Backtop, Image, Button, Calendar, Card, Cell, CellGroup, Checkbox, CheckboxGroup, DatetimePicker, From, FromItem, Icon, Input, Modal, NumberInput, Picker, Radio, RadioGroup, Switch, Upload]
+const components = [CollapseGroup, Collapse, ActionSheet, Backtop, Image, Button, Calendar, Card, Cell, CellGroup, Checkbox, CheckboxGroup, DatetimePicker, From, FromItem, Icon, Input, Modal, NumberInput, Picker, Radio, RadioGroup, Switch, Upload]
 
 const install = function (Vue) {
     if (install.installed) return;

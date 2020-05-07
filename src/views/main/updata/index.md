@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-30 14:17:50
+ * @LastEditTime: 2020-05-07 11:49:14
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -18,3 +18,6 @@
 ##### 2020/4/27 <Badge text="v0.05"/>
 - 新增Image组件
 - Toast组件移除部分入参
+---
+##### 2020/5/7 <Badge text="v0.06"/>
+- 新增Collapse组件

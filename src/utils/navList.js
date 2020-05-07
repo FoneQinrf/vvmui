@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 15:00:22
+ * @LastEditTime: 2020-05-06 11:03:54
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -55,6 +55,10 @@ module.exports = [
                     {
                         name: 'Image - 图片展示',
                         path: '/main/Image'
+                    },
+                    {
+                        name: 'Collapse - 折叠面板',
+                        path: '/main/Collapse'
                     }
                 ]
             },
