@@ -1,0 +1,32 @@
+.vvm-Collapse{
+    display: block;
+    position: relative;
+    &-header{
+        display: flex;
+        padding: 26px 30px;
+        justify-content: space-between;
+        cursor: pointer;
+        align-items: center;
+        &--icon{
+            transition: all 0.3s;
+            &.open{
+                transform:rotate(90deg);
+            }
+        }
+        &--title{
+            font-size: @size-14;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &-body{
+        overflow: hidden;
+        transition: 0.3s height ease-in-out;
+        will-change: height;
+        &-content{
+            padding: 20px 30px;
+            font-size: @size-14;
+            color: @B2;
+        }
+    }
+}
