@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-27 10:25:39
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 13:06:32
+ * @LastEditTime: 2020-05-12 14:57:23
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -26,7 +26,7 @@ function create(options) {
         /* eslint-disable */
         render(h) {
             return (
-                <transition onAfterLeave={this.onAfterLeave} name="top">
+                <transition onAfterLeave={this.onAfterLeave} name="vvm-model-top">
                     <div v-show={this.show} class={this.clasess}>
                         {
                             this.icon ? <Icon icon={this.icon} /> : ''

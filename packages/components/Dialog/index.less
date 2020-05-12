@@ -1,0 +1,35 @@
+.vvm-Dialog{
+    width: 560px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    &-title{
+        padding: 26px;
+        text-align: center;
+        font-weight: 500;
+        position: relative;
+        color: @B2;
+    }
+    &-context{
+        padding: 36px 26px;
+        text-align: center;
+    }
+    &-button{
+        display: flex;
+        .vvm-Button{
+            background: #fff;
+            color: @theme-color;
+            &:active{
+                background: @B5;
+            }
+        }
+        &-wrp{
+            flex: 1;
+            &.cancel{
+                .vvm-Button{
+                    color: @B3;
+                }
+            }
+        }
+    }
+}

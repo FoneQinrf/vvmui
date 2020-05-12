@@ -2,13 +2,13 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 15:45:14
+ * @LastEditTime: 2020-05-12 15:39:11
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
-## NumberInput 数字键盘
+### NumberInput 数字键盘
 ---
 
 #### 使用方式

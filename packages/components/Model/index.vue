@@ -2,19 +2,19 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-23 14:12:45
+ * @LastEditTime: 2020-05-12 10:31:39
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
 <template>
-  <div class="vvm-Layer">
+  <div class="vvm-Model">
     <transition v-if="maskShow" name="fade">
-      <div ref="ref" @click="click" v-show="value" class="vvm-Layer-mask"></div>
+      <div ref="ref" @click="click" v-show="currentValue" class="vvm-Model-mask"></div>
     </transition>
-    <transition :name="direction">
-      <div v-show="value" :class="['vvm-Layer-body',direction]">
+    <transition :name="`vvm-model-${direction}`">
+      <div v-show="currentValue" :class="['vvm-Model-body',direction]">
         <slot></slot>
       </div>
     </transition>
@@ -23,7 +23,7 @@
 <script>
 const direction = ["top", "left", "right", "bottom", "center"];
 export default {
-  name: "Modal",
+  name: "Model",
   props: {
     value: {
       type: Boolean
@@ -32,10 +32,10 @@ export default {
       type: Boolean,
       default: true
     },
-    isMask: {
+    isClickMask: {
       type: Boolean
     },
-    isMove: {
+    lockScroll: {
       type: Boolean
     },
     direction: {
@@ -44,18 +44,28 @@ export default {
       validator(val) {
         return direction.includes(val);
       }
+    },
+    routerChangeClose: {
+      type: Boolean,
+      default: true
     }
+  },
+  data() {
+    return {
+      currentValue: this.value
+    };
   },
   methods: {
     click() {
-      if (this.isMask) {
-        this.$emit("input", false);
+      if (this.isClickMask) {
+        this.currentValue = false;
+        this.$emit("input", this.currentValue);
         this.$emit("on-mask");
       }
     }
   },
   mounted() {
-    if (!this.isMove && this.value) {
+    if (!this.lockScroll && this.value) {
       this.$el.addEventListener(
         "touchmove",
         e => {
@@ -72,9 +82,7 @@ export default {
   },
   watch: {
     value(val) {
-      if (this.isMove) {
-        return;
-      }
+      this.currentValue = val;
       if (val) {
         this.$el.addEventListener(
           "touchmove",
@@ -88,6 +96,12 @@ export default {
           e.preventDefault();
         });
       }
+    }
+  },
+  $route() {
+    if (this.routerChangeClose) {
+      this.currentValue = false;
+      this.$emit("input", this.currentValue);
     }
   }
 };

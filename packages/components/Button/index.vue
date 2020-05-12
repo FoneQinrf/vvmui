@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 11:51:56
+ * @LastEditTime: 2020-05-08 11:43:00
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,7 +10,9 @@
 
 <template>
   <button :disabled="tagDisabled" @click="click" :class="clasess">
-    <Icon v-show="currentLoading" class="vvm-loading" icon="iconloading1" />
+    <span v-show="currentLoading" class="vvm-Button-loading">
+      <Icon class="vvm-loading" icon="iconloading1" />
+    </span>
     <span :class="[this.plain ? `vvm-button-text vvm-text-color-${this.type}` : 'vvm-button-text']">
       <template v-if="currentLoading">{{loadingText}}</template>
       <template v-else>

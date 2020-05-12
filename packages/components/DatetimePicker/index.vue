@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-15 13:40:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 11:55:12
+ * @LastEditTime: 2020-05-12 10:04:28
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -18,7 +18,7 @@
         :placeholder="placeholder"
       />
     </div>
-    <Modal v-if="!disabled" direction="bottom" isMask v-model="show">
+    <Modal v-if="!disabled" direction="bottom" isClickMask v-model="show">
       <template>
         <div class="vvm-DatetimePicker-title">
           <span @click="onCancel" class="cancel-text">{{cancelText}}</span>
@@ -43,7 +43,7 @@
 
 <script>
 import Input from "@/components/Input";
-import Modal from "@/components/Modal";
+import Modal from "@/components/Model";
 import vPicker from "@/components/Picker/src/component";
 import dispatch from "@/components/Emitter";
 import {
