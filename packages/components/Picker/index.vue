@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:28
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-29 15:40:55
+ * @LastEditTime: 2020-05-12 10:04:50
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -21,7 +21,7 @@
         v-model="context"
       />
     </div>
-    <Layer v-if="!disabled" direction="bottom" isMask v-model="LayerVal">
+    <Layer v-if="!disabled" direction="bottom" isClickMask v-model="LayerVal">
       <template>
         <div class="vvm-Picker-title">
           <span @click="onCancel" class="cancel-text">{{cancelText}}</span>
@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import Layer from "@/components/Modal";
+import Layer from "@/components/Model";
 import dispatch from "@/components/Emitter";
 import Icon from "@/components/Icon";
 import Input from "@/components/Input";

@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-08 11:17:40
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 11:51:26
+ * @LastEditTime: 2020-05-12 10:03:41
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -18,7 +18,7 @@
         :right-icon="rightArrow ? 'iconlist-rigthl' : ''"
       />
     </div>
-    <Layer @on-mask="mask" :isMask="true" direction="bottom" v-model="show">
+    <Layer @on-mask="mask" :isClickMask="true" direction="bottom" v-model="show">
       <div class="vvm-Action-Sheet-Model">
         <div v-if="data.length === 0" class="vvm-Action-Sheet-loading">
           <Icon icon="iconloading1" :size="24" class="vvm-loading" />
@@ -39,7 +39,7 @@
 
 <script>
 import dispatch from "@/components/Emitter";
-import Layer from "@/components/Modal";
+import Layer from "@/components/Model";
 import Icon from "@/components/Icon";
 import Input from "@/components/Input";
 

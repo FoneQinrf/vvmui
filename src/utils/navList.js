@@ -4,7 +4,7 @@
  * @LastModifiedBy: Fone丶峰
  * @Date: 2019-08-14 11:01:51
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-05-06 11:03:54
+ * @LastEditTime: 2020-05-09 11:31:05
  * @email: 15921712019@163.com
  * @gitHub: https://github.com/FoneQinrf
  */
@@ -59,6 +59,10 @@ module.exports = [
                     {
                         name: 'Collapse - 折叠面板',
                         path: '/main/Collapse'
+                    },
+                    {
+                        name: 'Model - 模态窗',
+                        path: '/main/Model'
                     }
                 ]
             },
@@ -129,6 +133,10 @@ module.exports = [
                     {
                         name: 'Notify - 消息通知',
                         path: '/main/Notify'
+                    },
+                    {
+                        name: 'Dialog - 弹出框',
+                        path: '/main/Dialog'
                     }
                 ]
             }

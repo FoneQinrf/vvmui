@@ -9,68 +9,68 @@
 }
 
 /*从下向上出现*/
-.top-enter-active,
-.top-leave-active {
+.vvm-model-top-enter-active,
+.vvm-model-top-leave-active {
   transition: all 0.5s ease;
 }
-.top-enter,
-.top-leave-to {
+.vvm-model-top-enter,
+.vvm-model-top-leave-to {
   transform: translateY(-100%);
 }
 
-.center-leave-active {
-    transform: translate3d(-50%, -50%, 0) scale(1);
-    opacity: 0;
-  }
-  .center-enter {
-    transform: translate3d(-50%, -50%, 0) scale(0.6);
-    opacity: 0;
-  }
-  //右出
-  .right-enter-active,
-  .right-leave-active {
-    transition: all 0.5s ease;
-  }
-  .right-enter,
-  .right-leave-to {
-    transform: translateX(100%);
-  }
-  //左出
-  .left-enter-active,
-  .left-leave-active {
-    transition: all 0.5s ease;
-  }
-  .left-enter,
-  .left-leave-to {
-    transform: translateX(-100%);
-  }
-  //上出
-  .bottom-enter-active,
-  .bottom-leave-active {
-    transition: all 0.5s ease;
-  }
-  .bottom-enter,
-  .bottom-leave-to {
-    transform: translateY(100%);
-  }
+.vvm-model-center-enter {
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+  opacity: 0;
+}
+.vvm-model-center-leave-active {
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+  opacity: 0;
+}
+//右出
+.vvm-model-right-enter-active,
+.vvm-model-right-leave-active {
+  transition: all 0.5s ease;
+}
+.vvm-model-right-enter,
+.vvm-model-right-leave-to {
+  transform: translateX(100%);
+}
+//左出
+.vvm-model-left-enter-active,
+.vvm-model-left-leave-active {
+  transition: all 0.5s ease;
+}
+.vvm-model-left-enter,
+.vvm-model-left-leave-to {
+  transform: translateX(-100%);
+}
+//上出
+.vvm-model-bottom-enter-active,
+.vvm-model-bottom-leave-active {
+  transition: all 0.5s ease;
+}
+.vvm-model-bottom-enter,
+.vvm-model-bottom-leave-to {
+  transform: translateY(100%);
+}
 
-  .vvm-loading{
-    display: inline-block;
-    animation: rotating 1.3s linear infinite;
-  }
+.vvm-loading{
+  display: inline-block;
+  animation: rotating 1.3s linear infinite;
+}
 
 @keyframes rotating{
   0%{-webkit-transform:rotateZ(0);transform:rotateZ(0)}
   100%{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}
 }
 
-  .slide-fade-enter-active {
-    transition: all .3s ease;
-  }
-  .slide-fade-leave-active {
-    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  }
-  .slide-fade-enter, .slide-fade-leave-to {
-    transform: translateX(-10px);
-    opacity: 0;
-  }
+.FormItem-slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.FormItem-slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.FormItem-slide-fade-enter, .FormItem-slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
