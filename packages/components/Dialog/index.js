@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-05-07 15:53:38
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-05-12 16:01:45
+ * @LastEditTime: 2020-05-12 17:31:14
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -31,7 +31,8 @@ class Install {
             render: undefined,
             isClickMask: true,
             button: undefined,
-            lockScroll: undefined
+            lockScroll: undefined,
+            routerChangeClose: undefined
         }
 
         if (!Install.instance) {
@@ -65,7 +66,8 @@ class Install {
                         confirmButtonText: this.confirmButtonText,
                         isClickMask: this.isClickMask,
                         onConfirm: this.onConfirm,
-                        lockScroll: this.lockScroll
+                        lockScroll: this.lockScroll,
+                        routerChangeClose: this.routerChangeClose
                     },
                     scopedSlots: {
                         button: () => {

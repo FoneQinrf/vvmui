@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-05-08 15:21:32
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-05-12 17:10:55
+ * @LastEditTime: 2020-05-12 17:30:49
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,6 +13,7 @@
     @input="cancel"
     :isClickMask="isMask"
     :lockScroll="lockScroll"
+    :routerChangeClose="routerChangeClose"
     direction="center"
     v-model="show"
   >
@@ -81,7 +82,11 @@ export default {
     },
     isClickMask: Boolean,
     onConfirm: Function,
-    lockScroll: Boolean
+    lockScroll: Boolean,
+    routerChangeClose: {
+      type: Boolean,
+      default: true
+    }
   },
   watch: {
     value(val) {
