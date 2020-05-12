@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-27 10:32:09
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-05-12 15:37:42
+ * @LastEditTime: 2020-05-12 17:33:06
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -111,6 +111,7 @@ export default {
 | isClickMask  |  是否可点击背景蒙层关闭  | Boolean        | true |
 | onConfirm  |  点击确认按钮时的回调函数  | Function        | 无 |
 | lockScroll  |  是否锁定背景滑动事件，锁定时蒙层里的内容也将无法滚动  | Boolean        | 无 |
+| routerChangeClose  |  是否路由变化时关闭Dialog  | Boolean        | true |
 | render  |  主体内容，使用后context无效 <a href="https://cn.vuejs.org/v2/guide/render-function.html" target="_blank"> 学习render语法</a>  | Function        | 无 |
 | button  |  自定义按钮内容 <a href="https://cn.vuejs.org/v2/guide/render-function.html" target="_blank"> 学习render语法</a>  | Function        | 无 |
 
@@ -127,6 +128,7 @@ export default {
 | isClickMask  | 是否可点击背景蒙层关闭    | Boolean       | 无 | true |
 | onConfirm  | 点击确认按钮时的回调函数    | Function       | 无 | 无 |
 | lockScroll  | 是否锁定背景滑动事件，锁定时蒙层里的内容也将无法滚动    | Boolean       | 无 | 无 |
+| routerChangeClose  | 是否路由变化时关闭Dialog    | Boolean       | 无 | true |
 
 ##### Dialog Events
 | 事件名 | 说明 | 回调参数 |
