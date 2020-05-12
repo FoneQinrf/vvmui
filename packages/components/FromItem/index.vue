@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-11-06 14:03:19
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-28 11:55:51
+ * @LastEditTime: 2020-05-09 15:24:02
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -26,7 +26,7 @@
     </div>
     <div :class="['vvm-From-Item-body',{'statusIcon':statusIcon}]">
       <slot></slot>
-      <transition name="slide-fade">
+      <transition name="FormItem-slide-fade">
         <label class="vvm-From-Item-message vvm-ellipsis" v-if="ruleState === 'error'">{{message}}</label>
       </transition>
       <span

@@ -2,13 +2,13 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-29 10:16:56
+ * @LastEditTime: 2020-05-12 15:41:34
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
-## Toast 消息提示
+### Toast 消息提示
 ---
 
 #### 使用方式
@@ -79,5 +79,5 @@ Toast.success({
 
 ##### 更新日志
 | 版本 |类型|内容|
-|:-------------:|:-|:-|
+|-------------|-|-|
 |<Badge text="v0.05"/>|-|去除`type`入参|

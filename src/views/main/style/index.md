@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-23 13:24:00
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 09:44:02
+ * @LastEditTime: 2020-05-09 14:14:36
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -38,15 +38,15 @@ fade
 
 //弹窗动画
 //上出
-top
+vvm-model-top
 //中间弹出
-center
+vvm-model-center
 //右出
-right
+vvm-model-right
 //左出
-left
+vvm-model-left
 //下出
-bottom
+vvm-model-bottom
 
 //旋转loading
 vvm-loading

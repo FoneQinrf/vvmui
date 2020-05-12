@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-04-23 16:35:16
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-05-06 11:02:26
+ * @LastEditTime: 2020-05-12 14:21:58
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -21,7 +21,7 @@ import From from "./components/From";
 import FromItem from "./components/FromItem";
 import Icon from "./components/Icon";
 import Input from "./components/Input";
-import Modal from "./components/Modal";
+import Model from "./components/Model";
 import NumberInput from "./components/NumberInput";
 import Picker from "./components/Picker";
 import Radio from "./components/Radio";
@@ -36,9 +36,35 @@ import Notify from "./components/Notify";
 import Image from "./components/Image";
 import Collapse from "./components/Collapse";
 import CollapseGroup from "./components/CollapseGroup";
+import Dialog from "./components/Dialog";
 
-
-const components = [CollapseGroup, Collapse, ActionSheet, Backtop, Image, Button, Calendar, Card, Cell, CellGroup, Checkbox, CheckboxGroup, DatetimePicker, From, FromItem, Icon, Input, Modal, NumberInput, Picker, Radio, RadioGroup, Switch, Upload]
+const components = [
+    CollapseGroup,
+    Collapse,
+    ActionSheet,
+    Backtop,
+    Image,
+    Button,
+    Calendar,
+    Card,
+    Cell,
+    CellGroup,
+    Checkbox,
+    CheckboxGroup,
+    DatetimePicker,
+    From,
+    FromItem,
+    Icon,
+    Input,
+    Model,
+    NumberInput,
+    Picker,
+    Radio,
+    RadioGroup,
+    Switch,
+    Upload,
+    Dialog
+]
 
 const install = function (Vue) {
     if (install.installed) return;
@@ -46,7 +72,8 @@ const install = function (Vue) {
     Vue.prototype.$Loading = Loading;
     Vue.prototype.$Toast = Toast;
     Vue.prototype.$Notify = Notify;
-    Vue.prototype.$emitterDispatch = Emitter
+    Vue.prototype.$emitterDispatch = Emitter;
+    Vue.prototype.$Dialog = Dialog;
     Vue.mixin(Filter)
 };
 

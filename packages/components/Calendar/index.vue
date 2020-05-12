@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-02-24 09:29:17
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-26 09:38:20
+ * @LastEditTime: 2020-05-12 10:04:05
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -19,7 +19,7 @@
         :placeholder="placeholder"
       />
     </div>
-    <Modal v-if="!disabled" isMove direction="bottom" isMask v-model="show" @on-mask="close">
+    <Modal v-if="!disabled" lockScroll direction="bottom" isClickMask v-model="show" @on-mask="close">
       <div class="vvm-Calendar-wrp">
         <div class="vvm-Calendar-model-top">
           <div class="vvm-Calendar-title">
@@ -100,7 +100,7 @@
 </template>
 
 <script>
-import Modal from "@/components/Modal";
+import Modal from "@/components/Model";
 import Icon from "@/components/Icon";
 import Toast from "@/components/~Toast";
 import emitter from "@/utils/emitter";

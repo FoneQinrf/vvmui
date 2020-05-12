@@ -2,13 +2,13 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-29 10:15:19
+ * @LastEditTime: 2020-05-09 10:27:56
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
-### Image 图片展示
+### Image 图片展示 <Badge text="v0.05"/>
 ---
 
 #### 使用方式

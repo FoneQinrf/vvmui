@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2019-12-23 15:34:02
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-24 10:08:34
+ * @LastEditTime: 2020-05-09 11:41:54
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -58,8 +58,8 @@
 </template>
 
 <script>
-import Layer from "../../Modal";
-import Icon from "../../Icon";
+import Layer from "@/components/Model";
+import Icon from "@/components/Icon";
 export default {
   name: "Number-keyboard",
   components: { Layer, Icon },

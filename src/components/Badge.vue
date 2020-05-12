@@ -2,7 +2,7 @@
  * @Author: Fone丶峰
  * @Date: 2020-03-30 13:29:54
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-04-08 10:06:38
+ * @LastEditTime: 2020-05-07 16:10:54
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -27,7 +27,7 @@ export default {
   font-size: 14px;
   height: 18px;
   line-height: 18px;
-  border-radius: 3px;
+  border-radius: 18px;
   padding: 0 6px;
   color: #fff;
   margin-right: 5px;

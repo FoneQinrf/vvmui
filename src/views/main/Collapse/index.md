@@ -2,13 +2,13 @@
  * @Author: Fone丶峰
  * @Date: 2019-10-22 11:32:29
  * @LastEditors: Fone丶峰
- * @LastEditTime: 2020-05-07 10:25:29
+ * @LastEditTime: 2020-05-12 15:43:07
  * @Description: msg
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  -->
 
-### Collapse 单元格
+### Collapse 单元格 <Badge text="v0.06"/>
 ---
 
 #### 使用方式
